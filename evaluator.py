@@ -6,12 +6,11 @@ import json
 
 
 class ScoreEvaluator:
-    workdir = ''
+    workdir = os.path.abspath('.')
     cases = {}
 
     @classmethod
     def read_from_url(cls, url):
-        cls.workdir = os.path.abspath('.')
         request.urlretrieve(url, 'code.zip')
         src = zipfile.ZipFile('code.zip')
         src.extractall('tmp')
