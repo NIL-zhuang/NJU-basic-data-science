@@ -7,6 +7,8 @@ import json
 
 class ScoreEvaluator:
     workdir = ''
+    cases = {}
+
     @classmethod
     def read_from_url(cls, url):
         cls.workdir = os.path.abspath('.')
@@ -38,8 +40,8 @@ class ScoreEvaluator:
         test_cases = cls.workdir + '/resource/.mooctest/testCases.json'
         all_the_code = open(file).read()
         with open (test_cases, 'r') as f:
-            cases = json.load(f)
-        for case in cases:
+            cls.cases = json.load(f)
+        for case in cls.cases:
             output = case["output"]
             output = output.replace('\n', '')
             if output in all_the_code: return True  # 这边的代码逻辑有待商榷 到底是只要匹配到一个就算作弊 还是匹配到所有才算作弊
@@ -51,17 +53,23 @@ class ScoreEvaluator:
         if not file: return -1  # cpp提交
         if cls.ischeated(file): return 0  # 面向用例
 
-        timestamp_start = time.time()*1000
+        runtime = 0
+        for case in cls.cases:
+            input = case["input"] + '\n'
+            test = open(cls.workdir+'/test.txt', 'w')
+            test.write(input)
+            test.close()
+            timestamp_start = time.time() * 1000
+            os.system('python3 {}<{}>>{}'.format(file, cls.workdir+'/test.txt', cls.workdir+'/test.txt'))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
+            timestamp_end = time.time() * 1000
+            runtime += timestamp_end - timestamp_start
 
-        os.system('python3 {}'.format(file))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
         # 确保配置了python的环境变量
-        # window环境下将"python3"修改成"python"
-        # 遇到了个小问题：如果代码中出现了 n=input() 这样的代码，无法正常执行
+        # window环境下将上面的"python3"修改成"python"
 
-        timestamp_end = time.time()*1000
-        runtime = timestamp_end - timestamp_start
-        # os.system('rm -rf {}'.format(cls.workdir + '/resource'))  # 完成分析后，删除下载下来的资源
-        return int(runtime)
+        os.system('rm {}'.format(cls.workdir+'/test.txt'))
+        os.system('rm -rf {}'.format(cls.workdir + '/resource'))  # 完成分析后，删除下载下来的资源
+        return runtime  # 暂时不知道怎么评分 还是先就返回个运行时间吧
 
 
 if __name__ == '__main__':
