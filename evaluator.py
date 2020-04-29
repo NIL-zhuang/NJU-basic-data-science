@@ -35,14 +35,14 @@ class ScoreEvaluator:
         return cls.workdir+'/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
 
     @classmethod
-    def ischeated(cls, file):
+    def is_cheated(cls, file, separator):
         test_cases = cls.workdir + '/resource/.mooctest/testCases.json'
         all_the_code = open(file).read().split('\n')
         with open (test_cases, 'r') as f:
             cls.cases = json.load(f)
         for case in cls.cases:
             output = case["output"]
-            output = output.replace('\n', '').split()
+            output = output.replace('\n', '').split(separator)
             for code in all_the_code:
                 code = code.replace('#.*', '')
                 if code != '' and 'return' not in code:
@@ -54,10 +54,10 @@ class ScoreEvaluator:
         return False
 
     @classmethod
-    def getscore(cls, code_url, recycle=5):
+    def getscore(cls, code_url, recycle=5, separator=' '):
         file = cls.read_from_url(code_url)
         if not file: return -1  # cpp提交
-        if cls.ischeated(file): return 0  # 面向用例
+        if cls.is_cheated(file, separator): return 0  # 面向用例
 
         runtime = 0
         for i in range(recycle):
