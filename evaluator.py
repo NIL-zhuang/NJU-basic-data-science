@@ -35,7 +35,6 @@ class ScoreEvaluator:
         return cls.workdir+'/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
 
     @classmethod
-    # TODO 用来判断是否面向用例
     def ischeated(cls, file):
         test_cases = cls.workdir + '/resource/.mooctest/testCases.json'
         all_the_code = open(file).read().split('\n')
