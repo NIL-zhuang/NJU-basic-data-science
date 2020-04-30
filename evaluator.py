@@ -34,6 +34,7 @@ class ScoreEvaluator:
         return cls.workdir+'/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
 
     @classmethod
+    # TODO 逻辑仍需要修改！还需要匹配input！
     def is_cheated(cls, file, separator):
         test_cases = cls.workdir + '/resource/.mooctest/testCases.json'
         all_the_code = open(file).read().split('\n')
@@ -44,7 +45,7 @@ class ScoreEvaluator:
             output = output.replace('\n', '').split(separator)
             for code in all_the_code:
                 code = code.replace('#.*', '')
-                if code != '' and 'return' not in code:
+                if code != '' and 'return' not in code and '=' not in code:  # 本意是不想把变量声明算进去，但这样似乎又带来了新的问题，仍需要修改
                     times = 0
                     for out in output:
                         if out in code: times += 1
