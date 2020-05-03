@@ -8,6 +8,7 @@ import json
 class ScoreEvaluator:
     workdir = os.path.abspath('.')
     cases = {}
+    lines = 0
 
     @classmethod
     def read_from_url(cls, url):
@@ -38,26 +39,35 @@ class ScoreEvaluator:
     def is_cheated(cls, file, separator):
         test_cases = cls.workdir + '/resource/.mooctest/testCases.json'
         all_the_code = open(file).read().split('\n')
+        cls.lines = len(all_the_code)
         with open (test_cases, 'r') as f:
             cls.cases = json.load(f)
+        cheats = 0
         for case in cls.cases:
             output = case["output"]
-            output = output.replace('\n', '').split(separator)
-            for code in all_the_code:
-                code = code.replace('#.*', '')
-                if code != '' and 'return' not in code and '=' not in code:  # 本意是不想把变量声明算进去，但这样似乎又带来了新的问题，仍需要修改
-                    times = 0
-                    for out in output:
-                        if out in code: times += 1
-                    if times == len(output): return True  # 匹配成功
-            # 这边的代码逻辑有待商榷 到底是只要匹配到一个用例就算作弊 还是匹配到所有才算作弊
+            if output != 'True' and output != 'False' and output != 'true' and output != 'false':
+                output = output.replace('\n', '').split(separator)
+                for code in all_the_code:
+                    code = code.replace('#.*', '')
+                    if code != '' and 'return' not in code:
+                        times = 0
+                        for out in output:
+                            if out in code: times += 1
+                        if times == len(output): cheats += 1  # 匹配成功
+                # 这边的代码逻辑有待商榷 到底是只要匹配到一个用例就算作弊 还是匹配到所有才算作弊
+        if cheats: return 1-cheats/len(cls.cases)
         return False
-
+    # 返回值是一个元组
     @classmethod
     def getscore(cls, code_url, recycle=5, separator=' '):
         file = cls.read_from_url(code_url)
-        if not file: return -1  # cpp提交
-        if cls.is_cheated(file, separator): return 0  # 面向用例
+        if not file:
+            os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            return -1, cls.lines  # cpp提交
+        cheats = cls.is_cheated(file, separator)
+        if cheats:
+            os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            return cheats, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0
         for i in range(recycle):
@@ -76,7 +86,7 @@ class ScoreEvaluator:
 
         os.system('rm {}'.format(cls.workdir+'/test.txt'))
         os.system('rm -rf {}'.format(cls.workdir + '/resource'))  # 完成分析后，删除下载下来的资源
-        return runtime  # 暂时不知道怎么评分 还是先就返回个运行时间吧
+        return runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
 
 
 if __name__ == '__main__':
