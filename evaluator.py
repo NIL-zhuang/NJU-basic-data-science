@@ -3,7 +3,8 @@ import os
 import time
 import zipfile
 from urllib import request
-
+import shutil
+from Util import Properties
 
 class ScoreEvaluator:
     workdir = os.path.abspath('.')
@@ -62,11 +63,13 @@ class ScoreEvaluator:
     def getscore(cls, code_url, recycle=5, separator=' '):
         file = cls.read_from_url(code_url)
         if not file:
-            os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            # os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            shutil.rmtree(cls.workdir + '/resource')
             return -1, cls.lines  # cpp提交
         cheats = cls.is_cheated(file, separator)
         if cheats:
-            os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            # os.system('rm -rf {}'.format(cls.workdir + '/resource'))
+            shutil.rmtree(cls.workdir + '/resource')
             return cheats, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0
@@ -77,19 +80,27 @@ class ScoreEvaluator:
                 test.write(input)
                 test.close()
                 timestamp_start = time.time() * 1000
-                os.system('python3 {}<{}>>{}'.format(file, cls.workdir+'/test.txt', cls.workdir+'/test.txt'))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
+                # os.system('python3 {}<{}>>{}'.format(file, cls.workdir+'/test.txt', cls.workdir+'/test.txt'))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
+                os.system('python {}<{}>>{}'.format(file, cls.workdir+'/test.txt', cls.workdir+'/test.txt'))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
         runtime /= recycle  # 通过取平均值尽量减少os.system带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
         # 确保配置了python的环境变量
         # window环境下将上面的"python3"修改成"python"
 
-        os.system('rm {}'.format(cls.workdir + '/test.txt'))
-        os.system('rm -rf {}'.format(cls.workdir + '/resource'))  # 完成分析后，删除下载下来的资源
+        # os.system('rm {}'.format(cls.workdir + '/test.txt'))
+        # os.system('rm -rf {}'.format(cls.workdir + '/resource'))  # 完成分析后，删除下载下来的资源
+        # 这两行在windows下有问题，windows下用下面的
+        os.remove(cls.workdir + '/test.txt')
+        shutil.rmtree(cls.workdir + '/resource')
+        shutil.rmtree(cls.workdir + '/tmp')
         return runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
 
 
 if __name__ == '__main__':
     print('Analyzing···')
-    url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4250/59018/%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F_1583812015501.zip"
+    # url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4250/60627/%E9%B8%A1%E8%9B%8B%E6%8E%89%E8%90%BD_1585025882008.zip" # 这个有问题
+    url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4250/60627/%E4%B8%89%E7%BB%B4%E5%BD%A2%E4%BD%93%E7%9A%84%E8%A1%A8%E9%9D%A2%E7%A7%AF_1584958468401.zip" # 这个有问题
+    # url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4251/60627/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE_1583591360065.zip" # 这个有问题
+    # url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4251/60627/%E6%B8%B8%E6%88%8F%E6%B3%A1%E6%B3%A1%E5%A0%82_1583589237697.zip" # 这个有问题
     print(ScoreEvaluator.getscore(url))
