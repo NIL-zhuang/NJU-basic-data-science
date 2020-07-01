@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MooctestAnalysis.iml" filepath="$PROJECT_DIR$/.idea/MooctestAnalysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NJU-basic-data-science.iml" filepath="$PROJECT_DIR$/.idea/NJU-basic-data-science.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NJU-basic-data-science.iml" filepath="$PROJECT_DIR$/.idea/NJU-basic-data-science.iml" />
     </modules>
   </component>
 </project>
