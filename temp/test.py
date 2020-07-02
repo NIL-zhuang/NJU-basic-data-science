@@ -1,6 +1,7 @@
 import json
 
 import DataUtils
+from evaluator import ScoreEvaluator
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
 deal_case_map = {}  # 修正后的数据
@@ -60,16 +61,16 @@ def read_data():
         for case in cases:
             raw_score = case['upload_records'][0]['score']
             url = case['upload_records'][0]['code_url']
-            if case['case_id'] not in raw_case_map.keys():
-                raw_case_map[case['case_id']] = []
-            # temp = CaseData(student,url,raw_score)
-            # print(temp)
-            time = 1
-            line = 1
-            raw_case_map[case['case_id']].append(CaseData(case['case_id'], student, url, raw_score, time, line))
+            res = ScoreEvaluator.getScore(url)
+            if res[0]:  # 如果不是异常提交，才加入
+                if case['case_id'] not in raw_case_map.keys():
+                    raw_case_map[case['case_id']] = []
+                temp = CaseData(case['case_id'], student, url, raw_score*res[1], res[2], res[3])
+                print(temp)
+                # raw_case_map[case['case_id']].append(temp)
     # print(raw_case_map)
 
 
 if __name__ == '__main__':
     read_data()
-    pre_deal_data()
+    # pre_deal_data()

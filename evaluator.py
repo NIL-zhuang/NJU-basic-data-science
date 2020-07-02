@@ -1,9 +1,35 @@
-from urllib import request
-import zipfile
-import os
-import time
 import json
+import os
+import shutil
+import time
+import zipfile
+from urllib import request
+
 from defender import Defender
+
+
+def deleteDir(dir):
+    windowsDeleteDir(dir)
+
+
+def windowsDeleteDir(dir):
+    shutil.rmtree(dir)
+
+
+def macDeleteDir(dir):
+    os.system('rm -rf {}'.format(dir))
+
+
+def deleteFile(file):
+    windowsDeleteFile(file)
+
+
+def windowsDeleteFile(file):
+    os.remove(file)
+
+
+def macDeleteFile(file):
+    os.system('rm {}'.format(dir))
 
 
 class ScoreEvaluator:
@@ -25,8 +51,11 @@ class ScoreEvaluator:
         files = zipfile.ZipFile(tmp_dir)  # 解压完成
         files.extractall(cls.work_dir + '/resource')
         # 这边的代码是用来处理后事的
-        os.system('rm -rf {}'.format(cls.work_dir + '/tmp'))  # 删除非空空目录，这个命令很危险路径不能错
-        os.system('rm {}'.format(cls.work_dir + '/code.zip'))  # 删除zip文件
+        # 这里我会报错，移到后面计算完一起删除 --- by cyz
+        # os.system('rm -rf {}'.format(cls.work_dir + '/tmp'))  # 删除非空空目录，这个命令很危险路径不能错
+        # deleteDir(cls.work_dir + '/tmp')
+        # os.system('rm {}'.format(cls.work_dir + '/code.zip'))  # 删除zip文件
+        # deleteFile(cls.work_dir + '/code.zip')
         # 这里是用的macOS终端命令 不一定适用于Windows cmd，如果报错改成相应的cmd命令即可
 
         return cls.work_dir + '/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
@@ -50,13 +79,15 @@ class ScoreEvaluator:
 
         # cpp提交，需要修改
         if Defender.cppDefend(cls.all_the_code):
-            os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
+            # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
+            deleteDir(cls.work_dir + '/resource')
             return False, 1, 0, cls.lines  # cpp提交
 
         # 作弊代码
         cheats = Defender.cheatDefend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
-            os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
+            # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
+            deleteDir(cls.work_dir + '/resource')
             return True, 1 - cheats, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0  # 运行时间
@@ -69,7 +100,8 @@ class ScoreEvaluator:
                 timestamp_start = time.time() * 1000
                 # os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt',
                 #                                     cls.work_dir + '/test.txt'))
-                res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+                # res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+                res = os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
                 # 返回值为0说明执行成功，否则说明提交的代码有问题
                 # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
                 if res:
@@ -81,14 +113,20 @@ class ScoreEvaluator:
         # 确保配置了python的环境变量
         # windows环境下将上面的"python3"修改成"python"
 
-        os.system('rm {}'.format(cls.work_dir + '/test.txt'))
-        os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
+        # os.system('rm {}'.format(cls.work_dir + '/test.txt'))
+        deleteFile(cls.work_dir + '/test.txt')
+        # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
+        deleteDir(cls.work_dir + '/resource')
+
+        deleteDir(cls.work_dir + '/tmp')
+        deleteFile(cls.work_dir + '/code.zip')
         return True, 1, runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
 
 
 # 程序入口
 if __name__ == '__main__':
     print('开始分析···')
-    print('请输入提交代码url：', end='')
-    url = input()
+    # print('请输入提交代码url：', end='')
+    # url = input()
+    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582023289869.zip'
     print(ScoreEvaluator.getScore(url))
