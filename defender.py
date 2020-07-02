@@ -2,6 +2,9 @@ import re
 
 
 class Defender:
+    def __init__(self):
+        pass
+
     @classmethod
     # 检查是否为cpp提交
     # 原理很简单，用运行cpp程序必不可少的int main或者void main判断即可
@@ -22,8 +25,7 @@ class Defender:
             # 逐行代码解释
             for line in codes:
                 code = re.sub(r'#.*$', "", line)  # 忽略代码中的注释
-                if code == '': continue
-
+                if code == '' or '+' in code or '=' in code: continue  # 代码为空，或者+1、赋值等情况
                 times = 0  # 分段匹配命中次数
                 # 暂时需要排除true or false，这个凭借输出不好判断，详见else逻辑块
                 if output != 'True' and output != 'False' and output != 'true' and output != 'false':

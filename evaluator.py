@@ -7,6 +7,9 @@ from defender import Defender
 
 
 class ScoreEvaluator:
+    def __init__(self):
+        pass
+
     work_dir = os.path.abspath('.')
     cases = {}
     lines = 0
@@ -48,13 +51,13 @@ class ScoreEvaluator:
         # cpp提交，需要修改
         if Defender.cppDefend(cls.all_the_code):
             os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
-            return -1, cls.lines  # cpp提交
+            return False, 1, 0, cls.lines  # cpp提交
 
         # 作弊代码
         cheats = Defender.cheatDefend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
             os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
-            return 1 - cheats, cls.lines  # 面向用例返回面向用例占比，0到1之间
+            return True, 1 - cheats, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0  # 运行时间
         for i in range(recycle):
@@ -64,17 +67,23 @@ class ScoreEvaluator:
                 test.write(inputs)
                 test.close()
                 timestamp_start = time.time() * 1000
-                os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt',
-                                                     cls.work_dir + '/test.txt'))  # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
+                # os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt',
+                #                                     cls.work_dir + '/test.txt'))
+                res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+                # 返回值为0说明执行成功，否则说明提交的代码有问题
+                # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
+                if res:
+                    print('提交代码有错误，无法正常运行')
+                    return True, 0, 0, cls.lines
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
         runtime /= recycle  # 通过取平均值尽量减少os.system带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
         # 确保配置了python的环境变量
-        # window环境下将上面的"python3"修改成"python"
+        # windows环境下将上面的"python3"修改成"python"
 
         os.system('rm {}'.format(cls.work_dir + '/test.txt'))
         os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
-        return runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
+        return True, 1, runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
 
 
 # 程序入口
@@ -83,4 +92,3 @@ if __name__ == '__main__':
     print('请输入提交代码url：', end='')
     url = input()
     print(ScoreEvaluator.getScore(url))
-

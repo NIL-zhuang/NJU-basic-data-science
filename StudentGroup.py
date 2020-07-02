@@ -15,7 +15,8 @@ def contain(list1, list2):
 if __name__ == '__main__':
     case_map = {}  # 题目集合
     question_list = []
-    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     for student in data:
@@ -48,19 +49,21 @@ if __name__ == '__main__':
         tmp = []
         for case in cases:
             tmp.append(case['case_id'])
+        # 分组逻辑
         for index in range(len(question_list)):
             if contain(question_list[index], tmp):
-                # print('第', index, '组')
+                # print(student, '第', index, '组')
                 group_list[index].append(student)
                 found = True
                 break
         if not found:
-            print(student, '分组失败')
+            print('student', student, '分组失败', end=' ')
             failure_user[student] = tmp.copy()
+            print('所做题目为:', failure_user[student])
 
     for group in group_list.keys():
         print('第', group, '组 人数共', len(group_list[group]))
         # print(group_list[group])
 
-    for user in failure_user.keys():
-        print(failure_user[user])
+    # for user in failure_user.keys():
+    #     print(failure_user[user])
