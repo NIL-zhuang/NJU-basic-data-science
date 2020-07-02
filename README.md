@@ -10,6 +10,7 @@
 - 2020.07.01 程荣鑫：重启项目，整顿之前面向用例判断的漏洞。
 - 2020.07.01 陈彦泽：提交了工作一半的文件，加入了.gitignore，加入了之前讨论的文档
 - 2020.07.02 程荣鑫：修改了evaluator.py和defender.py，添加了driver.py
+- 2020.07.02 陈彦泽：修改了evaluator.py中删除文件的方法，见使用说明
 
 ### 功能阐述
 
@@ -31,4 +32,20 @@
 ### 使用方法
 
 - 在evaluator类中的main函数启动程序即可（需要注意python的环境变量配置问题）
+
 - 随后在命令行输入url即可自动下载代码到本地（文件下完取完数据会自动删除
+
+- windows和mac下删除文件和运行python的指令不同，需要修改evaluator.py中的以下代码
+
+	```python
+	def deleteDir(dir):
+	    windowsDeleteDir(dir)
+	
+	def deleteFile(file):
+	    windowsDeleteFile(file)
+	
+	# res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+	res = os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+	```
+
+	

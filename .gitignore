@@ -1,3 +1,10 @@
 .idea/
 tmp/
 __pycache__/
+code.zip
+test.txt
+temp/tmp/
+temp/resource/
+resource/
+temp/code.zip
+temp/test.txt
