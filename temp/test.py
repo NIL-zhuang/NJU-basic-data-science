@@ -18,7 +18,7 @@ class CaseData:
         # [self.time, self.line] = ScoreEvaluator.getscore(url)
 
     def __str__(self):
-        return 'user' + str(self.user_id) + ' score' + str(self.score) + ' time' + str(self.time) + ' line' + str(
+        return 'user:' + str(self.user_id) + ' case:' + str(self.case_id) +' score:' + str(self.score) + ' time:' + str(self.time) + ' line:' + str(
             self.line)
 
     def __copy__(self):
@@ -59,8 +59,8 @@ def read_data():
     for student in data:
         cases = data[student]['cases']
         for case in cases:
-            raw_score = case['upload_records'][0]['score']
-            url = case['upload_records'][0]['code_url']
+            raw_score = case['upload_records'][-1]['score']
+            url = case['upload_records'][-1]['code_url']
             res = ScoreEvaluator.getScore(url)
             if res[0]:  # 如果不是异常提交，才加入
                 if case['case_id'] not in raw_case_map.keys():

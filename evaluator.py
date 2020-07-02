@@ -64,7 +64,7 @@ class ScoreEvaluator:
     # 提取文件中的信息
     def load(cls, file):
         test_cases = cls.work_dir + '/resource/.mooctest/testCases.json'
-        cls.all_the_code = open(file).read().split('\n')
+        cls.all_the_code = open(file, encoding='UTF-8').read().split('\n')
         cls.lines = len(cls.all_the_code)
         with open(test_cases, 'r') as f:
             cls.cases = json.load(f)
@@ -88,7 +88,10 @@ class ScoreEvaluator:
         if cheats > 0:
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
-            return True, 1 - cheats, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
+            temp = 1 - cheats # 防止返回负数
+            if temp < 0:
+                temp = 0
+            return True, temp, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0  # 运行时间
         for i in range(recycle):
@@ -128,5 +131,5 @@ if __name__ == '__main__':
     print('开始分析···')
     # print('请输入提交代码url：', end='')
     # url = input()
-    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582023289869.zip'
+    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/48117/%E5%BA%8F%E5%88%97%E5%85%83%E7%B4%A0_1584415591348.zip'
     print(ScoreEvaluator.getScore(url))
