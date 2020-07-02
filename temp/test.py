@@ -1,5 +1,5 @@
 import json
-import random
+
 import DataUtils
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
@@ -7,16 +7,22 @@ deal_case_map = {}  # 修正后的数据
 
 
 class CaseData:
-    def __init__(self, user_id, url, score):
+    def __init__(self, case_id, user_id, url, score, time, line):
         self.user_id = user_id
+        self.case_id = case_id
         self.url = url
         self.score = score
-        self.time = random.random()
-        self.line = random.random()
+        self.time = time
+        self.line = line
         # [self.time, self.line] = ScoreEvaluator.getscore(url)
 
     def __str__(self):
-        return 'user' + str(self.user_id) + ' score' + str(self.score)+' time' + str(self.time)+' line' + str(self.line)
+        return 'user' + str(self.user_id) + ' score' + str(self.score) + ' time' + str(self.time) + ' line' + str(
+            self.line)
+
+    def __copy__(self):
+        copy = CaseData(self.case_id, self.user_id, self.url, self.score, self.time, self.line)
+        return copy
 
 
 # 数据预处理
@@ -35,12 +41,13 @@ def pre_deal_data():
         lineVAR = DataUtils.getVAR(lineList)
         deal_case_map[case_id] = []
         for raw_case in raw_case_map[case_id]:
-            temp = CaseData(raw_case.user_id, raw_case.url, raw_case.score)
+            temp = raw_case.copy()
             # TODO:缺省值处理加载这里，temp是新的对象
             temp.time = DataUtils.omega(raw_case.time, timeAVG, timeVAR)
             temp.line = DataUtils.omega(raw_case.line, lineAVG, lineVAR)
             deal_case_map[case_id].append(temp)
             print(temp)
+
 
 # 数据读取
 def read_data():
@@ -57,8 +64,9 @@ def read_data():
                 raw_case_map[case['case_id']] = []
             # temp = CaseData(student,url,raw_score)
             # print(temp)
-            raw_case_map[case['case_id']].append(CaseData(student, url, raw_score))
-            # print(raw_case_map)
+            time = 1
+            line = 1
+            raw_case_map[case['case_id']].append(CaseData(case['case_id'], student, url, raw_score, time, line))
     # print(raw_case_map)
 
 
