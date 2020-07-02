@@ -42,22 +42,24 @@ class ScoreEvaluator:
     all_the_code = []
 
     @classmethod
-    # src_url 代码包url
     def read_from_url(cls, src_url):
-        request.urlretrieve(src_url, 'code.zip')
-        src = zipfile.ZipFile('code.zip')
-        src.extractall('tmp')
-        tmp_dir = 'tmp/' + src.namelist()[0]
-        files = zipfile.ZipFile(tmp_dir)  # 解压完成
-        files.extractall(cls.work_dir + '/resource')
-        # 这边的代码是用来处理后事的
-        # 这里我会报错，移到后面计算完一起删除 --- by cyz
+        """
+        :param src_url: 代码包的src url
+        :return: 解压后 main.py 文件的路径
+        """
+        def retrieve():
+            request.urlretrieve(src_url, 'code.zip')  # 下载文件
+            src = zipfile.ZipFile('code.zip')
+            src.extractall('tmp')
+            tmp_dir = 'tmp/' + src.namelist()[0]
+            files = zipfile.ZipFile(tmp_dir)  # 解压完成
+            files.extractall(cls.work_dir + '/resource')
+        retrieve()  # 函数调用结束后释放系统空间，就不用管文件占用什么的了
+        shutil.rmtree(cls.work_dir + '\\tmp')
+        os.remove(cls.work_dir + '\\code.zip')
         # os.system('rm -rf {}'.format(cls.work_dir + '/tmp'))  # 删除非空空目录，这个命令很危险路径不能错
-        # deleteDir(cls.work_dir + '/tmp')
         # os.system('rm {}'.format(cls.work_dir + '/code.zip'))  # 删除zip文件
-        # deleteFile(cls.work_dir + '/code.zip')
         # 这里是用的macOS终端命令 不一定适用于Windows cmd，如果报错改成相应的cmd命令即可
-
         return cls.work_dir + '/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
 
     @classmethod
@@ -73,22 +75,22 @@ class ScoreEvaluator:
     @classmethod
     # 循环次数recycle，这是为了减少os.system运行python导致的时间误差，默认为5
     # 测试用例输出的分割符，默认为空格
-    def getScore(cls, code_url, recycle=5, separator=' '):
+    def get_score(cls, code_url, recycle=5, separator=' '):
         file = cls.read_from_url(code_url)
         ScoreEvaluator.load(file)  # 导入文件，提取信息
 
         # cpp提交，需要修改
-        if Defender.cppDefend(cls.all_the_code):
+        if Defender.cpp_defend(cls.all_the_code):
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
             return False, 1, 0, cls.lines  # cpp提交
 
         # 作弊代码
-        cheats = Defender.cheatDefend(separator, cls.all_the_code, cls.cases)
+        cheats = Defender.cheat_defend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
-            temp = 1 - cheats # 防止返回负数
+            temp = 1 - cheats  # 防止返回负数
             if temp < 0:
                 temp = 0
             return True, temp, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
@@ -132,4 +134,4 @@ if __name__ == '__main__':
     # print('请输入提交代码url：', end='')
     # url = input()
     url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/48117/%E5%BA%8F%E5%88%97%E5%85%83%E7%B4%A0_1584415591348.zip'
-    print(ScoreEvaluator.getScore(url))
+    print(ScoreEvaluator.get_score(url))

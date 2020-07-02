@@ -61,7 +61,7 @@ def read_data():
         for case in cases:
             raw_score = case['upload_records'][-1]['score']
             url = case['upload_records'][-1]['code_url']
-            res = ScoreEvaluator.getScore(url)
+            res = ScoreEvaluator.get_score(url)
             if res[0]:  # 如果不是异常提交，才加入
                 if case['case_id'] not in raw_case_map.keys():
                     raw_case_map[case['case_id']] = []

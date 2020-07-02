@@ -16,4 +16,4 @@ if __name__ == '__main__':
             for upload in uploads:
                 url = upload['code_url']
                 print(url)
-                print(ScoreEvaluator.getScore(url))
+                print(ScoreEvaluator.get_score(url))
