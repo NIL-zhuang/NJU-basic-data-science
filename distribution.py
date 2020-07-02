@@ -35,6 +35,8 @@ if __name__ == '__main__':
                 case_map[case['case_id']] = {}
                 case_map[case['case_id']]['student'] = [int(student)]
     arr = []
+
+    # print(len(case_map.keys()))
     for i in case_map.keys():
         print('题目id', i, end=" ")
         print('作答人数', len(case_map[i]['student']))

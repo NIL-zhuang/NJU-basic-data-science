@@ -1,7 +1,8 @@
 # 探索学生分组情况
 import json
 
-group_list = {}
+group_list = {}  # 每组学生列表
+question_list = []  # 每组题目列表
 
 
 def contain(list1, list2):
@@ -12,9 +13,9 @@ def contain(list1, list2):
     return True
 
 
-if __name__ == '__main__':
+# 进行分组
+def devideGroup():
     case_map = {}  # 题目集合
-    question_list = []
     f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
@@ -28,9 +29,9 @@ if __name__ == '__main__':
             if len(question_list) == 0 or tmp[0] != question_list[-1][0]:
                 question_list.append(tmp)
             # 把下面三行注释打开就知道为什么是五组题目了 不过有点奇怪有个做了206题的
-            print('student', student, end=" ")
-            print(len(tmp), end=" ")
-            print(tmp)
+            # print('student', student, end=" ")
+            # print(len(tmp), end=" ")
+            # print(tmp)
 
     print("-----------------------------------")
     print("----------五组的题目分布如下-----------")
@@ -62,5 +63,18 @@ if __name__ == '__main__':
         print('第', group, '组 人数共', len(group_list[group]))
         # print(group_list[group])
 
+    print('打印分组失败名单...')
     for user in failure_user.keys():
-        print(failure_user[user])
+        print(user, failure_user[user])
+        # print(len(failure_user[user]))
+
+
+# 获取分组名单
+def getStudentGroup(index):
+    devideGroup()
+    return group_list[index]
+
+# 获取对应组的题目列表
+def getQuestionGroup(index):
+    devideGroup()
+    return question_list[index]
