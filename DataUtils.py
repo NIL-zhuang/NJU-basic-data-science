@@ -1,14 +1,12 @@
-def getAVG(list):
-    a = sum(list)
-    return a / len(list)
+import numpy as np
 
 
-def getVAR(list):
-    avg = getAVG(list)
-    sum = 0
-    for i in list:
-        sum += (i - avg) * (i - avg)
-    return sum / len(list)
+def getAVG(arr):
+    return np.average(arr)
+
+
+def getVAR(arr):
+    return np.var(arr)
 
 
 def omega(x, avg, var):
@@ -16,17 +14,16 @@ def omega(x, avg, var):
         return 1
     temp = (x - avg) / var
     if temp > 1.29:
-        temp = 1.129
+        return 1.129
     elif temp < -1.29:
-        temp = 0.871
+        return 0.871
     else:
-        temp = 1 + temp / 10
-    return temp
-    # print(temp)
+        return 1 + temp / 10
 
 
-l = [1, 2, 3, 4, 5, 6]
-pj = getAVG(l)
-fc = getVAR(l)
-for i in l:
-    omega(i, pj, fc)
+if __name__ == '__main__':
+    array = [1, 2, 3, 4, 5, 6]
+    pj = getAVG(array)
+    fc = getVAR(array)
+    for i in array:
+        omega(i, pj, fc)
