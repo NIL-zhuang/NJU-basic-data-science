@@ -138,6 +138,7 @@ class ScoreEvaluator:
         for i in range(recycle):
             for case in cls.cases:
                 inputs = case["input"] + '\n'
+
                 test = open(cls.work_dir + '/test.txt', 'w')
                 test.write(inputs + '\n')
                 test.close()
@@ -152,11 +153,14 @@ class ScoreEvaluator:
                 except subprocess.TimeoutExpired:
                     print('用例运行超时！')
                     return True, 1, 'TIMEOUT', cls.lines
+                    cls.afterTheEvaluate()
                 except subprocess.CalledProcessError:
                     print('程序运行错误！')
                     return True, 0, 'ERROR', cls.lines
+                    cls.afterTheEvaluate()
 
-
+                # finally:
+                #     cls.afterTheEvaluate()
                 # 返回值为0说明执行成功，否则说明提交的代码有问题, 可能是根本运行不通，也可能是严重超时
                 # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
                 # if res:

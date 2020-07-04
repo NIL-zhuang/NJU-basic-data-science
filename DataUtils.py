@@ -1,3 +1,5 @@
+from math import sqrt
+
 import numpy as np
 
 
@@ -12,13 +14,13 @@ def getVAR(arr):
 def omega(x, avg, var):
     if var == 0:
         return 1
-    temp = (x - avg) / var
+    temp = (x - avg) / sqrt(var)
     if temp > 1.29:
-        return 1.129
-    elif temp < -1.29:
         return 0.871
+    elif temp < -1.29:
+        return 1.129
     else:
-        return 1 + temp / 10
+        return 1 - temp / 10
 
 
 if __name__ == '__main__':
