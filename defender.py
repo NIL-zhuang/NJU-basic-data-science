@@ -29,8 +29,10 @@ class Defender:
             # 逐行代码解释
             for line in codes:
                 code = re.sub(r'#.*$', "", line)  # 忽略代码中的注释
-                if code == '' or '+' in code or '-' in code or '*' in code or '/' in code or '=' in code:
+                if code == '': continue
+                if '+' in code or '-' in code or '*' in code or '/' in code or '=' in code:
                     continue
+                if 'for' in code: continue
                 # 代码为空，或者四则运算、赋值等情况
                 times = 0  # 分段匹配命中次数
                 # 暂时需要排除true or false，这个凭借输出不好判断，详见else逻辑块

@@ -1,8 +1,10 @@
 import json
 import os
 import shutil
-import time
 import zipfile
+import signal
+import time
+import subprocess
 from urllib import request
 
 from defender import Defender
@@ -32,6 +34,35 @@ def macDeleteFile(file):
     os.system('rm {}'.format(dir))
 
 
+def after_timeout():
+    print('代码超时!')
+    work_dir = os.path.abspath('.')
+    deleteFile(work_dir + '/test.txt')
+    deleteDir(work_dir + '/resource')
+    deleteDir(work_dir + '/tmp')
+    deleteFile(work_dir + '/code.zip')
+
+
+def time_limit(set_time, callback):
+    def wraps(func):
+        def handler(signum, frame):
+            raise RuntimeError()
+
+        def deco(*args, **kwargs):
+            try:
+                signal.signal(signal.SIGALRM, handler)
+                signal.alarm(set_time)  # set_time单位为s
+                res = func(*args, **kwargs)
+                signal.alarm(0)
+                return res
+            except RuntimeError as e:
+                callback()
+
+        return deco
+
+    return wraps
+
+
 class ScoreEvaluator:
     def __init__(self):
         pass
@@ -42,24 +73,22 @@ class ScoreEvaluator:
     all_the_code = []
 
     @classmethod
+    # src_url 代码包url
     def read_from_url(cls, src_url):
-        """
-        :param src_url: 代码包的src url
-        :return: 解压后 main.py 文件的路径
-        """
-        def retrieve():
-            request.urlretrieve(src_url, 'code.zip')  # 下载文件
-            src = zipfile.ZipFile('code.zip')
-            src.extractall('tmp')
-            tmp_dir = 'tmp/' + src.namelist()[0]
-            files = zipfile.ZipFile(tmp_dir)  # 解压完成
-            files.extractall(cls.work_dir + '/resource')
-        retrieve()  # 函数调用结束后释放系统空间，就不用管文件占用什么的了
-        shutil.rmtree(cls.work_dir + '\\tmp')
-        os.remove(cls.work_dir + '\\code.zip')
+        request.urlretrieve(src_url, 'code.zip')
+        src = zipfile.ZipFile('code.zip')
+        src.extractall('tmp')
+        tmp_dir = 'tmp/' + src.namelist()[0]
+        files = zipfile.ZipFile(tmp_dir)  # 解压完成
+        files.extractall(cls.work_dir + '/resource')
+        # 这边的代码是用来处理后事的
+        # 这里我会报错，移到后面计算完一起删除 --- by cyz
         # os.system('rm -rf {}'.format(cls.work_dir + '/tmp'))  # 删除非空空目录，这个命令很危险路径不能错
+        # deleteDir(cls.work_dir + '/tmp')
         # os.system('rm {}'.format(cls.work_dir + '/code.zip'))  # 删除zip文件
+        # deleteFile(cls.work_dir + '/code.zip')
         # 这里是用的macOS终端命令 不一定适用于Windows cmd，如果报错改成相应的cmd命令即可
+
         return cls.work_dir + '/resource/main.py'  # resource文件夹存放爬取来的、已解压的文件资源
 
     @classmethod
@@ -71,22 +100,31 @@ class ScoreEvaluator:
         with open(test_cases, 'r') as f:
             cls.cases = json.load(f)
 
+    @classmethod
+    def afterTheEvaluate(cls):
+        # os.system('rm {}'.format(cls.work_dir + '/test.txt'))
+        deleteFile(cls.work_dir + '/test.txt')
+        # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
+        deleteDir(cls.work_dir + '/resource')
+
+        deleteDir(cls.work_dir + '/tmp')
+        deleteFile(cls.work_dir + '/code.zip')
+
     # 返回值是一个元组
     @classmethod
     # 循环次数recycle，这是为了减少os.system运行python导致的时间误差，默认为5
     # 测试用例输出的分割符，默认为空格
-    def get_score(cls, code_url, recycle=5, separator=' '):
+    def getScore(cls, code_url, recycle=5, separator=' '):
         file = cls.read_from_url(code_url)
         ScoreEvaluator.load(file)  # 导入文件，提取信息
 
-        # cpp提交，需要修改
-        if Defender.cpp_defend(cls.all_the_code):
+        if Defender.cppDefend(cls.all_the_code):
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
             return False, 1, 0, cls.lines  # cpp提交
 
         # 作弊代码
-        cheats = Defender.cheat_defend(separator, cls.all_the_code, cls.cases)
+        cheats = Defender.cheatDefend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
@@ -96,36 +134,43 @@ class ScoreEvaluator:
             return True, temp, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0  # 运行时间
+
         for i in range(recycle):
             for case in cls.cases:
                 inputs = case["input"] + '\n'
                 test = open(cls.work_dir + '/test.txt', 'w')
-                test.write(inputs)
+                test.write(inputs + '\n')
                 test.close()
                 timestamp_start = time.time() * 1000
-                # os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt',
-                #                                     cls.work_dir + '/test.txt'))
-                # res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
-                res = os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
-                # 返回值为0说明执行成功，否则说明提交的代码有问题
+                # os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
+                # res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir +
+                # '/test.txt'))
+                try:
+                    child = subprocess.run(
+                        'python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'),
+                        timeout=10, shell=True, check=True)
+                except subprocess.TimeoutExpired:
+                    print('用例运行超时！')
+                    return True, 1, 'TIMEOUT', cls.lines
+                except subprocess.CalledProcessError:
+                    print('程序运行错误！')
+                    return True, 0, 'ERROR', cls.lines
+
+                # 返回值为0说明执行成功，否则说明提交的代码有问题, 可能是根本运行不通，也可能是严重超时
                 # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
-                if res:
-                    print('提交代码有错误，无法正常运行')
-                    return True, 0, 0, cls.lines
+                # if res:
+                #     print('提交代码有错误，无法正常运行')
+                #     cls.afterTheEvaluate()
+                #     return True, 0, 0, cls.lines
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
-        runtime /= recycle  # 通过取平均值尽量减少os.system带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
+
+        runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
+        print('运行时间为{}ms'.format(runtime))
         # 确保配置了python的环境变量
         # windows环境下将上面的"python3"修改成"python"
-
-        # os.system('rm {}'.format(cls.work_dir + '/test.txt'))
-        deleteFile(cls.work_dir + '/test.txt')
-        # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
-        deleteDir(cls.work_dir + '/resource')
-
-        deleteDir(cls.work_dir + '/tmp')
-        deleteFile(cls.work_dir + '/code.zip')
-        return True, 1, runtime, cls.lines  # 暂时不知道怎么评分 还是先就返回个运行时间吧
+        cls.afterTheEvaluate()
+        return True, 1, runtime, cls.lines
 
 
 # 程序入口
@@ -133,5 +178,8 @@ if __name__ == '__main__':
     print('开始分析···')
     # print('请输入提交代码url：', end='')
     # url = input()
-    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/48117/%E5%BA%8F%E5%88%97%E5%85%83%E7%B4%A0_1584415591348.zip'
-    print(ScoreEvaluator.get_score(url))
+    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/48117/%E5%BA%8F%E5%88%97%E5%85%83%E7%B4' \
+          '%A0_1584415591348.zip '
+    # url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1' \
+    #      '%BB_1582023289869.zip '
+    print(ScoreEvaluator.getScore(url))

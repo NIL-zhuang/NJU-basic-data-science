@@ -1,0 +1,288 @@
+student 3544
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582023289869.zip
+运行时间为154.400830078125ms
+评估结果———— (True, 1, 154.400830078125, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582557829552.zip
+程序运行错误！
+评估结果———— (True, 0, 'ERROR', 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582557835991.zip
+运行时间为359.127783203125ms
+评估结果———— (True, 1, 359.127783203125, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558130012.zip
+运行时间为359.961279296875ms
+评估结果———— (True, 1, 359.961279296875, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558139071.zip
+运行时间为172.273291015625ms
+评估结果———— (True, 1, 172.273291015625, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558143538.zip
+运行时间为179.735888671875ms
+评估结果———— (True, 1, 179.735888671875, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/3544/%E4%B8%AD%E7%BC%80%E8%BD%AC%E5%90%8E%E7%BC%80_1583213500044.zip
+运行时间为226.424755859375ms
+评估结果———— (True, 1, 226.424755859375, 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/3544/%E4%B8%AD%E7%BC%80%E8%BD%AC%E5%90%8E%E7%BC%80_1583213530910.zip
+运行时间为240.540087890625ms
+评估结果———— (True, 1, 240.540087890625, 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/3544/%E4%B8%AD%E7%BC%80%E8%BD%AC%E5%90%8E%E7%BC%80_1583213533606.zip
+运行时间为222.430126953125ms
+评估结果———— (True, 1, 222.430126953125, 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/3544/%E4%B8%AD%E7%BC%80%E8%BD%AC%E5%90%8E%E7%BC%80_1583213536563.zip
+运行时间为227.75390625ms
+评估结果———— (True, 1, 227.75390625, 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4240/3544/%E5%90%8E%E7%BC%80%E6%8E%92%E5%BA%8F_1581948553391.zip
+发现面向用例代码——print(5 3 1 4 2) 当前发现作弊次数1
+评估结果———— (True, 0.5, 0, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4240/3544/%E5%90%8E%E7%BC%80%E6%8E%92%E5%BA%8F_1581948568939.zip
+发现面向用例代码——print('5 3 1 4 2') 当前发现作弊次数1
+评估结果———— (True, 0.5, 0, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4240/3544/%E5%90%8E%E7%BC%80%E6%8E%92%E5%BA%8F_1581995632462.zip
+发现面向用例代码——print('5 3 1 4 2') 当前发现作弊次数1
+评估结果———— (True, 0.5, 0, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4240/3544/%E5%90%8E%E7%BC%80%E6%8E%92%E5%BA%8F_1582105167736.zip
+发现面向用例代码——print('5 3 1 4 2') 当前发现作弊次数1
+评估结果———— (True, 0.5, 0, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4240/3544/%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0_1584197128695.zip
+运行时间为147.7001953125ms
+评估结果———— (True, 1, 147.7001953125, 2)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4241/3544/%E6%A3%AE%E9%9B%85%E5%AD%A6%E5%8A%A0%E6%B3%95_1582103355267.zip
+运行时间为211.567138671875ms
+评估结果———— (True, 1, 211.567138671875, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4241/3544/%E6%A3%AE%E9%9B%85%E5%AD%A6%E5%8A%A0%E6%B3%95_1582354681537.zip
+运行时间为227.429541015625ms
+评估结果———— (True, 1, 227.429541015625, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582023289869.zip
+运行时间为186.4609375ms
+评估结果———— (True, 1, 186.4609375, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582557829552.zip
+程序运行错误！
+评估结果———— (True, 0, 'ERROR', 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582557835991.zip
+运行时间为356.49306640625ms
+评估结果———— (True, 1, 356.49306640625, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558130012.zip
+运行时间为357.488720703125ms
+评估结果———— (True, 1, 357.488720703125, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558139071.zip
+运行时间为180.621875ms
+评估结果———— (True, 1, 180.621875, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1%BB_1582558143538.zip
+运行时间为183.605029296875ms
+评估结果———— (True, 1, 183.605029296875, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4257/3544/%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0_1582719193939.zip
+运行时间为188.244384765625ms
+评估结果———— (True, 1, 188.244384765625, 11)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4257/3544/%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0_1582719220548.zip
+运行时间为184.13818359375ms
+评估结果———— (True, 1, 184.13818359375, 11)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4257/3544/%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0_1582719222648.zip
+运行时间为186.72060546875ms
+评估结果———— (True, 1, 186.72060546875, 11)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4257/3544/%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0_1582719225637.zip
+运行时间为189.793798828125ms
+评估结果———— (True, 1, 189.793798828125, 11)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4257/3544/%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0_1582719227703.zip
+运行时间为187.27509765625ms
+评估结果———— (True, 1, 187.27509765625, 11)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4262/3544/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE_1582131858473.zip
+发现面向用例代码——print([1,1]) 当前发现作弊次数1
+评估结果———— (True, 0.8, 0, 1)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4262/3544/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE_1582131874386.zip
+发现面向用例代码——print([1,1]) 当前发现作弊次数1
+评估结果———— (True, 0.8, 0, 1)
+student 48117
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582445732269.zip
+运行时间为141.096875ms
+评估结果———— (True, 1, 141.096875, 4)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582445739632.zip
+运行时间为141.07900390625ms
+评估结果———— (True, 1, 141.07900390625, 4)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582445788354.zip
+运行时间为144.3453125ms
+评估结果———— (True, 1, 144.3453125, 5)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582445825580.zip
+运行时间为151.77412109375ms
+评估结果———— (True, 1, 151.77412109375, 8)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582445840507.zip
+运行时间为145.88623046875ms
+评估结果———— (True, 1, 145.88623046875, 5)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%90%E4%B8%B2%E6%9F%A5%E6%89%BE_1582446238035.zip
+运行时间为147.9111328125ms
+评估结果———— (True, 1, 147.9111328125, 13)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582531975419.zip
+运行时间为4333.69755859375ms
+评估结果———— (True, 1, 4333.69755859375, 13)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582531997961.zip
+运行时间为4545.564453125ms
+评估结果———— (True, 1, 4545.564453125, 13)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582676514375.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 23)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582676540417.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 24)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582676558412.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 24)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582677251099.zip
+运行时间为3924.351025390625ms
+评估结果———— (True, 1, 3924.351025390625, 16)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582677426107.zip
+运行时间为4602.61484375ms
+评估结果———— (True, 1, 4602.61484375, 16)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679118397.zip
+运行时间为2163.0259765625ms
+评估结果———— (True, 1, 2163.0259765625, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679305420.zip
+运行时间为2021.094189453125ms
+评估结果———— (True, 1, 2021.094189453125, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679328651.zip
+运行时间为2025.84873046875ms
+评估结果———— (True, 1, 2025.84873046875, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679453402.zip
+运行时间为2469.9697265625ms
+评估结果———— (True, 1, 2469.9697265625, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679649681.zip
+运行时间为2367.812060546875ms
+评估结果———— (True, 1, 2367.812060546875, 20)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679707204.zip
+运行时间为2332.75703125ms
+评估结果———— (True, 1, 2332.75703125, 20)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582679720071.zip
+运行时间为2369.794775390625ms
+评估结果———— (True, 1, 2369.794775390625, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858246021.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858260472.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858274877.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858289685.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858550055.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 22)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858574579.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 22)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858595456.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 22)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582858812571.zip
+运行时间为4416.0662109375ms
+评估结果———— (True, 1, 4416.0662109375, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582859090539.zip
+运行时间为6059.659814453125ms
+评估结果———— (True, 1, 6059.659814453125, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582859158800.zip
+运行时间为5767.923046875ms
+评估结果———— (True, 1, 5767.923046875, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582859563102.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%89%BE%E7%9B%B8%E5%90%8C%E5%AD%97%E7%AC%A6_1582859573404.zip
+评估结果———— (False, 1, 0, 89)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605025008.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 29)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605257329.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 30)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605384763.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 30)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605493711.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 30)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605591502.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605705056.zip
+程序运行错误！
+评估结果———— (True, 0, 'ERROR', 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605712372.zip
+程序运行错误！
+评估结果———— (True, 0, 'ERROR', 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605724463.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 32)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605821688.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 33)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582605896540.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 34)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606071120.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 34)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606235414.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 35)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606288783.zip
+运行时间为445.09267578125ms
+评估结果———— (True, 1, 445.09267578125, 39)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606434255.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 34)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606458606.zip
+用例运行超时！
+评估结果———— (True, 1, 'TIMEOUT', 35)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E7%94%B2%E8%8B%AF%E5%85%88%E7%94%9F%E5%92%8C%E5%A4%A7%E4%B8%AD%E9%94%8B%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2_1582606539641.zip
+运行时间为499.16669921875ms
+评估结果———— (True, 1, 499.16669921875, 39)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/ArrayPoisonousSuffixProblem_1582531374449.zip
+运行时间为837.958740234375ms
+评估结果———— (True, 1, 837.958740234375, 13)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534364057.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534386357.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534487234.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 14)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534586690.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+发现面向用例代码——    print(0 0 0 0 0 0 0 0 0 0) 当前发现作弊次数2
+评估结果———— (True, 0.6666666666666667, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534596984.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+发现面向用例代码——    print(0 0 0 0 0 0 0 0 0 0) 当前发现作弊次数2
+评估结果———— (True, 0.6666666666666667, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534607463.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+发现面向用例代码——    print('0 0 0 0 0 0 0 0 0 0') 当前发现作弊次数2
+评估结果———— (True, 0.6666666666666667, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534619929.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534647827.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534658624.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534676581.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 18)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534738309.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 20)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534785359.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582534797749.zip
+发现面向用例代码——    for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 17)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535006948.zip
+发现面向用例代码——        for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 19)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535119790.zip
+发现面向用例代码——        for i in range(10): 当前发现作弊次数1
+评估结果———— (True, 0.8333333333333334, 0, 21)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%97%E4%B8%B2%E8%A6%86%E7%9B%96_1582535609081.zip
+运行时间为144.46142578125ms
+评估结果———— (True, 1, 144.46142578125, 19)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%97%E4%B8%B2%E8%A6%86%E7%9B%96_1582535655415.zip
+运行时间为153.026416015625ms
+评估结果———— (True, 1, 153.026416015625, 19)
+code_url: http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E5%AD%97%E4%B8%B2%E8%A6%86%E7%9B%96_1582535876761.zip
