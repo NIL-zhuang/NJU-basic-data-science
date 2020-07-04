@@ -118,13 +118,13 @@ class ScoreEvaluator:
         file = cls.read_from_url(code_url)
         ScoreEvaluator.load(file)  # 导入文件，提取信息
 
-        if Defender.cppDefend(cls.all_the_code):
+        if Defender.cpp_defend(cls.all_the_code):
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
             return False, 1, 0, cls.lines  # cpp提交
 
         # 作弊代码
-        cheats = Defender.cheatDefend(separator, cls.all_the_code, cls.cases)
+        cheats = Defender.cheat_defend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
@@ -155,6 +155,7 @@ class ScoreEvaluator:
                 except subprocess.CalledProcessError:
                     print('程序运行错误！')
                     return True, 0, 'ERROR', cls.lines
+
 
                 # 返回值为0说明执行成功，否则说明提交的代码有问题, 可能是根本运行不通，也可能是严重超时
                 # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
