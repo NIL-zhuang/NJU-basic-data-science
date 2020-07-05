@@ -1,10 +1,10 @@
 import json
 import os
 import shutil
-import zipfile
 import signal
-import time
 import subprocess
+import time
+import zipfile
 from urllib import request
 
 from defender import Defender
@@ -16,6 +16,7 @@ def deleteDir(dir):
 
 def windowsDeleteDir(dir):
     shutil.rmtree(dir)
+    # os.system('rd /r/f/q {}'.format(dir))
 
 
 def macDeleteDir(dir):
@@ -28,6 +29,7 @@ def deleteFile(file):
 
 def windowsDeleteFile(file):
     os.remove(file)
+    # os.system('del /s/f/q {}'.format(dir))
 
 
 def macDeleteFile(file):
@@ -102,11 +104,8 @@ class ScoreEvaluator:
 
     @classmethod
     def afterTheEvaluate(cls):
-        # os.system('rm {}'.format(cls.work_dir + '/test.txt'))
-        deleteFile(cls.work_dir + '/test.txt')
-        # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))  # 完成分析后，删除下载下来的资源
+        # deleteFile(cls.work_dir + '/test.txt')
         deleteDir(cls.work_dir + '/resource')
-
         deleteDir(cls.work_dir + '/tmp')
         deleteFile(cls.work_dir + '/code.zip')
 
@@ -139,37 +138,22 @@ class ScoreEvaluator:
             for case in cls.cases:
                 inputs = case["input"] + '\n'
 
-                test = open(cls.work_dir + '/test.txt', 'w')
-                test.write(inputs + '\n')
-                test.close()
+                # test = open(cls.work_dir + '/test.txt', 'w')
+                # test.write(inputs + '\n')
+                # test.close()
                 timestamp_start = time.time() * 1000
-                # os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
-                # res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir +
-                # '/test.txt'))
+                # mac用python3
+                process = subprocess.Popen(['python', file], stdin=subprocess.PIPE,stdout=subprocess.PIPE, shell=True, close_fds=True)
                 try:
-                    child = subprocess.run(
-                        'python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'),
-                        timeout=10, shell=True, check=True)
+                    process.communicate(inputs.encode(),10)
                 except subprocess.TimeoutExpired:
                     print('用例运行超时！')
+                    process.terminate()
+                    process.kill()
+                    cls.afterTheEvaluate()
                     return True, 1, 'TIMEOUT', cls.lines
-                    cls.afterTheEvaluate()
-                except subprocess.CalledProcessError:
-                    print('程序运行错误！')
-                    return True, 0, 'ERROR', cls.lines
-                    cls.afterTheEvaluate()
-
-                # finally:
-                #     cls.afterTheEvaluate()
-                # 返回值为0说明执行成功，否则说明提交的代码有问题, 可能是根本运行不通，也可能是严重超时
-                # 与真实的运行时间有略微差异，因为是调用os模块从命令行调用的
-                # if res:
-                #     print('提交代码有错误，无法正常运行')
-                #     cls.afterTheEvaluate()
-                #     return True, 0, 0, cls.lines
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
-
         runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
         print('运行时间为{}ms'.format(runtime))
         # 确保配置了python的环境变量

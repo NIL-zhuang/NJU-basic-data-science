@@ -37,6 +37,8 @@ def ScoreEvaluator_getScore_save(group):
             url = case['upload_records'][-1]['code_url']
             res = ScoreEvaluator.getScore(url)
             print(res)
+            if res[2] == 'TIMEOUT':
+                print(student,case_id)
             res_map[student][case_id] = res
     out.write(json.dumps(res_map))
     f.close()
