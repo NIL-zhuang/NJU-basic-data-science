@@ -1,6 +1,6 @@
 import json
-import random
 from math import sqrt
+import numpy as np
 
 import DataUtils
 from StudentGroup import getQuestionGroup, getStudentGroup
@@ -8,8 +8,8 @@ from evaluator import ScoreEvaluator
 from temp.CaseData import CaseData
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
-case_student_map = {}  # 题目*学生列表
-student_case_map = {}  # 学生*题目列表
+case_student_map = {}  # 题目-学生列表
+student_case_map = {}  # 学生-题目列表
 student_ability = {}  # 学生能力值
 case_difficulty = {}  # 题目难度
 alpha = 1.15  # 运行时间权重
@@ -17,15 +17,17 @@ beta = 1.05  # 代码行数权重
 
 
 # 算一次，然后存到json里，要不太浪费时间了
-def ScoreEvaluator_getScore_save(group):
+def score_evaluator_get_score_save(group):
+    """
+    :param group: 分组
+    :return: 讲组内数据写入res.json中
+    """
     init_map(group)
     out = open('res.json', 'w')
     res_map = {}
-    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    f = open('C:\\Users\\NIL\\Documents\\GitHub\\NJU-basic-data-science\\test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
-    res = f.read()
-    data = json.loads(res)
-    # for student in data:
+    data = json.loads(f.read())
     for student in student_case_map.keys():
         res_map[student] = {}
         cases = data[student]['cases']
@@ -41,12 +43,6 @@ def ScoreEvaluator_getScore_save(group):
                 print(student,case_id)
             res_map[student][case_id] = res
     out.write(json.dumps(res_map))
-    f.close()
-    out.close()
-
-
-def mock_getScore(url):
-    return True, 1, random.random(), random.random()
 
 
 # 初始化四个map
@@ -75,10 +71,10 @@ def pre_deal_data():
             timeList.append(raw_case.time)
             lineList.append(raw_case.line)
         # print(timeList)
-        timeAVG = DataUtils.getAVG(timeList)
-        timeVAR = DataUtils.getVAR(timeList)
-        lineAVG = DataUtils.getAVG(lineList)
-        lineVAR = DataUtils.getVAR(lineList)
+        timeAVG = np.average(timeList)
+        timeVAR = np.var(timeList)
+        lineAVG = np.average(lineList)
+        lineVAR = np.var(lineList)
         for raw_case in raw_case_map[case_id]:
             temp = raw_case.copy()
             # TODO:缺省值处理加在这里，temp是新的对象
@@ -92,7 +88,7 @@ def pre_deal_data():
 
 # 数据读取
 def read_data():
-    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    f = open('test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
@@ -143,8 +139,8 @@ def calculate(times):
         array = []
         for value in student_ability.values():
             array.append(value)
-        B_AVG = DataUtils.getAVG(array)
-        B_VAR = DataUtils.getVAR(array)
+        B_AVG = np.average(array)
+        B_VAR = np.var(array)
         for q in case_difficulty.keys():
             temp = 0
             count = 0
@@ -165,8 +161,4 @@ def calculate(times):
 
 
 if __name__ == '__main__':
-    ScoreEvaluator_getScore_save(0)
-    # init_map(0)
-    # read_data()
-    # pre_deal_data()
-    # calculate(5)
+    score_evaluator_get_score_save(0)
