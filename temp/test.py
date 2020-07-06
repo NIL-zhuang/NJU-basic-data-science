@@ -65,22 +65,6 @@ def score_evaluator_get_score_save(group):
 
 def mock_getScore(url):
     return True, 1, random.random(), random.random()
-    data = json.loads(f.read())
-    for student in student_case_map.keys():
-        res_map[student] = {}
-        cases = data[student]['cases']
-        for case in cases:
-            case_id = case['case_id']
-            if len(case['upload_records']) == 0:
-                continue
-                # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
-            url = case['upload_records'][-1]['code_url']
-            res = ScoreEvaluator.getScore(url)
-            print(res)
-            if res[2] == 'TIMEOUT':
-                print(student,case_id)
-            res_map[student][case_id] = res
-    out.write(json.dumps(res_map))
 
 
 # 初始化四个map
