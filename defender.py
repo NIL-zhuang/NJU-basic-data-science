@@ -40,7 +40,8 @@ class Defender:
                 if output.lower() != 'true' and output.lower() != 'false':
                     standard = output.replace('\n', '').split(separator)  # 输出不一定是一个值，有可能是一组
                     for out in standard:
-                        times += 1 if out != '' and out in code and '[' + out + ']' not in code else 0
+                        if out.lower() != 'true' and out.lower() != 'false':  # 阻止对print(False)之类的误判
+                            times += 1 if out != '' and out in code and '[' + out + ']' not in code else 0
                         # 排除edge[0]等类似的误判
                 else:
                     standard = case_input.replace('\n', '').split(separator)
