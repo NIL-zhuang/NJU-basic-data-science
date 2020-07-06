@@ -111,9 +111,9 @@ def pre_deal_data():
 
 # 数据读取
 def read_data():
-    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
     f2 = open('group0.json', encoding='utf-8')
-    # f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
+    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
@@ -136,8 +136,8 @@ def read_data():
                 temp = CaseData(case_id, student, url, raw_score * res[1], res[2], res[3])
                 # print(temp)
                 raw_case_map[case_id].append(temp)
-            student_case_map[student][case_id] = temp
-            case_student_map[case_id][student] = temp
+                student_case_map[student][case_id] = temp
+                case_student_map[case_id][student] = temp
     # print(raw_case_map)
     f.close()
 
