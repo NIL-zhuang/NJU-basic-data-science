@@ -1,6 +1,6 @@
 import json
 import random
-import urllib
+from urllib import error as url_error
 from math import sqrt
 import numpy as np
 
@@ -27,15 +27,16 @@ def score_evaluator_get_score_save(group):
     init_map(group)
     out = open('res.json', 'w')
     res_map = {}
-    f = open('C:\\Users\\NIL\\Documents\\GitHub\\NJU-basic-data-science\\test_data.json', encoding='utf-8')
+    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
+    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     # for student in data:
     try:
         for student in student_case_map.keys():
 
-            print('----------------student:',student,'处理开始------------------------')
+            print('----------------student:', student, '处理开始------------------------')
             res_map[student] = {}
             cases = data[student]['cases']
             for case in cases:
@@ -55,7 +56,7 @@ def score_evaluator_get_score_save(group):
         out.write(json.dumps(res_map))
         f.close()
         out.close()
-    except urllib.error.URLError:
+    except url_error.URLError:
         print('出现异常')
         out.write(json.dumps(res_map))
         f.close()
@@ -125,7 +126,8 @@ def pre_deal_data():
 
 # 数据读取
 def read_data():
-    f = open('test_data.json', encoding='utf-8')
+    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    # f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)

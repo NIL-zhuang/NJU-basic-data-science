@@ -16,7 +16,8 @@ def contain(list1, list2):
 # 进行分组
 def devideGroup():
     case_map = {}  # 题目集合
-    f = open('C:\\Users\\NIL\\Documents\\GitHub\\NJU-basic-data-science\\test_data.json', encoding='utf-8')
+    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     for student in data:

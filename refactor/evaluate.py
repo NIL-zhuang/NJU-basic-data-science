@@ -39,13 +39,16 @@ class ScoreEvaluator:
         file = './resource/main.py'
         start_time = time.time()
         process = subprocess.Popen(['python', file], stdin=subprocess.PIPE,
-                                   stdout=subprocess.PIPE, shell=True, close_fds=True)
+                                   stdout=subprocess.PIPE, close_fds=True)
         try:
-            process.communicate(test_case.encode(), timeout=5)
+            process.communicate(test_case.encode(), timeout=10)
         except subprocess.TimeoutExpired:
             print('用例运行超时！')
-            process.terminate()
             process.kill()
             finish_eval(True, 1, 'TIMEOUT', self.lines)
+        if process.returncode != 0:
+            print('代码运行错误')
+            process.kill()
+            finish_eval(True, 1, 'ERROR', self.lines)
         end_time = time.time()
         return (end_time - start_time) * 1000

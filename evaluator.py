@@ -143,21 +143,20 @@ class ScoreEvaluator:
                 # test.close()
                 timestamp_start = time.time() * 1000
                 # mac用python3
-                process = subprocess.Popen(['python', file], stdin=subprocess.PIPE,stdout=subprocess.PIPE, shell=True, close_fds=True)
+                process = subprocess.Popen(['python3', file], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                           close_fds=True)
                 try:
-                    process.communicate(inputs.encode(),10)
+                    process.communicate(inputs.encode(encoding='UTF-8'), 10)
                 except subprocess.TimeoutExpired:
                     print('用例运行超时！')
-                    process.terminate()
                     process.kill()
                     cls.afterTheEvaluate()
                     return True, 1, 'TIMEOUT', cls.lines
-                except subprocess.CalledProcessError:
-                    print('程序运行错误！')
-                    process.terminate()
+                if process.returncode != 0:
+                    print('代码运行错误')
                     process.kill()
                     cls.afterTheEvaluate()
-                    return True, 0, 'ERROR', cls.lines
+                    return True, 1, 'ERROR', cls.lines
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
         runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
@@ -173,8 +172,7 @@ if __name__ == '__main__':
     print('开始分析···')
     # print('请输入提交代码url：', end='')
     # url = input()
-    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4239/48117/%E5%BA%8F%E5%88%97%E5%85%83%E7%B4' \
-          '%A0_1584415591348.zip '
+    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535119790.zip'
     # url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1' \
     #      '%BB_1582023289869.zip '
     print(ScoreEvaluator.getScore(url))
