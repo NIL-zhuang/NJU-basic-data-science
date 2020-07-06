@@ -152,6 +152,12 @@ class ScoreEvaluator:
                     process.kill()
                     cls.afterTheEvaluate()
                     return True, 1, 'TIMEOUT', cls.lines
+                except subprocess.CalledProcessError:
+                    print('程序运行错误！')
+                    process.terminate()
+                    process.kill()
+                    cls.afterTheEvaluate()
+                    return True, 0, 'ERROR', cls.lines
                 timestamp_end = time.time() * 1000
                 runtime += timestamp_end - timestamp_start
         runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
