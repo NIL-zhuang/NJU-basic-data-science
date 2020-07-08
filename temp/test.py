@@ -115,10 +115,10 @@ def pre_deal_data():
 
 # 数据读取
 def read_data():
-    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+
     f2 = open('group0.json', encoding='utf-8')
-    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
-    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
+    f = open('test_data.json', encoding='utf-8')
+
     res = f.read()
     data = json.loads(res)
     evaluator = json.loads(f2.read())
