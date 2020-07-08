@@ -30,8 +30,8 @@ class Defender:
             for line in codes:
                 code = re.sub(r'#.*$', "", line)  # 忽略代码中的注释
                 if code == '': continue
-                if '+' in code or '-' in code or '*' in code or '/' in code or '=' in code:
-                    continue
+                if '+' in code or '-' in code or '*' in code or '/' in code: continue
+                if '>' in code or '<' in code or '=' in code: continue
                 if 'for' in code or 'while' in code: continue
                 if 'def' in code or 'return' in code: continue
                 # 代码为空，或者四则运算、赋值等情况

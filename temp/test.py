@@ -2,6 +2,7 @@ import json
 import random
 from math import sqrt
 from urllib import error as url_error
+import zipfile
 
 import numpy as np
 
@@ -23,14 +24,14 @@ beta = 1.05  # 代码行数权重
 def score_evaluator_get_score_save(group):
     """
     :param group: 分组
-    :return: 讲组内数据写入res.json中
+    :return: 将组内数据写入res.json中
     """
     init_map(group)
-    out = open('res.json', 'w')
+    out = open('res4.json', 'w')
     res_map = {}
-    f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
+    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
-    # f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
+    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     # for student in data:
@@ -46,7 +47,10 @@ def score_evaluator_get_score_save(group):
                     continue
                     # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
                 url = case['upload_records'][-1]['code_url']
-                res = ScoreEvaluator.getScore(url)
+                try:
+                    res = ScoreEvaluator.getScore(url)
+                except zipfile.BadZipFile:
+                    print(url)
                 print('正在处理 student=', student, ',case_id=', case_id)
                 print(res)
                 if res[2] == 'TIMEOUT':
@@ -193,5 +197,5 @@ def run():
 
 
 if __name__ == '__main__':
-    # score_evaluator_get_score_save(0)
-    run()
+    score_evaluator_get_score_save(4)
+    # run()
