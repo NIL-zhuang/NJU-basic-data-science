@@ -77,6 +77,7 @@ def getStudentGroup(index):
     devideGroup()
     return group_list[index]
 
+
 # 获取对应组的题目列表
 def getQuestionGroup(index):
     devideGroup()

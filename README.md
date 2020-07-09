@@ -2,7 +2,7 @@
 
 ## 数据科学基础
 
-"反面向用例+代码评估"程序
+"反面向用例+代码评估+能力评价"程序
 
 ### 更新记录
 
@@ -12,8 +12,16 @@
 - 2020.07.02 程荣鑫：修改了evaluator.py和defender.py，添加了driver.py
 - 2020.07.02 陈彦泽：修改了evaluator.py中删除文件的方法，见使用说明
 - 2020.07.03~2020.07.06 程荣鑫&陈彦泽，用subprocess代替较老的模块os
+- 2020.07.09 程荣鑫：添加了abilities包，其中的abilities.py用于评估每个学生面对不同种类题目的表现
 
 ### 功能阐述
+
+- 反面向用例：我们的程序会尽可能去除那些"疑似作弊"的代码骗来的分数，以便进行后续的评估
+- 代码评估：我们的程序会根据代码行数、运行时间等等因素评估提交代码的质量
+- 题目难度分析：根据学生整体的做题表现尝试评估每道题目的难度
+- 能力评价：在上述三点之外，我们还给出每个学生的能力（数值化）
+
+### 数据说明&代码解释
 
 - evaluator类的getScore方法能返回一个元组，元素如下
     - 第一个返回值分三种情况，异常提交: False，正常提交: True
@@ -29,6 +37,7 @@
 - StudentGroup.py将学生分为五组
 - distribution.py画了一个题目作答人数的分布图
 - temp包下的为后续数据处理要用的，暂时没用上
+- abilities包中的数据为每个学生在各个种类题目上的表现，我们用0～100的浮点数来表示
 
 ### 使用方法
 
@@ -38,7 +47,7 @@
 
 - windows和mac下删除文件和运行python的指令不同，需要修改evaluator.py中的以下代码
 
-	```python
+	```
 	def deleteDir(dir):
 	    windowsDeleteDir(dir)
 	
@@ -48,5 +57,6 @@
 	# res = os.system('python3 {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
 	res = os.system('python {}<{}>>{}'.format(file, cls.work_dir + '/test.txt', cls.work_dir + '/test.txt'))
 	```
+    经测试，其实这里不改也不影响在MAC系统上的使用，就把这里的内容作为参考吧。
 
 	

@@ -27,17 +27,13 @@ def score_evaluator_get_score_save(group):
     :return: 将组内数据写入res.json中
     """
     init_map(group)
-    out = open('res4.json', 'w')
+    out = open('group4.json', 'w')
     res_map = {}
-    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
-    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\sample.json', encoding='utf-8')
-    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
+    f = open('test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
-    # for student in data:
     try:
         for student in student_case_map.keys():
-
             print('----------------student:', student, '处理开始------------------------')
             res_map[student] = {}
             cases = data[student]['cases']
