@@ -113,7 +113,7 @@ def pre_deal_data():
 def read_data():
 
     f2 = open('group0.json', encoding='utf-8')
-    f = open('test_data.json', encoding='utf-8')
+    f = open('../test_data.json', encoding='utf-8')
 
     res = f.read()
     data = json.loads(res)
@@ -180,8 +180,8 @@ def calculate(times):
             # temp /= count
             case_difficulty[q] = temp
         print('迭代', i)
-        print('题目难度',case_difficulty)
-        print('学生能力值',student_ability)
+        print('题目难度', case_difficulty)
+        print('学生能力值', student_ability)
 
 
 def run():
@@ -193,5 +193,5 @@ def run():
 
 
 if __name__ == '__main__':
-    score_evaluator_get_score_save(4)
-    # run()
+    # score_evaluator_get_score_save(4)
+    run()
