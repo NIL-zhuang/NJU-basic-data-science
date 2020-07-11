@@ -172,7 +172,7 @@ if __name__ == '__main__':
     print('开始分析···')
     # print('请输入提交代码url：', end='')
     # url = input()
-    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535119790.zip'
-    # url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1' \
-    #      '%BB_1582023289869.zip '
-    print(ScoreEvaluator.getScore(url))
+    # url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535119790.zip'
+    url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1' \
+         '%BB_1582023289869.zip '
+    print(ScoreEvaluator.getScore(url, 1))
