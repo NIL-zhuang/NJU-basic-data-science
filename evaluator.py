@@ -143,7 +143,7 @@ class ScoreEvaluator:
                 # test.close()
                 timestamp_start = time.time() * 1000
                 # mac用python3
-                process = subprocess.Popen(['python3', file], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                process = subprocess.Popen(['python', file], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                            close_fds=True)
                 try:
                     process.communicate(inputs.encode(encoding='UTF-8'), 10)

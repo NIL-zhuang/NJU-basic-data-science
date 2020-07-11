@@ -1,6 +1,7 @@
 # 分析每个学生对不同类别题目的完成情况
 # 尝试使用defender.py修正分数
 import json
+
 from evaluator import ScoreEvaluator
 
 f = open('../test_data.json', encoding='UTF-8')
