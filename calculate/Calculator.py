@@ -1,15 +1,15 @@
+# 本程序用于数据处理和学生能力值、题目难度计算
 import json
-import random
+import zipfile
 from math import sqrt
 from urllib import error as url_error
-import zipfile
 
 import numpy as np
 
 import DataUtils
 from StudentGroup import getQuestionGroup, getStudentGroup
+from calculate.CaseData import CaseData
 from evaluator import ScoreEvaluator
-from temp.CaseData import CaseData
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
 case_student_map = {}  # 题目-学生列表
@@ -27,7 +27,8 @@ def score_evaluator_get_score_save(group):
     :return: 将组内数据写入res.json中
     """
     init_map(group)
-    out = open('group4.json', 'w')
+    # out = open('group4.json', 'w')
+    out = open('test.json', 'w')
     res_map = {}
     f = open('../test_data.json', encoding='utf-8')
     res = f.read()
@@ -62,10 +63,6 @@ def score_evaluator_get_score_save(group):
         out.write(json.dumps(res_map))
         f.close()
         out.close()
-
-
-def mock_getScore(url):
-    return True, 1, random.random(), random.random()
 
 
 # 初始化四个map
@@ -110,9 +107,8 @@ def pre_deal_data():
 
 
 # 数据读取
-def read_data():
-
-    f2 = open('group0.json', encoding='utf-8')
+def read_data(group):
+    f2 = open('group{}.json'.format(group), encoding='utf-8')
     f = open('../test_data.json', encoding='utf-8')
 
     res = f.read()
@@ -123,6 +119,7 @@ def read_data():
         cases = data[student]['cases']
         for case in cases:
             case_id = case['case_id']
+            case_type = case['case_type']
             if len(case['upload_records']) == 0:
                 continue
                 # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
@@ -133,8 +130,8 @@ def read_data():
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
                 if case_id not in raw_case_map.keys():
                     raw_case_map[case_id] = []
-                temp = CaseData(case_id, student, url, raw_score * res[1], res[2], res[3])
-                # print(temp)
+                temp = CaseData(case_id, student, url, raw_score * res[1], res[2], res[3], case_type)
+                # print(calculate)
                 raw_case_map[case_id].append(temp)
                 student_case_map[student][case_id] = temp
                 case_student_map[case_id][student] = temp
@@ -144,7 +141,7 @@ def read_data():
 
 # 迭代计算
 # times: 迭代轮次
-def calculate(times):
+def calculate(times=20):
     for i in range(times):
         # 计算Bi
         for s in student_ability.keys():  # 对每个学生
@@ -177,21 +174,46 @@ def calculate(times):
                 temp += b / divisor * (100 - Mij)
             # 这里同样有两种处理方法，不知道取用哪一种
             temp /= len(student_ability.keys())
-            # temp /= count
+            # calculate /= count
             case_difficulty[q] = temp
         print('迭代', i)
         print('题目难度', case_difficulty)
         print('学生能力值', student_ability)
 
 
-def run():
-    group = 0  # 组号
+def run(group, times=20):
+    """
+    执行迭代
+    :param group:组号
+    :param times: 迭代次数
+    :return:
+    """
     init_map(group)
-    read_data()
+    read_data(group)
     pre_deal_data()
-    calculate(20)
+    calculate(times)
+
+
+def get_student_ability(group):
+    run(group)
+    return student_ability
+
+
+def get_case_difficulty(group):
+    run(group)
+    return case_difficulty
+
+
+def get_case_student_map(group):
+    run(group)
+    return case_student_map
+
+
+def get_student_case_map(group):
+    run(group)
+    return student_case_map
 
 
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
-    run()
+    run(4, 20)
