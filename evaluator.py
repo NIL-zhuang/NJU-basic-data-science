@@ -113,54 +113,54 @@ class ScoreEvaluator:
     @classmethod
     # 循环次数recycle，这是为了减少os.system运行python导致的时间误差，默认为5
     # 测试用例输出的分割符，默认为空格
-    def getScore(cls, code_url, recycle=5, separator=' '):
-        file = cls.read_from_url(code_url)
-        ScoreEvaluator.load(file)  # 导入文件，提取信息
-
+    def getScore(cls, code_url, recycle=5, separator=' ', require_time=True):
+        try:
+            file = cls.read_from_url(code_url)
+            ScoreEvaluator.load(file)  # 导入文件，提取信息
+        except zipfile.BadZipFile:
+            print('资源错误！')
+            return True, 1, 'ERROR', 0
         if Defender.cpp_defend(cls.all_the_code):
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
             return False, 1, 0, cls.lines  # cpp提交
-
         # 作弊代码
         cheats = Defender.cheat_defend(separator, cls.all_the_code, cls.cases)
         if cheats > 0:
             # os.system('rm -rf {}'.format(cls.work_dir + '/resource'))
             deleteDir(cls.work_dir + '/resource')
-            temp = 1 - cheats  # 防止返回负数
-            if temp < 0:
-                temp = 0
+            temp = max(1 - cheats, 0)
             return True, temp, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
 
         runtime = 0  # 运行时间
+        if require_time:
+            for i in range(recycle):
+                for case in cls.cases:
+                    inputs = case["input"] + '\n'
 
-        for i in range(recycle):
-            for case in cls.cases:
-                inputs = case["input"] + '\n'
-
-                # test = open(cls.work_dir + '/test.txt', 'w')
-                # test.write(inputs + '\n')
-                # test.close()
-                timestamp_start = time.time() * 1000
-                # mac用python3
-                process = subprocess.Popen(['python3', file], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                           close_fds=True)
-                try:
-                    process.communicate(inputs.encode(encoding='UTF-8'), 10)
-                except subprocess.TimeoutExpired:
-                    print('用例运行超时！')
-                    process.kill()
-                    cls.afterTheEvaluate()
-                    return True, 1, 'TIMEOUT', cls.lines
-                if process.returncode != 0:
-                    print('代码运行错误')
-                    process.kill()
-                    cls.afterTheEvaluate()
-                    return True, 1, 'ERROR', cls.lines
-                timestamp_end = time.time() * 1000
-                runtime += timestamp_end - timestamp_start
-        runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
-        print('运行时间为{}ms'.format(runtime))
+                    # test = open(cls.work_dir + '/test.txt', 'w')
+                    # test.write(inputs + '\n')
+                    # test.close()
+                    timestamp_start = time.time() * 1000
+                    # mac用python3
+                    process = subprocess.Popen(['python3', file], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                               close_fds=True)
+                    try:
+                        process.communicate(inputs.encode(encoding='UTF-8'), 10)
+                    except subprocess.TimeoutExpired:
+                        print('用例运行超时！')
+                        process.kill()
+                        cls.afterTheEvaluate()
+                        return True, 1, 'TIMEOUT', cls.lines
+                    if process.returncode != 0:
+                        print('代码运行错误')
+                        process.kill()
+                        cls.afterTheEvaluate()
+                        return True, 1, 'ERROR', cls.lines
+                    timestamp_end = time.time() * 1000
+                    runtime += timestamp_end - timestamp_start
+            runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
+            print('运行时间为{}ms'.format(runtime))
         # 确保配置了python的环境变量
         # windows环境下将上面的"python3"修改成"python"
         cls.afterTheEvaluate()
@@ -174,5 +174,5 @@ if __name__ == '__main__':
     # url = input()
     # url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/48117/%E6%A2%A6%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1_1582535119790.zip'
     url = 'http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4238/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1' \
-         '%BB_1582023289869.zip '
+          '%BB_1582023289869.zip '
     print(ScoreEvaluator.getScore(url, 1))
