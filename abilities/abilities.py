@@ -37,7 +37,7 @@ def get_ability_with_defender(src):
         sum_total_num += 1
         temp = s['final_score']
         if len(s['upload_records']) == 0: continue
-        r = ScoreEvaluator.getScore(s['upload_records'][-1]['code_url'], 1)
+        r = ScoreEvaluator.getScore(s['upload_records'][-1]['code_url'], require_time=False)
         temp = r[1] * temp
         sum_total_score += temp
     return sum_total_score / sum_total_num if sum_total_num != 0 else 0

@@ -55,7 +55,7 @@ def score_evaluator_get_score_save(group):
                 res_map[student][case_id] = res
 
             print('----------------student:', student, '处理结束------------------------')
-        out.write(json.dumps(res_map))
+        # out.write(json.dumps(res_map))
         f.close()
         out.close()
     except url_error.URLError:
