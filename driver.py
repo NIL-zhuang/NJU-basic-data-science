@@ -4,8 +4,6 @@ import sys
 from evaluator import ScoreEvaluator
 
 if __name__ == '__main__':
-    out = open('res.txt', 'w')
-    sys.stdout = out
     f = open('test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
@@ -20,5 +18,4 @@ if __name__ == '__main__':
                 result = ScoreEvaluator.getScore(url)
                 if result:
                     print('评估结果————', result)
-    f.close()
-    out.close()
+
