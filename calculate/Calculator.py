@@ -104,7 +104,7 @@ def pre_deal_data():
             temp.score = temp.score * time ** alpha * line ** beta
             student_case_map[temp.user_id][temp.case_id] = temp
             case_student_map[temp.case_id][temp.user_id] = temp
-            print(temp)
+            # print(temp)
 
 
 # 数据读取
