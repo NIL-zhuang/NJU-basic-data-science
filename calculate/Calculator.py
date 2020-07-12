@@ -4,6 +4,9 @@ import zipfile
 from math import sqrt
 from urllib import error as url_error
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import random
+from itertools import chain
 
 import numpy as np
 
@@ -11,14 +14,13 @@ import DataUtils
 from StudentGroup import getQuestionGroup, getStudentGroup
 from calculate.CaseData import CaseData
 from evaluator import ScoreEvaluator
+from scipy.stats import linregress
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
 case_student_map = {}  # 题目-学生列表
 student_case_map = {}  # 学生-题目列表
 student_ability = {}  # 学生能力值
 case_difficulty = {}  # 题目难度
-alpha = 1.15  # 运行时间权重
-beta = 1.05  # 代码行数权重
 
 
 # 算一次，然后存到json里，要不太浪费时间了
@@ -85,7 +87,11 @@ def init_map(index):
 
 
 # 数据预处理
-def pre_deal_data():
+def pre_deal_data(alpha=1, beta=1):
+    """
+    :param alpha: 运行时间权重
+    :param beta: 代码行数权重
+    """
     for case_id in raw_case_map.keys():
         timeList = []
         lineList = []
@@ -134,7 +140,7 @@ def read_data(group):
                 print(group)
                 print(student_case_map[student])
                 print(student, case_id)
-                print(evaluator[student])
+                # print(evaluator[student])
             # print(res)
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
                 if case_id not in raw_case_map.keys():
@@ -151,8 +157,12 @@ def read_data(group):
 # 迭代计算
 # times: 迭代轮次
 def calculate(times=20):
-    diff_loss_arr, ability_loss_arr = [], []
-    for i in range(times):
+    """
+    :param times: 运行次数
+    :return: 拟合后的函数值
+    """
+    # diff_loss_arr, ability_loss_arr = [], []
+    for stu_index in range(times):
         # 计算Bi
         diff_loss = ability_loss = 0
         for s in student_ability.keys():  # 对每个学生
@@ -189,20 +199,20 @@ def calculate(times=20):
             # calculate /= count
             diff_loss += (temp - case_difficulty[q]) ** 2 if case_difficulty[q] is not None else 0
             case_difficulty[q] = temp
-        print('迭代', i)
-        print('题目难度', case_difficulty)
-        print('学生能力值', student_ability)
-        diff_loss_arr.append(diff_loss)
-        ability_loss_arr.append(ability_loss)
-    plt.xlabel('iter time')
-    plt.ylabel('loss')
-    plt.title('difficulty loss')
-    plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
+        # print('迭代', i)
+        # print('题目难度', case_difficulty)
+        # print('学生能力值', student_ability)
+        # diff_loss_arr.append(diff_loss)
+        # ability_loss_arr.append(ability_loss)
+    # plt.xlabel('iter time')
+    # plt.ylabel('loss')
+    # plt.title('difficulty loss')
+    # plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
     # plt.show()
-    plt.xlabel('iter time')
-    plt.ylabel('loss')
-    plt.title('ability loss')
-    plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
+    # plt.xlabel('iter time')
+    # plt.ylabel('loss')
+    # plt.title('ability loss')
+    # plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
     # plt.show()
     students = list(student_case_map.keys())
     stu_ability = [student_ability[stu_id] for stu_id in students]
@@ -211,27 +221,54 @@ def calculate(times=20):
         scores = [student_case_map[stu][q].score * case_difficulty[q] / 2.5 for q in case_difficulty.keys() if
                   student_case_map[stu][q] is not None]
         student_score.append(np.average(scores))
-    for i in range(len(students)):
+    print(linregress(stu_ability, student_score))
+    for stu_index in range(len(students)):
         color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
-        x, y = stu_ability[i], student_score[i]
+        x, y = stu_ability[stu_index], student_score[stu_index]
         plt.scatter(x, y, c=color, alpha=0.6, edgecolors='white')
     plt.xlabel('student ability')
     plt.ylabel('average score')
     plt.grid(True)
-    # plt.show()
+    plt.show()
 
 
-def run(group, times=20):
+def run(group, time=5):
+    init_map(group)
+    read_data(group)
+    pre_deal_data()
+    calculate()
+
+
+def run_param(group, times=5):
     """
-    执行迭代
+    执行迭代找好的alpha和beta
     :param group:组号
     :param times: 迭代次数
     :return:
     """
     init_map(group)
     read_data(group)
-    pre_deal_data()
-    calculate(times)
+    x, y = np.arange(-5.0, 5.1, 1.0), np.arange(-5.0, 5.1, 1.0)
+    xx, yy = np.meshgrid(x, y)
+    ax3 = plt.axes(projection='3d')
+    lin_res = []
+
+    def run_rvalue(m):
+        alp, be = m
+        pre_deal_data(alp, be)
+        res = calculate(5)
+        print(alp, be, res)
+        lin_res.append((alp, be, res))
+        return res.rvalue
+
+    zz = list(map(run_rvalue, zip(chain(*xx), chain(*yy))))
+    zz = np.asarray(zz).reshape(*xx.shape)
+    ax3.plot_surface(xx, yy, zz, cmap='rainbow', rstride=1, cstride=1)
+    plt.xlabel('alpha')
+    plt.ylabel('beta')
+    plt.title('alpha,beta-rvalue optimize')
+    plt.show()
+    print("best suit is: ", max(lin_res, key=lambda k: k[2].rvalue))
 
 
 def get_student_ability(group):
@@ -260,5 +297,7 @@ def init_group(group):
 
 
 if __name__ == '__main__':
-    score_evaluator_get_score_save(1)
-    # run(4, 20)
+    # score_evaluator_get_score_save(4)
+    for i in range(0, 6):
+        run(i, 5)
+    # run_param(1, 5)

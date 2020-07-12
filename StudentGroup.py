@@ -17,7 +17,8 @@ def contain(list1, list2):
 def devideGroup():
     case_map = {}  # 题目集合
     # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
-    f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
+    # f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
+    f = open('C:\\Users\\NIL\\Documents\\GitHub\\NJU-basic-data-science\\test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     for student in data:
@@ -34,15 +35,15 @@ def devideGroup():
             # print(len(tmp), end=" ")
             # print(tmp)
 
-    print("-----------------------------------")
-    print("----------五组的题目分布如下-----------")
-    for q in question_list:
-        print(q)
+    # print("-----------------------------------")
+    # print("----------五组的题目分布如下-----------")
+    # for q in question_list:
+    #     print(q)
     for index in range(len(question_list)):
         group_list[index] = []  # 有几组，就初始化几个key
-
+    #
     failure_user = {}
-    print('正在分组中...')
+    # print('正在分组中...')
 
     for student in data:
         found = False
@@ -53,28 +54,28 @@ def devideGroup():
         # 分组逻辑
         for index in range(len(question_list)):
             if contain(question_list[index], tmp):
-                # print(student, '第', index, '组')
+                print(student, '第', index, '组')
                 group_list[index].append(student)
                 found = True
                 break
         if not found:
-            print('student', student, '分组失败', end=' ')
+            # print('student', student, '分组失败', end=' ')
             failure_user[student] = tmp.copy()
-            print('所做题目为:', failure_user[student])
+            # print('所做题目为:', failure_user[student])
 
-    for group in group_list.keys():
-        print('第', group, '组 人数共', len(group_list[group]))
-        # print(group_list[group])
+    # for group in group_list.keys():
+    #     print('第', group, '组 人数共', len(group_list[group]))
+    # print(group_list[group])
 
-    print('打印分组失败名单...')
-    for user in failure_user.keys():
-        print(user, failure_user[user])
-        # print(len(failure_user[user]))
+    # print('打印分组失败名单...')
+    # for user in failure_user.keys():
+    #     print(user, failure_user[user])
+    # print(len(failure_user[user]))
 
 
 # 获取分组名单
 def getStudentGroup(index):
-    if len(group_list.keys())==0:
+    if len(group_list.keys()) == 0:
         devideGroup()
     return group_list[index]
 
