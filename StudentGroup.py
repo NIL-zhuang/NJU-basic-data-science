@@ -74,11 +74,13 @@ def devideGroup():
 
 # 获取分组名单
 def getStudentGroup(index):
-    devideGroup()
+    if len(group_list.keys())==0:
+        devideGroup()
     return group_list[index]
 
 
 # 获取对应组的题目列表
 def getQuestionGroup(index):
-    devideGroup()
+    if len(group_list.keys()) == 0:
+        devideGroup()
     return question_list[index]

@@ -4,7 +4,9 @@ import zipfile
 from math import sqrt
 from urllib import error as url_error
 import matplotlib.pyplot as plt
+
 import numpy as np
+
 import DataUtils
 from StudentGroup import getQuestionGroup, getStudentGroup
 from calculate.CaseData import CaseData
@@ -15,7 +17,6 @@ case_student_map = {}  # 题目-学生列表
 student_case_map = {}  # 学生-题目列表
 student_ability = {}  # 学生能力值
 case_difficulty = {}  # 题目难度
-question_type = {}  # 所有的题目，以及其对应类型
 alpha = 1.15  # 运行时间权重
 beta = 1.05  # 代码行数权重
 
@@ -28,7 +29,7 @@ def score_evaluator_get_score_save(group):
     """
     init_map(group)
     # out = open('group4.json', 'w')
-    # out = open('test.json', 'w')
+    out = open('test.json', 'w')
     res_map = {}
     f = open('../test_data.json', encoding='utf-8')
     res = f.read()
@@ -57,12 +58,12 @@ def score_evaluator_get_score_save(group):
             print('----------------student:', student, '处理结束------------------------')
         # out.write(json.dumps(res_map))
         f.close()
-        # out.close()
+        out.close()
     except url_error.URLError:
         print('出现异常')
-        # out.write(json.dumps(res_map))
+        out.write(json.dumps(res_map))
         f.close()
-        # out.close()
+        out.close()
 
 
 # 初始化四个map
@@ -103,7 +104,7 @@ def pre_deal_data():
             temp.score = temp.score * time ** alpha * line ** beta
             student_case_map[temp.user_id][temp.case_id] = temp
             case_student_map[temp.case_id][temp.user_id] = temp
-            print(temp)
+            # print(temp)
 
 
 # 数据读取
@@ -125,12 +126,7 @@ def read_data(group):
                 # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
             raw_score = case['upload_records'][-1]['score']
             url = case['upload_records'][-1]['code_url']
-            try:
-                res = evaluator[student][case_id]
-            except KeyError:
-                print(evaluator[student])
-                print(student, case_id)
-                print(evaluator)
+            res = evaluator[student][case_id]
             # print(res)
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
                 if case_id not in raw_case_map.keys():
@@ -194,12 +190,12 @@ def calculate(times=20):
     plt.ylabel('loss')
     plt.title('difficulty loss')
     plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
-    # plt.show()
+    plt.show()
     plt.xlabel('iter time')
     plt.ylabel('loss')
     plt.title('ability loss')
     plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
-    # plt.show()
+    plt.show()
     students = list(student_case_map.keys())
     stu_ability = [student_ability[stu_id] for stu_id in students]
     student_score = []
@@ -214,7 +210,7 @@ def calculate(times=20):
     plt.xlabel('student ability')
     plt.ylabel('average score')
     plt.grid(True)
-    # plt.show()
+    plt.show()
 
 
 def run(group, times=20):
@@ -252,4 +248,4 @@ def get_student_case_map(group):
 
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
-    run(0, 20)
+    run(4, 20)
