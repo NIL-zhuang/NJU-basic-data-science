@@ -79,23 +79,20 @@ def get_ability_with_weight(src, case_difficulty):
 def get_abilities_with_weight():
     user_ability = {}
     for group in range(5):
-        student_case_map = Calculator.get_student_case_map(group)
-        case_difficulty = Calculator.get_case_difficulty(group)
-        case_student_map = Calculator.get_case_student_map(group)
-
+        student_case_map, case_difficulty, case_student_map = Calculator.init_group(group)
         for student in student_case_map:
             cases = student_case_map[student]
-            print()
             user_ability[student] = {}
             for t in types:
                 user_ability[student][t] = get_ability_with_weight(extract_the_case(cases, t, case_student_map), case_difficulty)
+        print(len(user_ability))
     return user_ability
 
 
 if __name__ == '__main__':
-    print(os.path.abspath('../calculate'))
-    user_ability = get_abilities_with_weight()
 
+    user_ability = get_abilities_with_weight()
+    print(user_ability)
     # abilities = getAbilities(with_defend)
     # if not with_defend:
     #     res_without_defend = open('abilities.json', 'w', encoding='UTF-8')  # 输出文件

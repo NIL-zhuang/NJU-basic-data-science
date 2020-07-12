@@ -70,6 +70,8 @@ def score_evaluator_get_score_save(group):
 def init_map(index):
     question_list = getQuestionGroup(index)
     student_list = getStudentGroup(index)
+    case_student_map.clear()
+    student_case_map.clear()  # 清空是为了组组之间互不影响
     for question in question_list:
         case_difficulty[question] = 1  # 初始默认难度为1
         case_student_map[question] = {}
@@ -126,7 +128,13 @@ def read_data(group):
                 # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
             raw_score = case['upload_records'][-1]['score']
             url = case['upload_records'][-1]['code_url']
-            res = evaluator[student][case_id]
+            try:
+                res = evaluator[student][case_id]
+            except KeyError:
+                print(group)
+                print(student_case_map[student])
+                print(student, case_id)
+                print(evaluator[student])
             # print(res)
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
                 if case_id not in raw_case_map.keys():
@@ -190,12 +198,12 @@ def calculate(times=20):
     plt.ylabel('loss')
     plt.title('difficulty loss')
     plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
-    plt.show()
+    # plt.show()
     plt.xlabel('iter time')
     plt.ylabel('loss')
     plt.title('ability loss')
     plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
-    plt.show()
+    # plt.show()
     students = list(student_case_map.keys())
     stu_ability = [student_ability[stu_id] for stu_id in students]
     student_score = []
@@ -210,7 +218,7 @@ def calculate(times=20):
     plt.xlabel('student ability')
     plt.ylabel('average score')
     plt.grid(True)
-    plt.show()
+    # plt.show()
 
 
 def run(group, times=20):
@@ -246,6 +254,11 @@ def get_student_case_map(group):
     return student_case_map
 
 
+def init_group(group):
+    run(group)
+    return student_case_map, case_difficulty, case_student_map
+
+
 if __name__ == '__main__':
-    # score_evaluator_get_score_save(4)
-    run(4, 20)
+    score_evaluator_get_score_save(1)
+    # run(4, 20)
