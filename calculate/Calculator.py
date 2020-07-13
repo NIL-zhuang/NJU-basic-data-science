@@ -70,8 +70,6 @@ def score_evaluator_get_score_save(group):
 def init_map(index):
     question_list = getQuestionGroup(index)
     student_list = getStudentGroup(index)
-    case_student_map.clear()
-    student_case_map.clear()  # 清空是为了组组之间互不影响
     for question in question_list:
         case_difficulty[question] = 1  # 初始默认难度为1
         case_student_map[question] = {}
@@ -132,12 +130,13 @@ def read_data(group):
                 # 不知道为什么会有空的提交记录...直接跳过叭 不然下面IndexError了
             raw_score = case['upload_records'][-1]['score']
             url = case['upload_records'][-1]['code_url']
-            try:
-                res = evaluator[student][case_id]
-            except KeyError:
-                print(group)
-                print(student_case_map[student])
-                print(student, case_id)
+            res = evaluator[student][case_id]
+            # try:
+            #     res = evaluator[student][case_id]
+            # except KeyError:
+            #     print(group)
+            #     print(student_case_map[student])
+            #     print(student, case_id)
                 # print(evaluator[student])
             # print(res)
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
@@ -160,7 +159,7 @@ def calculate(times=20):
     :return: 拟合后的函数值
     """
     # diff_loss_arr, ability_loss_arr = [], []
-    for stu_index in range(times):
+    for i in range(times):
         # 计算Bi
         diff_loss = ability_loss = 0
         for s in student_ability.keys():  # 对每个学生
@@ -197,9 +196,9 @@ def calculate(times=20):
             # calculate /= count
             diff_loss += (temp - case_difficulty[q]) ** 2 if case_difficulty[q] is not None else 0
             case_difficulty[q] = temp
-        # print('迭代', i)
-        # print('题目难度', case_difficulty)
-        # print('学生能力值', student_ability)
+        print('迭代', i)
+        print('题目难度', case_difficulty)
+        print('学生能力值', student_ability)
         # diff_loss_arr.append(diff_loss)
         # ability_loss_arr.append(ability_loss)
     # plt.xlabel('iter time')
@@ -231,6 +230,11 @@ def calculate(times=20):
 
 
 def run(group, time=5):
+    raw_case_map.clear()
+    case_student_map.clear()
+    student_case_map.clear()  # 清空是为了组组之间互不影响
+    case_difficulty.clear()
+    student_ability.clear()
     init_map(group)
     read_data(group)
     pre_deal_data()
@@ -296,6 +300,11 @@ def init_group(group):
 
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
-    for i in range(0, 6):
-        run(i, 5)
+
+    run(2)
+    run(0)
+    run(3)
+    run(4)
+    # for i in range(0, 5):
+    #     run(i, 5)
     # run_param(1, 5)

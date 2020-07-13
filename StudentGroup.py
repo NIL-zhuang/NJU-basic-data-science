@@ -16,9 +16,7 @@ def contain(list1, list2):
 # 进行分组
 def devideGroup():
     case_map = {}  # 题目集合
-    # f = open('C:\\Users\\admin\\Desktop\\数据科学基础\大作业\\test_data.json', encoding='utf-8')
-    # f = open('/Users/chengrongxin/Downloads/数据科学大作业/test_data.json', encoding='utf-8')
-    f = open('C:\\Users\\NIL\\Documents\\GitHub\\NJU-basic-data-science\\test_data.json', encoding='utf-8')
+    f = open('../test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     for student in data:
@@ -54,14 +52,14 @@ def devideGroup():
         # 分组逻辑
         for index in range(len(question_list)):
             if contain(question_list[index], tmp):
-                print(student, '第', index, '组')
+                # print(student, '第', index, '组')
                 group_list[index].append(student)
                 found = True
                 break
         if not found:
-            # print('student', student, '分组失败', end=' ')
+            print('student', student, '分组失败', end=' ')
             failure_user[student] = tmp.copy()
-            # print('所做题目为:', failure_user[student])
+            print('所做题目为:', failure_user[student])
 
     # for group in group_list.keys():
     #     print('第', group, '组 人数共', len(group_list[group]))
