@@ -4,8 +4,6 @@ import zipfile
 from math import sqrt
 from urllib import error as url_error
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import random
 from itertools import chain
 
 import numpy as np
