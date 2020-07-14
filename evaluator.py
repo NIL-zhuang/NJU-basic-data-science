@@ -91,10 +91,9 @@ class ScoreEvaluator:
             return False, 1, 0, cls.lines  # cpp提交
         # 作弊代码
         cheats = Defender.cheat_defend(separator, cls.all_the_code, cls.cases)
+        proportion = 1
         if cheats > 0:
-            deleteDir(cls.work_dir + '/resource')
-            temp = max(1 - cheats, 0)
-            return True, temp, 0, cls.lines  # 面向用例返回面向用例占比，0到1之间
+            proportion = max(1 - cheats, 0)
 
         runtime = 0  # 运行时间
 
@@ -124,7 +123,7 @@ class ScoreEvaluator:
             runtime /= recycle  # 通过取平均值尽量减少子进程运行带来的时间波动误差，如果对次数不满意可以自己传入recycle参数
             print('运行时间为{}ms'.format(runtime))
         cls.afterTheEvaluate()
-        return True, 1, runtime, cls.lines
+        return True, proportion, runtime, cls.lines
 
 
 # 程序入口
@@ -132,6 +131,5 @@ if __name__ == '__main__':
     print('开始分析···')
     # print('请输入提交代码url：', end='')
     # url = input()
-    url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4249/3544/%E5%8D%95%E8%AF%8D%E5%88%86%E7%B1" \
-          "%BB_1582558143538.zip "
+    url = "http://mooctest-dev.oss-cn-shanghai.aliyuncs.com/data/answers/4265/60618/%E6%96%B0%E7%94%9F%E8%88%9E%E4%BC%9A_1585669641494.zip"
     print(ScoreEvaluator.getScore(url, 1))
