@@ -137,8 +137,8 @@ def read_data(group):
             #     print(group)
             #     print(student_case_map[student])
             #     print(student, case_id)
-                # print(evaluator[student])
-            # print(res)
+            #     print(evaluator[student])
+            #     print(res)
             if res[0] and res[2] != 'ERROR' and res[2] != 'TIMEOUT':  # 如果不是异常提交，才加入
                 if case_id not in raw_case_map.keys():
                     raw_case_map[case_id] = []
@@ -196,9 +196,9 @@ def calculate(times=20):
             # calculate /= count
             diff_loss += (temp - case_difficulty[q]) ** 2 if case_difficulty[q] is not None else 0
             case_difficulty[q] = temp
-        print('迭代', i)
-        print('题目难度', case_difficulty)
-        print('学生能力值', student_ability)
+        # print('迭代', i)
+        # print('题目难度', case_difficulty)
+        # print('学生能力值', student_ability)
         # diff_loss_arr.append(diff_loss)
         # ability_loss_arr.append(ability_loss)
     # plt.xlabel('iter time')
@@ -218,15 +218,15 @@ def calculate(times=20):
         scores = [student_case_map[stu][q].score * case_difficulty[q] / 2.5 for q in case_difficulty.keys() if
                   student_case_map[stu][q] is not None]
         student_score.append(np.average(scores))
-    print(linregress(stu_ability, student_score))
-    for stu_index in range(len(students)):
-        color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
-        x, y = stu_ability[stu_index], student_score[stu_index]
-        plt.scatter(x, y, c=color, alpha=0.6, edgecolors='white')
-    plt.xlabel('student ability')
-    plt.ylabel('average score')
-    plt.grid(True)
-    plt.show()
+    return linregress(stu_ability, student_score)
+    # for stu_index in range(len(students)):
+    #     color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
+    #     x, y = stu_ability[stu_index], student_score[stu_index]
+    #     plt.scatter(x, y, c=color, alpha=0.6, edgecolors='white')
+    # plt.xlabel('student ability')
+    # plt.ylabel('average score')
+    # plt.grid(True)
+    # plt.show()
 
 
 def run(group, time=5):
@@ -238,30 +238,40 @@ def run(group, time=5):
     init_map(group)
     read_data(group)
     pre_deal_data()
-    calculate()
+    print(calculate())
+    print("run group finish")
 
 
-def run_param(group, times=5):
+def run_param(times=5):
     """
     执行迭代找好的alpha和beta
-    :param group:组号
     :param times: 迭代次数
     :return:
     """
-    init_map(group)
-    read_data(group)
-    x, y = np.arange(-5.0, 5.1, 1.0), np.arange(-5.0, 5.1, 1.0)
+
+    x, y = np.arange(-0.15, 0.15, 0.01), np.arange(-0.15, 0.15, 0.01)
     xx, yy = np.meshgrid(x, y)
     ax3 = plt.axes(projection='3d')
     lin_res = []
 
     def run_rvalue(m):
         alp, be = m
-        pre_deal_data(alp, be)
-        res = calculate(5)
-        print(alp, be, res)
-        lin_res.append((alp, be, res))
-        return res.rvalue
+        temp_r_val = 0
+        for group_num in range(2, 5):
+            raw_case_map.clear()
+            case_student_map.clear()
+            student_case_map.clear()  # 清空是为了组组之间互不影响
+            case_difficulty.clear()
+            student_ability.clear()
+            init_map(group_num)
+            read_data(group_num)
+            pre_deal_data(alp, be)
+            res = calculate(times)
+            temp_r_val += res.rvalue
+        temp_r_val /= 3
+        print(alp, be, temp_r_val)
+        lin_res.append((alp, be, temp_r_val))
+        return temp_r_val
 
     zz = list(map(run_rvalue, zip(chain(*xx), chain(*yy))))
     zz = np.asarray(zz).reshape(*xx.shape)
@@ -270,7 +280,7 @@ def run_param(group, times=5):
     plt.ylabel('beta')
     plt.title('alpha,beta-rvalue optimize')
     plt.show()
-    print("best suit is: ", max(lin_res, key=lambda k: k[2].rvalue))
+    print("best suit is: ", max(lin_res, key=lambda k: k[2]))
 
 
 def get_student_ability(group):
@@ -300,11 +310,5 @@ def init_group(group):
 
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
-
-    run(2)
-    run(0)
-    run(3)
-    run(4)
-    # for i in range(0, 5):
-    #     run(i, 5)
-    # run_param(1, 5)
+    run_param()
+    # run(0)
