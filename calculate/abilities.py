@@ -3,7 +3,6 @@
 import json
 from evaluator import ScoreEvaluator
 from calculate import Calculator
-import os
 
 f = open('../test_data.json', encoding='UTF-8')
 d = f.read()
@@ -34,7 +33,7 @@ def get_ability_of_type(src):
     for s in src:
         sum_total_num += 1
         sum_total_score += s['final_score']
-    return sum_total_score / sum_total_num
+    return sum_total_score / sum_total_num if sum_total_num != 0 else 0
 
 
 def get_ability_with_defender(src):
@@ -51,19 +50,20 @@ def get_ability_with_defender(src):
     return sum_total_score / sum_total_num if sum_total_num != 0 else 0
 
 
-def getAbilities(with_defender=False):
+def get_abilities(with_defender=False):
     """
     This method works without defender.py by default, which means it is unable to justify those who cheat.
     While in case with_defender is set True, it works with defender.py.
     :return: a json object carrying the information of students' abilities
     """
     user_ability = {}  # 用户
-    for user in data:
-        cases = data[user]['cases']
-        user_ability[user] = {}
-        for t in types:
-            user_ability[user][t] = get_ability_with_defender(extract_the_case(cases, t)) if with_defender \
-                else get_ability_of_type(extract_the_case(cases, t))
+    for group in range(5):
+        for user in data:
+            cases = data[user]['cases']
+            user_ability[user] = {}
+            for t in types:
+                user_ability[user][t] = get_ability_with_defender([c for c in cases if c['case_type'] == t]) if with_defender \
+                    else get_ability_of_type([c for c in cases if c['case_type'] == t])
     return user_ability
 
 
@@ -84,15 +84,16 @@ def get_abilities_with_weight():
             cases = student_case_map[student]
             user_ability[student] = {}
             for t in types:
-                user_ability[student][t] = get_ability_with_weight(extract_the_case(cases, t, case_student_map), case_difficulty)
-        print(len(user_ability))
+                user_ability[student][t] = get_ability_with_weight(extract_the_case(cases, t, case_student_map),
+                                                                   case_difficulty)
     return user_ability
 
 
 if __name__ == '__main__':
-
     user_ability = get_abilities_with_weight()
-    print(user_ability)
+    f = open('../abilities/abilities_with_modify.json', 'w')
+    f.write(json.dumps(user_ability, ensure_ascii=False))
+    f.close()
     # abilities = getAbilities(with_defend)
     # if not with_defend:
     #     res_without_defend = open('abilities.json', 'w', encoding='UTF-8')  # 输出文件
