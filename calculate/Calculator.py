@@ -56,12 +56,11 @@ def score_evaluator_get_score_save(group):
                 res_map[student][case_id] = res
 
             print('----------------student:', student, '处理结束------------------------')
-        # out.write(json.dumps(res_map))
+        out.write(json.dumps(res_map))
         f.close()
         out.close()
     except url_error.URLError:
         print('出现异常')
-        out.write(json.dumps(res_map))
         f.close()
         out.close()
 
@@ -235,6 +234,7 @@ def run(group, time=5):
     student_case_map.clear()  # 清空是为了组组之间互不影响
     case_difficulty.clear()
     student_ability.clear()
+
     init_map(group)
     read_data(group)
     pre_deal_data()
