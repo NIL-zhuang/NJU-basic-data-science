@@ -1,24 +1,28 @@
 # 本程序用于数据处理和学生能力值、题目难度计算
 import json
+import os
 import zipfile
+from itertools import chain
 from math import sqrt
 from urllib import error as url_error
-import matplotlib.pyplot as plt
-from itertools import chain
 
+import matplotlib.pyplot as plt
 import numpy as np
 
 import DataUtils
 from StudentGroup import getQuestionGroup, getStudentGroup
 from calculate.CaseData import CaseData
 from evaluator import ScoreEvaluator
-from scipy.stats import linregress
 
 raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
 case_student_map = {}  # 题目-学生列表
 student_case_map = {}  # 学生-题目列表
 student_ability = {}  # 学生能力值
 case_difficulty = {}  # 题目难度
+
+
+def root_path():
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 
 # 算一次，然后存到json里，要不太浪费时间了
@@ -112,8 +116,8 @@ def pre_deal_data(alpha=1, beta=1):
 
 # 数据读取
 def read_data(group):
-    f2 = open('group{}.json'.format(group), encoding='utf-8')
-    f = open('../test_data.json', encoding='utf-8')
+    f2 = open(root_path()+'/calculate/group{}.json'.format(group), encoding='utf-8')
+    f = open(root_path()+'/test_data.json', encoding='utf-8')
 
     res = f.read()
     data = json.loads(res)
@@ -210,14 +214,14 @@ def calculate(times=20):
     # plt.title('ability loss')
     # plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
     # plt.show()
-    students = list(student_case_map.keys())
-    stu_ability = [student_ability[stu_id] for stu_id in students]
-    student_score = []
-    for stu in students:
-        scores = [student_case_map[stu][q].score * case_difficulty[q] / 2.5 for q in case_difficulty.keys() if
-                  student_case_map[stu][q] is not None]
-        student_score.append(np.average(scores))
-    return linregress(stu_ability, student_score)
+    # students = list(student_case_map.keys())
+    # stu_ability = [student_ability[stu_id] for stu_id in students]
+    # student_score = []
+    # for stu in students:
+    #     scores = [student_case_map[stu][q].score * case_difficulty[q] / 2.5 for q in case_difficulty.keys() if
+    #               student_case_map[stu][q] is not None]
+    #     student_score.append(np.average(scores))
+    # return linregress(stu_ability, student_score)
     # for stu_index in range(len(students)):
     #     color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
     #     x, y = stu_ability[stu_index], student_score[stu_index]
@@ -310,5 +314,5 @@ def init_group(group):
 
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
-    run_param()
-    # run(0)
+    # run_param()
+    run(0)
