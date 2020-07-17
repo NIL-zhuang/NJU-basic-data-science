@@ -94,12 +94,3 @@ if __name__ == '__main__':
     f = open('../abilities/abilities_with_modify.json', 'w')
     f.write(json.dumps(user_ability, ensure_ascii=False))
     f.close()
-    # abilities = getAbilities(with_defend)
-    # if not with_defend:
-    #     res_without_defend = open('abilities.json', 'w', encoding='UTF-8')  # 输出文件
-    # else:
-    #     res_with_defend = open('abilities_with_defend.json', 'w', encoding='UTF-8')
-    # res_with_defend.write(json.dumps(abilities, ensure_ascii=False)) if with_defend \
-    #     else res_without_defend.write(json.dumps(abilities, ensure_ascii=False))
-    # res_without_defend.close()
-    # res_with_defend.close()
