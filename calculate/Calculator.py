@@ -37,6 +37,7 @@ def score_evaluator_get_score_save(group):
     res_map = {}
     f = open('../test_data.json', encoding='utf-8')
     res = f.read()
+    f.close()
     data = json.loads(res)
     try:
         for student in student_case_map.keys():
