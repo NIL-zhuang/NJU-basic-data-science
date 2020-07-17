@@ -1,7 +1,6 @@
 # 绘制各组所有学生的成绩分布
 import matplotlib.pyplot as plt
 import numpy as np
-
 import calculate.Calculator as Calculator
 
 

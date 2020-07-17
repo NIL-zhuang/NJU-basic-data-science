@@ -62,7 +62,8 @@ def get_abilities(with_defender=False):
             cases = data[user]['cases']
             user_ability[user] = {}
             for t in types:
-                user_ability[user][t] = get_ability_with_defender([c for c in cases if c['case_type'] == t]) if with_defender \
+                user_ability[user][t] = get_ability_with_defender(
+                    [c for c in cases if c['case_type'] == t]) if with_defender \
                     else get_ability_of_type([c for c in cases if c['case_type'] == t])
     return user_ability
 
@@ -89,8 +90,34 @@ def get_abilities_with_weight():
     return user_ability
 
 
+def modify_with_variation():
+    """
+    用全距（极差）来修正abilities_with_modify.json中的能力值，确保能力值在0～100范围内
+    结果保存在final_abilities.json中
+    :return: a json object
+    """
+    file = open('../abilities/abilities_with_modify.json', encoding='utf-8')
+    abilities = json.loads(file.read())
+    file.close()
+    mins = {}
+    maxs = {}
+    for t in types:
+        mins[t] = 10000
+        maxs[t] = -1
+    res = {}
+    for student in abilities:
+        for t in types:
+            mins[t] = min(abilities[student][t], mins[t])
+            maxs[t] = max(abilities[student][t], maxs[t])
+    for student in abilities:
+        res[student] = {}
+        for t in types:
+            res[student][t] = 100 * (abilities[student][t] - mins[t]) / (maxs[t] - mins[t])
+    return res
+
+
 if __name__ == '__main__':
-    user_ability = get_abilities_with_weight()
-    f = open('../abilities/abilities_with_modify.json', 'w')
-    f.write(json.dumps(user_ability, ensure_ascii=False))
+    res = modify_with_variation()
+    f = open('../abilities/final_abilities.json', 'w')
+    f.write(json.dumps(res, ensure_ascii=False))
     f.close()

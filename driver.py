@@ -1,6 +1,5 @@
 # 该类用来自动取本地json文件，调用evaluator.py类中的ScoreEvaluator
 import json
-import sys
 from evaluator import ScoreEvaluator
 
 if __name__ == '__main__':

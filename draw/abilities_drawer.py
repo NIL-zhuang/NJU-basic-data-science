@@ -19,5 +19,4 @@ ax1.set_xticks(theta)  # 分成8等分
 ax1.set_xticklabels(labels, y=0.01)
 ax1.set_title('abilities', color='b', size=20)
 ax1.set_yticks([20, 40, 60, 80, 100])
-
 plt.show()
