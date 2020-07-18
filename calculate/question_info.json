@@ -1,1 +1,4412 @@
-{"2908": {"type": "字符串", "submits": 487, "accepts": 99}, "2172": {"type": "线性表", "submits": 145, "accepts": 52}, "2179": {"type": "数组", "submits": 61, "accepts": 56}, "2176": {"type": "字符串", "submits": 424, "accepts": 167}, "2307": {"type": "数组", "submits": 84, "accepts": 55}, "2804": {"type": "数组", "submits": 115, "accepts": 73}, "2456": {"type": "数组", "submits": 130, "accepts": 106}, "2450": {"type": "查找算法", "submits": 157, "accepts": 91}, "2081": {"type": "字符串", "submits": 81, "accepts": 48}, "2180": {"type": "字符串", "submits": 313, "accepts": 69}, "2190": {"type": "字符串", "submits": 180, "accepts": 40}, "2177": {"type": "字符串", "submits": 153, "accepts": 32}, "2892": {"type": "字符串", "submits": 152, "accepts": 43}, "2188": {"type": "字符串", "submits": 69, "accepts": 34}, "2199": {"type": "字符串", "submits": 164, "accepts": 33}, "2198": {"type": "字符串", "submits": 142, "accepts": 29}, "2164": {"type": "字符串", "submits": 53, "accepts": 39}, "2531": {"type": "排序算法", "submits": 125, "accepts": 93}, "2894": {"type": "字符串", "submits": 95, "accepts": 44}, "2530": {"type": "排序算法", "submits": 146, "accepts": 93}, "2200": {"type": "字符串", "submits": 128, "accepts": 38}, "2936": {"type": "字符串", "submits": 178, "accepts": 49}, "2474": {"type": "线性表", "submits": 75, "accepts": 46}, "2173": {"type": "线性表", "submits": 57, "accepts": 47}, "2171": {"type": "线性表", "submits": 72, "accepts": 45}, "2647": {"type": "线性表", "submits": 122, "accepts": 45}, "2548": {"type": "线性表", "submits": 122, "accepts": 43}, "2547": {"type": "线性表", "submits": 80, "accepts": 47}, "2589": {"type": "线性表", "submits": 62, "accepts": 48}, "2169": {"type": "线性表", "submits": 75, "accepts": 44}, "2145": {"type": "线性表", "submits": 56, "accepts": 47}, "2607": {"type": "线性表", "submits": 95, "accepts": 45}, "2629": {"type": "线性表", "submits": 102, "accepts": 39}, "2561": {"type": "线性表", "submits": 61, "accepts": 47}, "2186": {"type": "线性表", "submits": 64, "accepts": 48}, "2142": {"type": "线性表", "submits": 130, "accepts": 41}, "2185": {"type": "线性表", "submits": 89, "accepts": 46}, "2482": {"type": "线性表", "submits": 105, "accepts": 46}, "2141": {"type": "线性表", "submits": 79, "accepts": 46}, "2184": {"type": "线性表", "submits": 59, "accepts": 49}, "2140": {"type": "线性表", "submits": 173, "accepts": 42}, "2183": {"type": "线性表", "submits": 60, "accepts": 48}, "2182": {"type": "线性表", "submits": 67, "accepts": 46}, "2181": {"type": "线性表", "submits": 68, "accepts": 46}, "2614": {"type": "线性表", "submits": 72, "accepts": 46}, "2558": {"type": "线性表", "submits": 127, "accepts": 47}, "2610": {"type": "线性表", "submits": 99, "accepts": 49}, "2212": {"type": "线性表", "submits": 55, "accepts": 47}, "2618": {"type": "线性表", "submits": 69, "accepts": 47}, "2617": {"type": "线性表", "submits": 63, "accepts": 44}, "2615": {"type": "线性表", "submits": 61, "accepts": 45}, "2494": {"type": "数组", "submits": 163, "accepts": 138}, "2373": {"type": "数组", "submits": 93, "accepts": 46}, "2252": {"type": "数组", "submits": 81, "accepts": 45}, "2395": {"type": "数组", "submits": 82, "accepts": 45}, "2394": {"type": "数组", "submits": 85, "accepts": 49}, "2371": {"type": "数组", "submits": 63, "accepts": 46}, "2392": {"type": "数组", "submits": 53, "accepts": 46}, "2701": {"type": "查找算法", "submits": 255, "accepts": 134}, "2426": {"type": "数组", "submits": 48, "accepts": 47}, "2425": {"type": "数组", "submits": 68, "accepts": 48}, "2424": {"type": "数组", "submits": 60, "accepts": 45}, "2203": {"type": "数组", "submits": 96, "accepts": 47}, "2467": {"type": "数组", "submits": 113, "accepts": 96}, "2346": {"type": "数组", "submits": 107, "accepts": 47}, "2423": {"type": "数组", "submits": 67, "accepts": 47}, "2466": {"type": "数组", "submits": 67, "accepts": 48}, "2345": {"type": "数组", "submits": 146, "accepts": 93}, "2389": {"type": "数组", "submits": 75, "accepts": 47}, "2344": {"type": "数组", "submits": 74, "accepts": 47}, "2388": {"type": "数组", "submits": 49, "accepts": 45}, "2442": {"type": "数字操作", "submits": 214, "accepts": 140}, "2209": {"type": "字符串", "submits": 245, "accepts": 90}, "2527": {"type": "排序算法", "submits": 253, "accepts": 131}, "2342": {"type": "数组", "submits": 105, "accepts": 46}, "2386": {"type": "数组", "submits": 113, "accepts": 48}, "2341": {"type": "数组", "submits": 72, "accepts": 45}, "2340": {"type": "数组", "submits": 196, "accepts": 98}, "2283": {"type": "数组", "submits": 63, "accepts": 46}, "2061": {"type": "数组", "submits": 65, "accepts": 56}, "2280": {"type": "数组", "submits": 62, "accepts": 48}, "2438": {"type": "数组", "submits": 70, "accepts": 56}, "2339": {"type": "数组", "submits": 146, "accepts": 87}, "2338": {"type": "数组", "submits": 64, "accepts": 46}, "2359": {"type": "数组", "submits": 69, "accepts": 45}, "2358": {"type": "数组", "submits": 66, "accepts": 45}, "2357": {"type": "数组", "submits": 50, "accepts": 45}, "2356": {"type": "数组", "submits": 94, "accepts": 42}, "2279": {"type": "数组", "submits": 94, "accepts": 45}, "2498": {"type": "数组", "submits": 57, "accepts": 47}, "2278": {"type": "数组", "submits": 75, "accepts": 46}, "2211": {"type": "数组", "submits": 149, "accepts": 82}, "2718": {"type": "查找算法", "submits": 424, "accepts": 185}, "2463": {"type": "查找算法", "submits": 89, "accepts": 47}, "2451": {"type": "查找算法", "submits": 140, "accepts": 91}, "2462": {"type": "查找算法", "submits": 125, "accepts": 51}, "2461": {"type": "查找算法", "submits": 123, "accepts": 95}, "2537": {"type": "查找算法", "submits": 73, "accepts": 48}, "2449": {"type": "查找算法", "submits": 154, "accepts": 98}, "2514": {"type": "查找算法", "submits": 133, "accepts": 92}, "2445": {"type": "查找算法", "submits": 192, "accepts": 96}, "2741": {"type": "查找算法", "submits": 204, "accepts": 154}, "2542": {"type": "排序算法", "submits": 188, "accepts": 162}, "2454": {"type": "查找算法", "submits": 82, "accepts": 48}, "2465": {"type": "查找算法", "submits": 83, "accepts": 50}, "2453": {"type": "查找算法", "submits": 56, "accepts": 47}, "2464": {"type": "查找算法", "submits": 131, "accepts": 97}, "2506": {"type": "查找算法", "submits": 184, "accepts": 100}, "2505": {"type": "查找算法", "submits": 80, "accepts": 46}, "2535": {"type": "排序算法", "submits": 202, "accepts": 159}, "2534": {"type": "排序算法", "submits": 152, "accepts": 109}, "2412": {"type": "排序算法", "submits": 107, "accepts": 36}, "2444": {"type": "图结构", "submits": 290, "accepts": 130}, "2387": {"type": "排序算法", "submits": 316, "accepts": 131}, "2441": {"type": "线性表", "submits": 111, "accepts": 91}, "2396": {"type": "排序算法", "submits": 110, "accepts": 48}, "2440": {"type": "排序算法", "submits": 188, "accepts": 140}, "2152": {"type": "图结构", "submits": 121, "accepts": 75}, "2490": {"type": "排序算法", "submits": 121, "accepts": 90}, "2070": {"type": "数字操作", "submits": 122, "accepts": 47}, "2111": {"type": "数字操作", "submits": 74, "accepts": 54}, "2099": {"type": "数字操作", "submits": 57, "accepts": 49}, "2110": {"type": "数字操作", "submits": 67, "accepts": 47}, "2153": {"type": "数字操作", "submits": 162, "accepts": 93}, "2098": {"type": "数字操作", "submits": 119, "accepts": 50}, "2097": {"type": "数字操作", "submits": 81, "accepts": 46}, "2096": {"type": "数字操作", "submits": 56, "accepts": 50}, "2095": {"type": "数字操作", "submits": 56, "accepts": 47}, "2094": {"type": "数字操作", "submits": 81, "accepts": 48}, "2093": {"type": "数字操作", "submits": 58, "accepts": 48}, "2108": {"type": "数字操作", "submits": 60, "accepts": 48}, "2106": {"type": "数字操作", "submits": 69, "accepts": 49}, "2127": {"type": "数字操作", "submits": 73, "accepts": 51}, "2105": {"type": "数字操作", "submits": 60, "accepts": 45}, "2069": {"type": "数字操作", "submits": 53, "accepts": 51}, "2068": {"type": "数字操作", "submits": 85, "accepts": 51}, "2109": {"type": "数字操作", "submits": 59, "accepts": 53}, "2067": {"type": "数字操作", "submits": 65, "accepts": 51}, "2584": {"type": "数字操作", "submits": 133, "accepts": 120}, "2100": {"type": "数字操作", "submits": 54, "accepts": 51}, "2122": {"type": "数字操作", "submits": 48, "accepts": 45}, "2121": {"type": "数字操作", "submits": 88, "accepts": 47}, "2065": {"type": "数字操作", "submits": 88, "accepts": 49}, "2120": {"type": "数字操作", "submits": 64, "accepts": 46}, "2064": {"type": "数字操作", "submits": 86, "accepts": 51}, "2063": {"type": "数字操作", "submits": 73, "accepts": 48}, "2117": {"type": "数字操作", "submits": 50, "accepts": 44}, "2116": {"type": "数字操作", "submits": 56, "accepts": 46}, "2114": {"type": "数字操作", "submits": 54, "accepts": 48}, "2113": {"type": "数字操作", "submits": 87, "accepts": 39}, "2134": {"type": "数字操作", "submits": 66, "accepts": 57}, "2080": {"type": "图结构", "submits": 68, "accepts": 42}, "2088": {"type": "图结构", "submits": 104, "accepts": 28}, "2087": {"type": "图结构", "submits": 216, "accepts": 35}, "2086": {"type": "图结构", "submits": 89, "accepts": 41}, "2085": {"type": "图结构", "submits": 158, "accepts": 46}, "2084": {"type": "图结构", "submits": 201, "accepts": 38}, "2196": {"type": "字符串", "submits": 142, "accepts": 31}, "2178": {"type": "字符串", "submits": 188, "accepts": 82}, "2592": {"type": "线性表", "submits": 90, "accepts": 42}, "2193": {"type": "数组", "submits": 96, "accepts": 43}, "2397": {"type": "树结构", "submits": 664, "accepts": 82}, "2174": {"type": "图结构", "submits": 203, "accepts": 55}, "2115": {"type": "图结构", "submits": 234, "accepts": 53}, "2390": {"type": "排序算法", "submits": 203, "accepts": 39}, "2126": {"type": "数字操作", "submits": 66, "accepts": 45}, "2119": {"type": "数字操作", "submits": 59, "accepts": 45}, "2253": {"type": "树结构", "submits": 93, "accepts": 31}, "2296": {"type": "树结构", "submits": 142, "accepts": 68}, "2295": {"type": "树结构", "submits": 98, "accepts": 37}, "2273": {"type": "树结构", "submits": 167, "accepts": 51}, "2151": {"type": "图结构", "submits": 94, "accepts": 66}, "2291": {"type": "树结构", "submits": 56, "accepts": 33}, "2304": {"type": "树结构", "submits": 245, "accepts": 81}, "2149": {"type": "图结构", "submits": 106, "accepts": 47}, "2301": {"type": "树结构", "submits": 51, "accepts": 27}, "2289": {"type": "树结构", "submits": 62, "accepts": 28}, "2168": {"type": "图结构", "submits": 135, "accepts": 51}, "2300": {"type": "树结构", "submits": 117, "accepts": 33}, "2266": {"type": "树结构", "submits": 86, "accepts": 26}, "2288": {"type": "树结构", "submits": 67, "accepts": 28}, "2167": {"type": "图结构", "submits": 77, "accepts": 65}, "2308": {"type": "树结构", "submits": 173, "accepts": 76}, "2406": {"type": "树结构", "submits": 171, "accepts": 59}, "2286": {"type": "树结构", "submits": 55, "accepts": 32}, "2383": {"type": "树结构", "submits": 93, "accepts": 28}, "2415": {"type": "树结构", "submits": 110, "accepts": 62}, "2315": {"type": "树结构", "submits": 57, "accepts": 39}, "2237": {"type": "树结构", "submits": 68, "accepts": 39}, "2236": {"type": "树结构", "submits": 89, "accepts": 35}, "2312": {"type": "树结构", "submits": 77, "accepts": 38}, "2378": {"type": "树结构", "submits": 191, "accepts": 65}, "2311": {"type": "树结构", "submits": 120, "accepts": 30}, "2299": {"type": "树结构", "submits": 62, "accepts": 32}, "2439": {"type": "树结构", "submits": 124, "accepts": 71}, "2091": {"type": "图结构", "submits": 100, "accepts": 24}, "2090": {"type": "图结构", "submits": 62, "accepts": 24}, "2089": {"type": "图结构", "submits": 58, "accepts": 28}, "2139": {"type": "图结构", "submits": 39, "accepts": 31}, "2104": {"type": "图结构", "submits": 106, "accepts": 34}, "2103": {"type": "图结构", "submits": 80, "accepts": 23}, "2124": {"type": "图结构", "submits": 73, "accepts": 23}, "2309": {"type": "图结构", "submits": 124, "accepts": 53}, "2791": {"type": "数组", "submits": 90, "accepts": 52}, "2790": {"type": "数组", "submits": 79, "accepts": 50}, "2789": {"type": "数组", "submits": 83, "accepts": 50}, "2800": {"type": "数组", "submits": 54, "accepts": 50}, "2822": {"type": "数组", "submits": 109, "accepts": 49}, "2821": {"type": "数组", "submits": 70, "accepts": 58}, "2820": {"type": "数组", "submits": 65, "accepts": 57}, "2809": {"type": "数组", "submits": 66, "accepts": 50}, "2808": {"type": "数组", "submits": 79, "accepts": 50}, "2829": {"type": "数组", "submits": 84, "accepts": 52}, "2807": {"type": "数组", "submits": 60, "accepts": 50}, "2806": {"type": "数组", "submits": 92, "accepts": 52}, "2828": {"type": "数组", "submits": 62, "accepts": 49}, "2827": {"type": "数组", "submits": 82, "accepts": 57}, "2805": {"type": "数组", "submits": 136, "accepts": 51}, "2826": {"type": "数组", "submits": 99, "accepts": 54}, "2825": {"type": "数组", "submits": 77, "accepts": 56}, "2847": {"type": "数组", "submits": 56, "accepts": 52}, "2803": {"type": "数组", "submits": 71, "accepts": 51}, "2846": {"type": "数组", "submits": 85, "accepts": 53}, "2802": {"type": "数组", "submits": 85, "accepts": 52}, "2812": {"type": "数组", "submits": 91, "accepts": 58}, "2811": {"type": "数组", "submits": 94, "accepts": 58}, "2833": {"type": "数组", "submits": 73, "accepts": 55}, "2799": {"type": "数组", "submits": 166, "accepts": 49}, "2810": {"type": "数组", "submits": 108, "accepts": 48}, "2798": {"type": "数组", "submits": 155, "accepts": 47}, "2795": {"type": "数组", "submits": 194, "accepts": 50}, "2794": {"type": "数组", "submits": 55, "accepts": 47}, "2818": {"type": "数组", "submits": 80, "accepts": 54}, "2839": {"type": "数组", "submits": 59, "accepts": 52}, "2817": {"type": "数组", "submits": 92, "accepts": 50}, "2816": {"type": "数组", "submits": 72, "accepts": 49}, "2814": {"type": "数组", "submits": 133, "accepts": 52}, "2813": {"type": "数组", "submits": 165, "accepts": 57}, "2793": {"type": "数组", "submits": 152, "accepts": 47}, "2792": {"type": "数组", "submits": 69, "accepts": 45}, "2801": {"type": "数组", "submits": 53, "accepts": 41}, "2788": {"type": "数组", "submits": 97, "accepts": 45}, "2787": {"type": "数组", "submits": 68, "accepts": 41}, "2786": {"type": "数组", "submits": 91, "accepts": 42}, "2797": {"type": "数组", "submits": 71, "accepts": 44}, "2785": {"type": "数组", "submits": 173, "accepts": 44}, "2796": {"type": "数组", "submits": 74, "accepts": 43}, "2784": {"type": "数组", "submits": 80, "accepts": 41}, "2783": {"type": "数组", "submits": 105, "accepts": 46}, "2819": {"type": "数组", "submits": 227, "accepts": 91}, "2815": {"type": "数组", "submits": 207, "accepts": 95}, "2870": {"type": "数组", "submits": 48, "accepts": 42}, "2867": {"type": "数组", "submits": 53, "accepts": 41}, "2845": {"type": "数组", "submits": 127, "accepts": 38}, "2823": {"type": "数组", "submits": 130, "accepts": 38}, "2844": {"type": "数组", "submits": 142, "accepts": 40}, "2866": {"type": "数组", "submits": 91, "accepts": 41}, "2865": {"type": "数组", "submits": 78, "accepts": 42}, "2843": {"type": "数组", "submits": 76, "accepts": 40}, "2864": {"type": "数组", "submits": 135, "accepts": 33}, "2842": {"type": "数组", "submits": 73, "accepts": 39}, "2863": {"type": "数组", "submits": 70, "accepts": 42}, "2840": {"type": "数组", "submits": 63, "accepts": 41}, "2861": {"type": "数组", "submits": 62, "accepts": 40}, "2849": {"type": "数组", "submits": 60, "accepts": 41}, "2848": {"type": "数组", "submits": 106, "accepts": 39}, "2868": {"type": "数组", "submits": 64, "accepts": 41}, "2824": {"type": "数组", "submits": 69, "accepts": 42}, "2834": {"type": "数组", "submits": 62, "accepts": 39}, "2877": {"type": "数组", "submits": 58, "accepts": 40}, "2855": {"type": "数组", "submits": 77, "accepts": 41}, "2854": {"type": "数组", "submits": 122, "accepts": 42}, "2832": {"type": "数组", "submits": 77, "accepts": 40}, "2875": {"type": "数组", "submits": 60, "accepts": 41}, "2831": {"type": "数组", "submits": 62, "accepts": 41}, "2853": {"type": "数组", "submits": 53, "accepts": 42}, "2830": {"type": "数组", "submits": 72, "accepts": 42}, "2852": {"type": "数组", "submits": 80, "accepts": 40}, "2873": {"type": "数组", "submits": 139, "accepts": 44}, "2851": {"type": "数组", "submits": 54, "accepts": 42}, "2872": {"type": "数组", "submits": 74, "accepts": 41}, "2850": {"type": "数组", "submits": 116, "accepts": 41}, "2838": {"type": "数组", "submits": 74, "accepts": 41}, "2859": {"type": "数组", "submits": 139, "accepts": 40}, "2837": {"type": "数组", "submits": 90, "accepts": 41}, "2836": {"type": "数组", "submits": 99, "accepts": 37}, "2858": {"type": "数组", "submits": 54, "accepts": 41}, "2835": {"type": "数组", "submits": 115, "accepts": 39}, "2857": {"type": "数组", "submits": 285, "accepts": 38}, "2891": {"type": "数组", "submits": 55, "accepts": 54}, "2890": {"type": "数组", "submits": 62, "accepts": 41}, "2889": {"type": "数组", "submits": 60, "accepts": 56}, "2922": {"type": "数组", "submits": 79, "accepts": 45}, "2888": {"type": "数组", "submits": 54, "accepts": 43}, "2921": {"type": "数组", "submits": 78, "accepts": 40}, "2887": {"type": "数组", "submits": 60, "accepts": 48}, "2920": {"type": "数组", "submits": 76, "accepts": 48}, "2886": {"type": "数组", "submits": 55, "accepts": 53}, "2885": {"type": "数组", "submits": 86, "accepts": 49}, "2841": {"type": "数组", "submits": 53, "accepts": 47}, "2884": {"type": "数组", "submits": 63, "accepts": 57}, "2862": {"type": "数组", "submits": 55, "accepts": 51}, "2883": {"type": "数组", "submits": 76, "accepts": 55}, "2882": {"type": "数组", "submits": 137, "accepts": 47}, "2860": {"type": "数组", "submits": 58, "accepts": 44}, "2929": {"type": "数组", "submits": 58, "accepts": 49}, "2928": {"type": "数组", "submits": 103, "accepts": 49}, "2927": {"type": "数组", "submits": 51, "accepts": 46}, "2926": {"type": "数组", "submits": 53, "accepts": 48}, "2925": {"type": "数组", "submits": 68, "accepts": 46}, "2869": {"type": "数组", "submits": 87, "accepts": 54}, "2924": {"type": "数组", "submits": 58, "accepts": 47}, "2923": {"type": "数组", "submits": 49, "accepts": 43}, "2881": {"type": "数组", "submits": 67, "accepts": 61}, "2880": {"type": "数组", "submits": 110, "accepts": 51}, "2878": {"type": "数组", "submits": 75, "accepts": 58}, "2856": {"type": "数组", "submits": 75, "accepts": 55}, "2911": {"type": "数组", "submits": 56, "accepts": 47}, "2910": {"type": "数组", "submits": 70, "accepts": 42}, "2876": {"type": "数组", "submits": 63, "accepts": 49}, "2930": {"type": "数组", "submits": 63, "accepts": 55}, "2874": {"type": "数组", "submits": 78, "accepts": 50}, "2871": {"type": "数组", "submits": 68, "accepts": 58}, "2918": {"type": "数组", "submits": 103, "accepts": 41}, "2917": {"type": "数组", "submits": 66, "accepts": 46}, "2916": {"type": "数组", "submits": 74, "accepts": 50}, "2915": {"type": "数组", "submits": 78, "accepts": 49}, "2914": {"type": "数组", "submits": 116, "accepts": 41}, "2913": {"type": "数组", "submits": 72, "accepts": 56}, "2879": {"type": "数组", "submits": 63, "accepts": 49}, "2909": {"type": "字符串", "submits": 66, "accepts": 46}, "2900": {"type": "字符串", "submits": 65, "accepts": 42}, "2955": {"type": "字符串", "submits": 95, "accepts": 35}, "2898": {"type": "字符串", "submits": 67, "accepts": 43}, "2985": {"type": "字符串", "submits": 61, "accepts": 43}, "2952": {"type": "字符串", "submits": 64, "accepts": 43}, "2896": {"type": "字符串", "submits": 131, "accepts": 38}, "2740": {"type": "查找算法", "submits": 120, "accepts": 101}, "2906": {"type": "字符串", "submits": 58, "accepts": 42}, "2904": {"type": "字符串", "submits": 67, "accepts": 42}, "2947": {"type": "字符串", "submits": 56, "accepts": 45}, "2958": {"type": "字符串", "submits": 61, "accepts": 34}, "2934": {"type": "字符串", "submits": 92, "accepts": 38}, "2747": {"type": "字符串", "submits": 162, "accepts": 88}, "2671": {"type": "线性表", "submits": 48, "accepts": 40}, "2197": {"type": "线性表", "submits": 56, "accepts": 43}, "2195": {"type": "线性表", "submits": 61, "accepts": 42}, "2194": {"type": "线性表", "submits": 84, "accepts": 43}, "2192": {"type": "线性表", "submits": 63, "accepts": 43}, "2207": {"type": "线性表", "submits": 58, "accepts": 41}, "2669": {"type": "线性表", "submits": 60, "accepts": 44}, "2206": {"type": "线性表", "submits": 60, "accepts": 43}, "2668": {"type": "线性表", "submits": 44, "accepts": 41}, "2205": {"type": "线性表", "submits": 62, "accepts": 38}, "2667": {"type": "线性表", "submits": 69, "accepts": 45}, "2204": {"type": "线性表", "submits": 76, "accepts": 43}, "2665": {"type": "线性表", "submits": 43, "accepts": 40}, "2202": {"type": "线性表", "submits": 76, "accepts": 40}, "2543": {"type": "线性表", "submits": 54, "accepts": 37}, "2201": {"type": "线性表", "submits": 45, "accepts": 43}, "2662": {"type": "线性表", "submits": 42, "accepts": 41}, "2189": {"type": "线性表", "submits": 60, "accepts": 41}, "2562": {"type": "线性表", "submits": 115, "accepts": 48}, "2661": {"type": "线性表", "submits": 47, "accepts": 41}, "2187": {"type": "线性表", "submits": 63, "accepts": 44}, "2658": {"type": "线性表", "submits": 56, "accepts": 41}, "2656": {"type": "线性表", "submits": 59, "accepts": 45}, "2655": {"type": "线性表", "submits": 51, "accepts": 43}, "2653": {"type": "线性表", "submits": 45, "accepts": 39}, "2651": {"type": "线性表", "submits": 44, "accepts": 42}, "2673": {"type": "线性表", "submits": 44, "accepts": 41}, "2659": {"type": "线性表", "submits": 43, "accepts": 41}, "2430": {"type": "数组", "submits": 59, "accepts": 45}, "2692": {"type": "数组", "submits": 148, "accepts": 93}, "2372": {"type": "数组", "submits": 89, "accepts": 45}, "2293": {"type": "数组", "submits": 48, "accepts": 43}, "2427": {"type": "数组", "submits": 52, "accepts": 41}, "2602": {"type": "数组", "submits": 56, "accepts": 49}, "2468": {"type": "数组", "submits": 86, "accepts": 46}, "2523": {"type": "排序算法", "submits": 121, "accepts": 86}, "2489": {"type": "数组", "submits": 130, "accepts": 90}, "2522": {"type": "数组", "submits": 155, "accepts": 94}, "2500": {"type": "数组", "submits": 167, "accepts": 97}, "2564": {"type": "数组", "submits": 73, "accepts": 51}, "2729": {"type": "查找算法", "submits": 142, "accepts": 104}, "2528": {"type": "排序算法", "submits": 207, "accepts": 165}, "2429": {"type": "数组", "submits": 48, "accepts": 42}, "2428": {"type": "数组", "submits": 66, "accepts": 43}, "2285": {"type": "数组", "submits": 47, "accepts": 41}, "2284": {"type": "数组", "submits": 81, "accepts": 45}, "2282": {"type": "数组", "submits": 70, "accepts": 45}, "2436": {"type": "数组", "submits": 70, "accepts": 48}, "2533": {"type": "排序算法", "submits": 197, "accepts": 122}, "2433": {"type": "数组", "submits": 172, "accepts": 106}, "2739": {"type": "查找算法", "submits": 141, "accepts": 113}, "2738": {"type": "查找算法", "submits": 133, "accepts": 101}, "2737": {"type": "查找算法", "submits": 202, "accepts": 155}, "2539": {"type": "排序算法", "submits": 138, "accepts": 105}, "2148": {"type": "图结构", "submits": 121, "accepts": 30}, "2125": {"type": "图结构", "submits": 43, "accepts": 26}, "2147": {"type": "图结构", "submits": 82, "accepts": 31}, "2146": {"type": "图结构", "submits": 57, "accepts": 38}, "2220": {"type": "图结构", "submits": 70, "accepts": 25}, "2150": {"type": "图结构", "submits": 114, "accepts": 28}, "2133": {"type": "数字操作", "submits": 49, "accepts": 45}, "2155": {"type": "数字操作", "submits": 52, "accepts": 42}, "2154": {"type": "数字操作", "submits": 49, "accepts": 46}, "2132": {"type": "数字操作", "submits": 55, "accepts": 43}, "2230": {"type": "数字操作", "submits": 47, "accepts": 43}, "2131": {"type": "数字操作", "submits": 50, "accepts": 40}, "2130": {"type": "数字操作", "submits": 71, "accepts": 46}, "2107": {"type": "数字操作", "submits": 49, "accepts": 45}, "2129": {"type": "数字操作", "submits": 57, "accepts": 49}, "2128": {"type": "数字操作", "submits": 53, "accepts": 45}, "2227": {"type": "数字操作", "submits": 96, "accepts": 34}, "2226": {"type": "数字操作", "submits": 52, "accepts": 44}, "2102": {"type": "数字操作", "submits": 47, "accepts": 45}, "2223": {"type": "数字操作", "submits": 85, "accepts": 43}, "2245": {"type": "数字操作", "submits": 50, "accepts": 45}, "2101": {"type": "数字操作", "submits": 53, "accepts": 47}, "2123": {"type": "数字操作", "submits": 53, "accepts": 46}, "2240": {"type": "数字操作", "submits": 99, "accepts": 45}, "2161": {"type": "数字操作", "submits": 48, "accepts": 46}, "2160": {"type": "数字操作", "submits": 55, "accepts": 45}, "2218": {"type": "数字操作", "submits": 64, "accepts": 44}, "2118": {"type": "数字操作", "submits": 54, "accepts": 45}, "2215": {"type": "数字操作", "submits": 53, "accepts": 41}, "2138": {"type": "数字操作", "submits": 52, "accepts": 45}, "2137": {"type": "数字操作", "submits": 53, "accepts": 47}, "2159": {"type": "数字操作", "submits": 48, "accepts": 42}, "2158": {"type": "数字操作", "submits": 65, "accepts": 43}, "2136": {"type": "数字操作", "submits": 50, "accepts": 45}, "2157": {"type": "数字操作", "submits": 59, "accepts": 44}, "2135": {"type": "数字操作", "submits": 53, "accepts": 43}, "2112": {"type": "数字操作", "submits": 51, "accepts": 44}, "2156": {"type": "数字操作", "submits": 46, "accepts": 44}, "2219": {"type": "数字操作", "submits": 62, "accepts": 44}, "2298": {"type": "树结构", "submits": 34, "accepts": 33}, "2375": {"type": "树结构", "submits": 168, "accepts": 37}, "2294": {"type": "树结构", "submits": 81, "accepts": 37}, "2492": {"type": "树结构", "submits": 70, "accepts": 35}, "2391": {"type": "树结构", "submits": 40, "accepts": 38}, "2292": {"type": "树结构", "submits": 47, "accepts": 37}, "2306": {"type": "树结构", "submits": 99, "accepts": 35}, "2405": {"type": "树结构", "submits": 86, "accepts": 35}, "2404": {"type": "树结构", "submits": 70, "accepts": 34}, "2446": {"type": "树结构", "submits": 57, "accepts": 37}, "2302": {"type": "树结构", "submits": 41, "accepts": 35}, "2460": {"type": "树结构", "submits": 48, "accepts": 34}, "2459": {"type": "树结构", "submits": 106, "accepts": 36}, "2458": {"type": "树结构", "submits": 56, "accepts": 35}, "2435": {"type": "树结构", "submits": 47, "accepts": 43}, "2457": {"type": "树结构", "submits": 99, "accepts": 34}, "2710": {"type": "树结构", "submits": 135, "accepts": 85}, "2434": {"type": "树结构", "submits": 72, "accepts": 40}, "2455": {"type": "树结构", "submits": 183, "accepts": 72}, "2432": {"type": "树结构", "submits": 68, "accepts": 43}, "2431": {"type": "树结构", "submits": 92, "accepts": 33}, "2448": {"type": "排序算法", "submits": 73, "accepts": 48}, "2443": {"type": "排序算法", "submits": 64, "accepts": 43}, "2495": {"type": "排序算法", "submits": 70, "accepts": 41}, "2491": {"type": "排序算法", "submits": 52, "accepts": 43}, "2538": {"type": "排序算法", "submits": 183, "accepts": 108}, "2515": {"type": "查找算法", "submits": 62, "accepts": 48}, "2536": {"type": "排序算法", "submits": 243, "accepts": 131}, "2525": {"type": "排序算法", "submits": 123, "accepts": 82}, "2601": {"type": "查找算法", "submits": 59, "accepts": 48}, "2634": {"type": "查找算法", "submits": 151, "accepts": 90}, "2513": {"type": "查找算法", "submits": 131, "accepts": 93}, "2579": {"type": "查找算法", "submits": 77, "accepts": 44}, "2578": {"type": "查找算法", "submits": 81, "accepts": 45}, "2541": {"type": "图结构", "submits": 145, "accepts": 103}, "2517": {"type": "查找算法", "submits": 53, "accepts": 43}, "2604": {"type": "查找算法", "submits": 91, "accepts": 47}, "2516": {"type": "查找算法", "submits": 57, "accepts": 44}, "2603": {"type": "数组", "submits": 129, "accepts": 47}, "2368": {"type": "数组", "submits": 212, "accepts": 39}, "2365": {"type": "数组", "submits": 80, "accepts": 50}, "2385": {"type": "数组", "submits": 77, "accepts": 45}, "2290": {"type": "线性表", "submits": 95, "accepts": 47}, "2210": {"type": "线性表", "submits": 208, "accepts": 39}, "2231": {"type": "线性表", "submits": 120, "accepts": 45}, "2472": {"type": "线性表", "submits": 89, "accepts": 45}, "2593": {"type": "线性表", "submits": 192, "accepts": 40}, "2546": {"type": "线性表", "submits": 65, "accepts": 45}, "2689": {"type": "线性表", "submits": 56, "accepts": 44}, "2688": {"type": "线性表", "submits": 74, "accepts": 42}, "2687": {"type": "线性表", "submits": 76, "accepts": 40}, "2686": {"type": "线性表", "submits": 125, "accepts": 45}, "2685": {"type": "线性表", "submits": 65, "accepts": 41}, "2684": {"type": "线性表", "submits": 78, "accepts": 40}, "2208": {"type": "线性表", "submits": 148, "accepts": 45}, "2287": {"type": "线性表", "submits": 115, "accepts": 43}, "2683": {"type": "线性表", "submits": 116, "accepts": 41}, "2682": {"type": "线性表", "submits": 130, "accepts": 46}, "2681": {"type": "线性表", "submits": 57, "accepts": 43}, "2680": {"type": "线性表", "submits": 62, "accepts": 44}, "2481": {"type": "线性表", "submits": 55, "accepts": 46}, "2480": {"type": "线性表", "submits": 75, "accepts": 43}, "2281": {"type": "线性表", "submits": 71, "accepts": 43}, "2679": {"type": "线性表", "submits": 71, "accepts": 43}, "2479": {"type": "线性表", "submits": 170, "accepts": 50}, "2677": {"type": "线性表", "submits": 52, "accepts": 43}, "2478": {"type": "线性表", "submits": 65, "accepts": 45}, "2676": {"type": "线性表", "submits": 88, "accepts": 46}, "2675": {"type": "线性表", "submits": 48, "accepts": 43}, "2477": {"type": "线性表", "submits": 105, "accepts": 47}, "2944": {"type": "字符串", "submits": 87, "accepts": 46}, "2964": {"type": "字符串", "submits": 196, "accepts": 44}, "2941": {"type": "字符串", "submits": 137, "accepts": 47}, "2951": {"type": "字符串", "submits": 129, "accepts": 50}, "2940": {"type": "字符串", "submits": 110, "accepts": 43}, "2962": {"type": "字符串", "submits": 164, "accepts": 40}, "2950": {"type": "字符串", "submits": 169, "accepts": 43}, "2960": {"type": "字符串", "submits": 143, "accepts": 43}, "2939": {"type": "字符串", "submits": 155, "accepts": 50}, "2938": {"type": "字符串", "submits": 80, "accepts": 50}, "2949": {"type": "字符串", "submits": 168, "accepts": 47}, "2937": {"type": "字符串", "submits": 55, "accepts": 50}, "2959": {"type": "字符串", "submits": 151, "accepts": 46}, "2935": {"type": "字符串", "submits": 82, "accepts": 46}, "2912": {"type": "字符串", "submits": 69, "accepts": 48}, "2251": {"type": "数字操作", "submits": 88, "accepts": 56}, "2328": {"type": "数字操作", "submits": 116, "accepts": 50}, "2229": {"type": "数字操作", "submits": 56, "accepts": 43}, "2327": {"type": "数字操作", "submits": 90, "accepts": 44}, "2228": {"type": "数字操作", "submits": 63, "accepts": 44}, "2249": {"type": "数字操作", "submits": 72, "accepts": 45}, "2325": {"type": "数字操作", "submits": 138, "accepts": 47}, "2248": {"type": "数字操作", "submits": 79, "accepts": 44}, "2247": {"type": "数字操作", "submits": 73, "accepts": 41}, "2225": {"type": "数字操作", "submits": 72, "accepts": 43}, "2323": {"type": "数字操作", "submits": 81, "accepts": 45}, "2224": {"type": "数字操作", "submits": 108, "accepts": 46}, "2246": {"type": "数字操作", "submits": 70, "accepts": 45}, "2244": {"type": "数字操作", "submits": 74, "accepts": 44}, "2222": {"type": "数字操作", "submits": 109, "accepts": 47}, "2243": {"type": "数字操作", "submits": 66, "accepts": 46}, "2320": {"type": "数字操作", "submits": 119, "accepts": 42}, "2166": {"type": "数字操作", "submits": 130, "accepts": 36}, "2242": {"type": "数字操作", "submits": 63, "accepts": 48}, "2241": {"type": "数字操作", "submits": 57, "accepts": 43}, "2163": {"type": "数字操作", "submits": 88, "accepts": 44}, "2162": {"type": "数字操作", "submits": 189, "accepts": 87}, "2317": {"type": "数字操作", "submits": 70, "accepts": 45}, "2217": {"type": "数字操作", "submits": 54, "accepts": 42}, "2216": {"type": "数字操作", "submits": 162, "accepts": 82}, "2238": {"type": "数字操作", "submits": 64, "accepts": 45}, "2335": {"type": "数字操作", "submits": 179, "accepts": 103}, "2214": {"type": "数字操作", "submits": 67, "accepts": 43}, "2334": {"type": "数字操作", "submits": 83, "accepts": 44}, "2333": {"type": "数字操作", "submits": 121, "accepts": 45}, "2376": {"type": "数字操作", "submits": 158, "accepts": 44}, "2277": {"type": "数字操作", "submits": 105, "accepts": 45}, "2319": {"type": "数字操作", "submits": 101, "accepts": 48}, "2221": {"type": "图结构", "submits": 81, "accepts": 39}, "2254": {"type": "图结构", "submits": 255, "accepts": 77}, "2265": {"type": "图结构", "submits": 97, "accepts": 30}, "2232": {"type": "图结构", "submits": 174, "accepts": 30}, "2165": {"type": "图结构", "submits": 69, "accepts": 42}, "2264": {"type": "图结构", "submits": 197, "accepts": 35}, "2175": {"type": "图结构", "submits": 87, "accepts": 36}, "2337": {"type": "图结构", "submits": 217, "accepts": 43}, "2303": {"type": "图结构", "submits": 113, "accepts": 40}, "2213": {"type": "图结构", "submits": 54, "accepts": 32}, "2234": {"type": "图结构", "submits": 211, "accepts": 33}, "2233": {"type": "图结构", "submits": 178, "accepts": 41}, "2702": {"type": "查找算法", "submits": 144, "accepts": 45}, "2635": {"type": "查找算法", "submits": 92, "accepts": 48}, "2645": {"type": "查找算法", "submits": 62, "accepts": 45}, "2644": {"type": "查找算法", "submits": 101, "accepts": 43}, "2643": {"type": "查找算法", "submits": 63, "accepts": 43}, "2566": {"type": "查找算法", "submits": 120, "accepts": 42}, "2576": {"type": "查找算法", "submits": 102, "accepts": 45}, "2642": {"type": "查找算法", "submits": 86, "accepts": 41}, "2565": {"type": "查找算法", "submits": 115, "accepts": 45}, "2641": {"type": "查找算法", "submits": 102, "accepts": 48}, "2630": {"type": "查找算法", "submits": 159, "accepts": 44}, "2575": {"type": "查找算法", "submits": 61, "accepts": 45}, "2773": {"type": "排序算法", "submits": 219, "accepts": 102}, "2563": {"type": "查找算法", "submits": 132, "accepts": 45}, "2606": {"type": "查找算法", "submits": 229, "accepts": 146}, "2639": {"type": "查找算法", "submits": 187, "accepts": 99}, "2637": {"type": "查找算法", "submits": 101, "accepts": 50}, "2526": {"type": "树结构", "submits": 314, "accepts": 98}, "2504": {"type": "排序算法", "submits": 116, "accepts": 46}, "2488": {"type": "排序算法", "submits": 98, "accepts": 46}, "2520": {"type": "排序算法", "submits": 87, "accepts": 43}, "2399": {"type": "排序算法", "submits": 130, "accepts": 43}, "2496": {"type": "排序算法", "submits": 95, "accepts": 47}, "2551": {"type": "树结构", "submits": 48, "accepts": 42}, "2297": {"type": "树结构", "submits": 87, "accepts": 46}, "2550": {"type": "树结构", "submits": 60, "accepts": 44}, "2572": {"type": "树结构", "submits": 157, "accepts": 42}, "2351": {"type": "树结构", "submits": 114, "accepts": 28}, "2493": {"type": "树结构", "submits": 52, "accepts": 42}, "2503": {"type": "树结构", "submits": 151, "accepts": 42}, "2349": {"type": "图结构", "submits": 97, "accepts": 74}, "2447": {"type": "树结构", "submits": 78, "accepts": 43}, "2502": {"type": "树结构", "submits": 123, "accepts": 45}, "2369": {"type": "树结构", "submits": 97, "accepts": 49}, "2501": {"type": "树结构", "submits": 57, "accepts": 44}, "2508": {"type": "树结构", "submits": 91, "accepts": 39}, "2437": {"type": "树结构", "submits": 112, "accepts": 44}, "2314": {"type": "树结构", "submits": 104, "accepts": 39}, "2512": {"type": "树结构", "submits": 56, "accepts": 41}, "2556": {"type": "树结构", "submits": 72, "accepts": 40}, "2313": {"type": "树结构", "submits": 228, "accepts": 40}, "2511": {"type": "树结构", "submits": 100, "accepts": 37}, "2555": {"type": "树结构", "submits": 67, "accepts": 43}, "2499": {"type": "树结构", "submits": 174, "accepts": 44}, "2554": {"type": "树结构", "submits": 88, "accepts": 40}, "2553": {"type": "树结构", "submits": 132, "accepts": 40}, "2597": {"type": "树结构", "submits": 107, "accepts": 41}, "2552": {"type": "树结构", "submits": 123, "accepts": 43}, "2310": {"type": "树结构", "submits": 261, "accepts": 37}, "2318": {"type": "树结构", "submits": 210, "accepts": 40}, "2666": {"type": "线性表", "submits": 80, "accepts": 55}, "2663": {"type": "线性表", "submits": 62, "accepts": 57}, "2672": {"type": "线性表", "submits": 62, "accepts": 55}, "2473": {"type": "线性表", "submits": 75, "accepts": 39}, "2691": {"type": "线性表", "submits": 74, "accepts": 36}, "2471": {"type": "线性表", "submits": 98, "accepts": 40}, "2690": {"type": "线性表", "submits": 141, "accepts": 33}, "2590": {"type": "线性表", "submits": 121, "accepts": 40}, "2724": {"type": "线性表", "submits": 46, "accepts": 42}, "2723": {"type": "线性表", "submits": 64, "accepts": 42}, "2646": {"type": "线性表", "submits": 57, "accepts": 40}, "2722": {"type": "线性表", "submits": 93, "accepts": 40}, "2721": {"type": "线性表", "submits": 76, "accepts": 41}, "2487": {"type": "线性表", "submits": 103, "accepts": 45}, "2761": {"type": "线性表", "submits": 58, "accepts": 42}, "2486": {"type": "线性表", "submits": 79, "accepts": 38}, "2728": {"type": "线性表", "submits": 78, "accepts": 40}, "2727": {"type": "线性表", "submits": 97, "accepts": 35}, "2649": {"type": "线性表", "submits": 85, "accepts": 41}, "2725": {"type": "线性表", "submits": 89, "accepts": 37}, "2760": {"type": "线性表", "submits": 61, "accepts": 43}, "2485": {"type": "线性表", "submits": 79, "accepts": 40}, "2484": {"type": "线性表", "submits": 116, "accepts": 40}, "2560": {"type": "线性表", "submits": 73, "accepts": 41}, "2483": {"type": "线性表", "submits": 62, "accepts": 44}, "2559": {"type": "线性表", "submits": 62, "accepts": 44}, "2557": {"type": "线性表", "submits": 95, "accepts": 46}, "2755": {"type": "线性表", "submits": 99, "accepts": 39}, "2732": {"type": "线性表", "submits": 74, "accepts": 44}, "2336": {"type": "线性表", "submits": 103, "accepts": 38}, "2731": {"type": "线性表", "submits": 58, "accepts": 39}, "2730": {"type": "线性表", "submits": 69, "accepts": 41}, "2759": {"type": "线性表", "submits": 62, "accepts": 41}, "2954": {"type": "字符串", "submits": 124, "accepts": 32}, "2975": {"type": "字符串", "submits": 61, "accepts": 45}, "2942": {"type": "字符串", "submits": 161, "accepts": 43}, "2963": {"type": "字符串", "submits": 106, "accepts": 34}, "2974": {"type": "字符串", "submits": 75, "accepts": 36}, "2984": {"type": "字符串", "submits": 121, "accepts": 43}, "2961": {"type": "字符串", "submits": 74, "accepts": 43}, "2972": {"type": "字符串", "submits": 203, "accepts": 36}, "2970": {"type": "字符串", "submits": 89, "accepts": 31}, "2981": {"type": "字符串", "submits": 88, "accepts": 35}, "2969": {"type": "字符串", "submits": 109, "accepts": 34}, "2979": {"type": "字符串", "submits": 56, "accepts": 44}, "2946": {"type": "字符串", "submits": 80, "accepts": 44}, "2957": {"type": "字符串", "submits": 77, "accepts": 36}, "2968": {"type": "字符串", "submits": 77, "accepts": 33}, "2978": {"type": "字符串", "submits": 246, "accepts": 44}, "2945": {"type": "字符串", "submits": 91, "accepts": 41}, "2956": {"type": "字符串", "submits": 105, "accepts": 39}, "2305": {"type": "图结构", "submits": 107, "accepts": 24}, "2316": {"type": "图结构", "submits": 147, "accepts": 30}, "2348": {"type": "图结构", "submits": 98, "accepts": 26}, "2347": {"type": "图结构", "submits": 132, "accepts": 25}, "2235": {"type": "图结构", "submits": 86, "accepts": 35}, "2343": {"type": "图结构", "submits": 36, "accepts": 33}, "2354": {"type": "图结构", "submits": 186, "accepts": 68}, "2331": {"type": "图结构", "submits": 109, "accepts": 33}, "2352": {"type": "图结构", "submits": 77, "accepts": 30}, "2704": {"type": "树结构", "submits": 118, "accepts": 86}, "2374": {"type": "数组", "submits": 157, "accepts": 85}, "2470": {"type": "数组", "submits": 82, "accepts": 36}, "2393": {"type": "数组", "submits": 72, "accepts": 39}, "2469": {"type": "数组", "submits": 77, "accepts": 38}, "2384": {"type": "数组", "submits": 63, "accepts": 37}, "2521": {"type": "排序算法", "submits": 89, "accepts": 42}, "2532": {"type": "排序算法", "submits": 83, "accepts": 43}, "2497": {"type": "排序算法", "submits": 65, "accepts": 46}, "2519": {"type": "排序算法", "submits": 79, "accepts": 45}, "2529": {"type": "排序算法", "submits": 198, "accepts": 103}, "2650": {"type": "树结构", "submits": 63, "accepts": 34}, "2353": {"type": "树结构", "submits": 103, "accepts": 35}, "2524": {"type": "树结构", "submits": 143, "accepts": 34}, "2600": {"type": "树结构", "submits": 68, "accepts": 33}, "2400": {"type": "树结构", "submits": 107, "accepts": 24}, "2509": {"type": "树结构", "submits": 61, "accepts": 38}, "2605": {"type": "树结构", "submits": 95, "accepts": 37}, "2549": {"type": "树结构", "submits": 68, "accepts": 39}, "2648": {"type": "树结构", "submits": 113, "accepts": 35}, "2540": {"type": "树结构", "submits": 96, "accepts": 28}, "2660": {"type": "树结构", "submits": 137, "accepts": 86}, "2382": {"type": "树结构", "submits": 100, "accepts": 39}, "2416": {"type": "树结构", "submits": 77, "accepts": 36}, "2636": {"type": "树结构", "submits": 81, "accepts": 37}, "2657": {"type": "树结构", "submits": 76, "accepts": 30}, "2633": {"type": "树结构", "submits": 100, "accepts": 37}, "2699": {"type": "树结构", "submits": 149, "accepts": 33}, "2599": {"type": "树结构", "submits": 76, "accepts": 33}, "2632": {"type": "树结构", "submits": 88, "accepts": 38}, "2654": {"type": "树结构", "submits": 54, "accepts": 36}, "2598": {"type": "树结构", "submits": 63, "accepts": 36}, "2631": {"type": "树结构", "submits": 119, "accepts": 36}, "2697": {"type": "树结构", "submits": 61, "accepts": 35}, "2696": {"type": "树结构", "submits": 90, "accepts": 38}, "2355": {"type": "树结构", "submits": 125, "accepts": 34}, "2695": {"type": "树结构", "submits": 77, "accepts": 33}, "2398": {"type": "树结构", "submits": 129, "accepts": 34}, "2638": {"type": "树结构", "submits": 68, "accepts": 35}, "2092": {"type": "数字操作", "submits": 254, "accepts": 31}, "2276": {"type": "数字操作", "submits": 81, "accepts": 38}, "2275": {"type": "数字操作", "submits": 82, "accepts": 36}, "2330": {"type": "数字操作", "submits": 154, "accepts": 35}, "2250": {"type": "数字操作", "submits": 83, "accepts": 42}, "2370": {"type": "数字操作", "submits": 67, "accepts": 42}, "2403": {"type": "数字操作", "submits": 66, "accepts": 44}, "2326": {"type": "数字操作", "submits": 75, "accepts": 38}, "2402": {"type": "数字操作", "submits": 44, "accepts": 40}, "2401": {"type": "数字操作", "submits": 58, "accepts": 40}, "2324": {"type": "数字操作", "submits": 81, "accepts": 41}, "2367": {"type": "数字操作", "submits": 72, "accepts": 41}, "2421": {"type": "数字操作", "submits": 93, "accepts": 49}, "2322": {"type": "数字操作", "submits": 79, "accepts": 38}, "2420": {"type": "数字操作", "submits": 66, "accepts": 45}, "2321": {"type": "数字操作", "submits": 119, "accepts": 38}, "2409": {"type": "数字操作", "submits": 88, "accepts": 49}, "2408": {"type": "数字操作", "submits": 95, "accepts": 46}, "2407": {"type": "数字操作", "submits": 73, "accepts": 45}, "2329": {"type": "数字操作", "submits": 71, "accepts": 36}, "2364": {"type": "数字操作", "submits": 59, "accepts": 41}, "2363": {"type": "数字操作", "submits": 59, "accepts": 44}, "2362": {"type": "数字操作", "submits": 73, "accepts": 42}, "2360": {"type": "数字操作", "submits": 62, "accepts": 39}, "2381": {"type": "数字操作", "submits": 81, "accepts": 41}, "2239": {"type": "数字操作", "submits": 93, "accepts": 42}, "2379": {"type": "数字操作", "submits": 70, "accepts": 41}, "2411": {"type": "数字操作", "submits": 81, "accepts": 44}, "2377": {"type": "数字操作", "submits": 94, "accepts": 44}, "2332": {"type": "数字操作", "submits": 63, "accepts": 38}, "2419": {"type": "数字操作", "submits": 54, "accepts": 43}, "2518": {"type": "数字操作", "submits": 82, "accepts": 45}, "2694": {"type": "查找算法", "submits": 57, "accepts": 37}, "2570": {"type": "查找算法", "submits": 71, "accepts": 36}, "2745": {"type": "查找算法", "submits": 127, "accepts": 83}, "2711": {"type": "查找算法", "submits": 105, "accepts": 94}, "2567": {"type": "查找算法", "submits": 72, "accepts": 40}, "2720": {"type": "查找算法", "submits": 60, "accepts": 40}, "2707": {"type": "图结构", "submits": 138, "accepts": 104}, "2706": {"type": "查找算法", "submits": 76, "accepts": 43}, "2717": {"type": "查找算法", "submits": 152, "accepts": 88}, "2716": {"type": "图结构", "submits": 296, "accepts": 66}, "2705": {"type": "图结构", "submits": 148, "accepts": 92}, "2726": {"type": "树结构", "submits": 109, "accepts": 88}, "2715": {"type": "查找算法", "submits": 95, "accepts": 42}, "2703": {"type": "查找算法", "submits": 120, "accepts": 52}, "2573": {"type": "线性表", "submits": 104, "accepts": 57}, "2771": {"type": "线性表", "submits": 59, "accepts": 51}, "2594": {"type": "线性表", "submits": 58, "accepts": 51}, "2770": {"type": "线性表", "submits": 78, "accepts": 45}, "2670": {"type": "线性表", "submits": 72, "accepts": 57}, "2591": {"type": "线性表", "submits": 79, "accepts": 50}, "2768": {"type": "线性表", "submits": 67, "accepts": 46}, "2767": {"type": "线性表", "submits": 80, "accepts": 46}, "2766": {"type": "线性表", "submits": 64, "accepts": 47}, "2545": {"type": "线性表", "submits": 72, "accepts": 49}, "2765": {"type": "线性表", "submits": 56, "accepts": 46}, "2544": {"type": "线性表", "submits": 98, "accepts": 52}, "2764": {"type": "线性表", "submits": 58, "accepts": 42}, "2763": {"type": "线性表", "submits": 63, "accepts": 50}, "2762": {"type": "线性表", "submits": 51, "accepts": 44}, "2609": {"type": "线性表", "submits": 70, "accepts": 51}, "2905": {"type": "线性表", "submits": 59, "accepts": 53}, "2780": {"type": "线性表", "submits": 57, "accepts": 46}, "2779": {"type": "线性表", "submits": 63, "accepts": 47}, "2778": {"type": "线性表", "submits": 63, "accepts": 46}, "2678": {"type": "线性表", "submits": 61, "accepts": 51}, "2777": {"type": "线性表", "submits": 74, "accepts": 50}, "2775": {"type": "线性表", "submits": 72, "accepts": 53}, "2774": {"type": "线性表", "submits": 62, "accepts": 49}, "2476": {"type": "线性表", "submits": 64, "accepts": 46}, "2674": {"type": "线性表", "submits": 63, "accepts": 48}, "2574": {"type": "线性表", "submits": 78, "accepts": 57}, "2772": {"type": "线性表", "submits": 59, "accepts": 51}, "2475": {"type": "线性表", "submits": 55, "accepts": 47}, "2991": {"type": "字符串", "submits": 114, "accepts": 60}, "2980": {"type": "字符串", "submits": 90, "accepts": 54}, "2990": {"type": "字符串", "submits": 63, "accepts": 62}, "2988": {"type": "字符串", "submits": 70, "accepts": 62}, "2977": {"type": "字符串", "submits": 79, "accepts": 56}, "2966": {"type": "字符串", "submits": 53, "accepts": 40}, "2987": {"type": "字符串", "submits": 75, "accepts": 69}, "2976": {"type": "字符串", "submits": 102, "accepts": 49}, "2965": {"type": "字符串", "submits": 69, "accepts": 51}, "2986": {"type": "字符串", "submits": 70, "accepts": 49}, "2973": {"type": "字符串", "submits": 62, "accepts": 50}, "2983": {"type": "字符串", "submits": 88, "accepts": 52}, "2971": {"type": "字符串", "submits": 97, "accepts": 46}, "2948": {"type": "字符串", "submits": 96, "accepts": 53}, "2989": {"type": "字符串", "submits": 68, "accepts": 62}, "2967": {"type": "字符串", "submits": 66, "accepts": 52}, "2693": {"type": "树结构", "submits": 68, "accepts": 47}, "2744": {"type": "树结构", "submits": 53, "accepts": 44}, "2743": {"type": "树结构", "submits": 61, "accepts": 43}, "2742": {"type": "树结构", "submits": 72, "accepts": 43}, "2708": {"type": "树结构", "submits": 106, "accepts": 46}, "2749": {"type": "树结构", "submits": 85, "accepts": 38}, "2902": {"type": "树结构", "submits": 57, "accepts": 52}, "2782": {"type": "树结构", "submits": 84, "accepts": 43}, "2781": {"type": "树结构", "submits": 84, "accepts": 40}, "2713": {"type": "树结构", "submits": 85, "accepts": 41}, "2735": {"type": "树结构", "submits": 65, "accepts": 45}, "2757": {"type": "树结构", "submits": 77, "accepts": 50}, "2712": {"type": "树结构", "submits": 59, "accepts": 41}, "2734": {"type": "树结构", "submits": 54, "accepts": 38}, "2733": {"type": "树结构", "submits": 75, "accepts": 34}, "2776": {"type": "树结构", "submits": 77, "accepts": 46}, "2698": {"type": "树结构", "submits": 80, "accepts": 51}, "2510": {"type": "树结构", "submits": 72, "accepts": 38}, "2652": {"type": "树结构", "submits": 112, "accepts": 45}, "2719": {"type": "树结构", "submits": 57, "accepts": 43}, "2758": {"type": "树结构", "submits": 72, "accepts": 50}, "2714": {"type": "树结构", "submits": 109, "accepts": 41}, "2736": {"type": "树结构", "submits": 62, "accepts": 47}, "2595": {"type": "数字操作", "submits": 69, "accepts": 62}, "2452": {"type": "数字操作", "submits": 75, "accepts": 56}, "2625": {"type": "数字操作", "submits": 114, "accepts": 52}, "2624": {"type": "数字操作", "submits": 79, "accepts": 56}, "2623": {"type": "数字操作", "submits": 72, "accepts": 59}, "2622": {"type": "数字操作", "submits": 141, "accepts": 64}, "2621": {"type": "数字操作", "submits": 84, "accepts": 59}, "2620": {"type": "数字操作", "submits": 70, "accepts": 59}, "2587": {"type": "数字操作", "submits": 74, "accepts": 57}, "2586": {"type": "数字操作", "submits": 78, "accepts": 59}, "2585": {"type": "数字操作", "submits": 80, "accepts": 55}, "2608": {"type": "数字操作", "submits": 105, "accepts": 50}, "2628": {"type": "数字操作", "submits": 61, "accepts": 48}, "2627": {"type": "数字操作", "submits": 107, "accepts": 52}, "2901": {"type": "数字操作", "submits": 81, "accepts": 60}, "2626": {"type": "数字操作", "submits": 72, "accepts": 58}, "2583": {"type": "数字操作", "submits": 81, "accepts": 50}, "2582": {"type": "数字操作", "submits": 63, "accepts": 58}, "2361": {"type": "数字操作", "submits": 72, "accepts": 54}, "2581": {"type": "数字操作", "submits": 66, "accepts": 54}, "2580": {"type": "数字操作", "submits": 88, "accepts": 52}, "2899": {"type": "数字操作", "submits": 70, "accepts": 60}, "2613": {"type": "数字操作", "submits": 87, "accepts": 54}, "2414": {"type": "数字操作", "submits": 76, "accepts": 57}, "2612": {"type": "数字操作", "submits": 83, "accepts": 51}, "2413": {"type": "数字操作", "submits": 87, "accepts": 60}, "2895": {"type": "数字操作", "submits": 65, "accepts": 59}, "2410": {"type": "数字操作", "submits": 111, "accepts": 63}, "2619": {"type": "数字操作", "submits": 67, "accepts": 52}, "2418": {"type": "数字操作", "submits": 77, "accepts": 54}, "2616": {"type": "数字操作", "submits": 64, "accepts": 51}, "2417": {"type": "数字操作", "submits": 68, "accepts": 59}, "2756": {"type": "图结构", "submits": 58, "accepts": 48}, "2754": {"type": "图结构", "submits": 68, "accepts": 51}, "2750": {"type": "图结构", "submits": 64, "accepts": 51}, "2571": {"type": "查找算法", "submits": 56, "accepts": 47}, "2746": {"type": "查找算法", "submits": 70, "accepts": 52}, "2897": {"type": "查找算法", "submits": 65, "accepts": 54}, "2577": {"type": "查找算法", "submits": 81, "accepts": 49}, "2753": {"type": "查找算法", "submits": 67, "accepts": 54}, "2752": {"type": "查找算法", "submits": 61, "accepts": 49}, "2751": {"type": "查找算法", "submits": 91, "accepts": 52}, "2640": {"type": "查找算法", "submits": 66, "accepts": 56}, "2709": {"type": "查找算法", "submits": 56, "accepts": 47}, "2748": {"type": "查找算法", "submits": 133, "accepts": 47}, "2769": {"type": "查找算法", "submits": 60, "accepts": 47}, "2422": {"type": "排序算法", "submits": 71, "accepts": 49}, "2903": {"type": "数组", "submits": 70, "accepts": 47}, "2893": {"type": "数组", "submits": 66, "accepts": 52}, "2953": {"type": "字符串", "submits": 161, "accepts": 46}, "2588": {"type": "数字操作", "submits": 105, "accepts": 49}, "2350": {"type": "图结构", "submits": 77, "accepts": 36}}
+{
+  "2908": {
+    "type": "字符串",
+    "submits": 487,
+    "accepts": 99
+  },
+  "2172": {
+    "type": "线性表",
+    "submits": 145,
+    "accepts": 52
+  },
+  "2179": {
+    "type": "数组",
+    "submits": 61,
+    "accepts": 56
+  },
+  "2176": {
+    "type": "字符串",
+    "submits": 424,
+    "accepts": 167
+  },
+  "2307": {
+    "type": "数组",
+    "submits": 84,
+    "accepts": 55
+  },
+  "2804": {
+    "type": "数组",
+    "submits": 115,
+    "accepts": 73
+  },
+  "2456": {
+    "type": "数组",
+    "submits": 130,
+    "accepts": 106
+  },
+  "2450": {
+    "type": "查找算法",
+    "submits": 157,
+    "accepts": 91
+  },
+  "2081": {
+    "type": "字符串",
+    "submits": 81,
+    "accepts": 48
+  },
+  "2180": {
+    "type": "字符串",
+    "submits": 313,
+    "accepts": 69
+  },
+  "2190": {
+    "type": "字符串",
+    "submits": 180,
+    "accepts": 40
+  },
+  "2177": {
+    "type": "字符串",
+    "submits": 153,
+    "accepts": 32
+  },
+  "2892": {
+    "type": "字符串",
+    "submits": 152,
+    "accepts": 43
+  },
+  "2188": {
+    "type": "字符串",
+    "submits": 69,
+    "accepts": 34
+  },
+  "2199": {
+    "type": "字符串",
+    "submits": 164,
+    "accepts": 33
+  },
+  "2198": {
+    "type": "字符串",
+    "submits": 142,
+    "accepts": 29
+  },
+  "2164": {
+    "type": "字符串",
+    "submits": 53,
+    "accepts": 39
+  },
+  "2531": {
+    "type": "排序算法",
+    "submits": 125,
+    "accepts": 93
+  },
+  "2894": {
+    "type": "字符串",
+    "submits": 95,
+    "accepts": 44
+  },
+  "2530": {
+    "type": "排序算法",
+    "submits": 146,
+    "accepts": 93
+  },
+  "2200": {
+    "type": "字符串",
+    "submits": 128,
+    "accepts": 38
+  },
+  "2936": {
+    "type": "字符串",
+    "submits": 178,
+    "accepts": 49
+  },
+  "2474": {
+    "type": "线性表",
+    "submits": 75,
+    "accepts": 46
+  },
+  "2173": {
+    "type": "线性表",
+    "submits": 57,
+    "accepts": 47
+  },
+  "2171": {
+    "type": "线性表",
+    "submits": 72,
+    "accepts": 45
+  },
+  "2647": {
+    "type": "线性表",
+    "submits": 122,
+    "accepts": 45
+  },
+  "2548": {
+    "type": "线性表",
+    "submits": 122,
+    "accepts": 43
+  },
+  "2547": {
+    "type": "线性表",
+    "submits": 80,
+    "accepts": 47
+  },
+  "2589": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 48
+  },
+  "2169": {
+    "type": "线性表",
+    "submits": 75,
+    "accepts": 44
+  },
+  "2145": {
+    "type": "线性表",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2607": {
+    "type": "线性表",
+    "submits": 95,
+    "accepts": 45
+  },
+  "2629": {
+    "type": "线性表",
+    "submits": 102,
+    "accepts": 39
+  },
+  "2561": {
+    "type": "线性表",
+    "submits": 61,
+    "accepts": 47
+  },
+  "2186": {
+    "type": "线性表",
+    "submits": 64,
+    "accepts": 48
+  },
+  "2142": {
+    "type": "线性表",
+    "submits": 130,
+    "accepts": 41
+  },
+  "2185": {
+    "type": "线性表",
+    "submits": 89,
+    "accepts": 46
+  },
+  "2482": {
+    "type": "线性表",
+    "submits": 105,
+    "accepts": 46
+  },
+  "2141": {
+    "type": "线性表",
+    "submits": 79,
+    "accepts": 46
+  },
+  "2184": {
+    "type": "线性表",
+    "submits": 59,
+    "accepts": 49
+  },
+  "2140": {
+    "type": "线性表",
+    "submits": 173,
+    "accepts": 42
+  },
+  "2183": {
+    "type": "线性表",
+    "submits": 60,
+    "accepts": 48
+  },
+  "2182": {
+    "type": "线性表",
+    "submits": 67,
+    "accepts": 46
+  },
+  "2181": {
+    "type": "线性表",
+    "submits": 68,
+    "accepts": 46
+  },
+  "2614": {
+    "type": "线性表",
+    "submits": 72,
+    "accepts": 46
+  },
+  "2558": {
+    "type": "线性表",
+    "submits": 127,
+    "accepts": 47
+  },
+  "2610": {
+    "type": "线性表",
+    "submits": 99,
+    "accepts": 49
+  },
+  "2212": {
+    "type": "线性表",
+    "submits": 55,
+    "accepts": 47
+  },
+  "2618": {
+    "type": "线性表",
+    "submits": 69,
+    "accepts": 47
+  },
+  "2617": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 44
+  },
+  "2615": {
+    "type": "线性表",
+    "submits": 61,
+    "accepts": 45
+  },
+  "2494": {
+    "type": "数组",
+    "submits": 163,
+    "accepts": 138
+  },
+  "2373": {
+    "type": "数组",
+    "submits": 93,
+    "accepts": 46
+  },
+  "2252": {
+    "type": "数组",
+    "submits": 81,
+    "accepts": 45
+  },
+  "2395": {
+    "type": "数组",
+    "submits": 82,
+    "accepts": 45
+  },
+  "2394": {
+    "type": "数组",
+    "submits": 85,
+    "accepts": 49
+  },
+  "2371": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 46
+  },
+  "2392": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 46
+  },
+  "2701": {
+    "type": "查找算法",
+    "submits": 255,
+    "accepts": 134
+  },
+  "2426": {
+    "type": "数组",
+    "submits": 48,
+    "accepts": 47
+  },
+  "2425": {
+    "type": "数组",
+    "submits": 68,
+    "accepts": 48
+  },
+  "2424": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 45
+  },
+  "2203": {
+    "type": "数组",
+    "submits": 96,
+    "accepts": 47
+  },
+  "2467": {
+    "type": "数组",
+    "submits": 113,
+    "accepts": 96
+  },
+  "2346": {
+    "type": "数组",
+    "submits": 107,
+    "accepts": 47
+  },
+  "2423": {
+    "type": "数组",
+    "submits": 67,
+    "accepts": 47
+  },
+  "2466": {
+    "type": "数组",
+    "submits": 67,
+    "accepts": 48
+  },
+  "2345": {
+    "type": "数组",
+    "submits": 146,
+    "accepts": 93
+  },
+  "2389": {
+    "type": "数组",
+    "submits": 75,
+    "accepts": 47
+  },
+  "2344": {
+    "type": "数组",
+    "submits": 74,
+    "accepts": 47
+  },
+  "2388": {
+    "type": "数组",
+    "submits": 49,
+    "accepts": 45
+  },
+  "2442": {
+    "type": "数字操作",
+    "submits": 214,
+    "accepts": 140
+  },
+  "2209": {
+    "type": "字符串",
+    "submits": 245,
+    "accepts": 90
+  },
+  "2527": {
+    "type": "排序算法",
+    "submits": 253,
+    "accepts": 131
+  },
+  "2342": {
+    "type": "数组",
+    "submits": 105,
+    "accepts": 46
+  },
+  "2386": {
+    "type": "数组",
+    "submits": 113,
+    "accepts": 48
+  },
+  "2341": {
+    "type": "数组",
+    "submits": 72,
+    "accepts": 45
+  },
+  "2340": {
+    "type": "数组",
+    "submits": 196,
+    "accepts": 98
+  },
+  "2283": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 46
+  },
+  "2061": {
+    "type": "数组",
+    "submits": 65,
+    "accepts": 56
+  },
+  "2280": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 48
+  },
+  "2438": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 56
+  },
+  "2339": {
+    "type": "数组",
+    "submits": 146,
+    "accepts": 87
+  },
+  "2338": {
+    "type": "数组",
+    "submits": 64,
+    "accepts": 46
+  },
+  "2359": {
+    "type": "数组",
+    "submits": 69,
+    "accepts": 45
+  },
+  "2358": {
+    "type": "数组",
+    "submits": 66,
+    "accepts": 45
+  },
+  "2357": {
+    "type": "数组",
+    "submits": 50,
+    "accepts": 45
+  },
+  "2356": {
+    "type": "数组",
+    "submits": 94,
+    "accepts": 42
+  },
+  "2279": {
+    "type": "数组",
+    "submits": 94,
+    "accepts": 45
+  },
+  "2498": {
+    "type": "数组",
+    "submits": 57,
+    "accepts": 47
+  },
+  "2278": {
+    "type": "数组",
+    "submits": 75,
+    "accepts": 46
+  },
+  "2211": {
+    "type": "数组",
+    "submits": 149,
+    "accepts": 82
+  },
+  "2718": {
+    "type": "查找算法",
+    "submits": 424,
+    "accepts": 185
+  },
+  "2463": {
+    "type": "查找算法",
+    "submits": 89,
+    "accepts": 47
+  },
+  "2451": {
+    "type": "查找算法",
+    "submits": 140,
+    "accepts": 91
+  },
+  "2462": {
+    "type": "查找算法",
+    "submits": 125,
+    "accepts": 51
+  },
+  "2461": {
+    "type": "查找算法",
+    "submits": 123,
+    "accepts": 95
+  },
+  "2537": {
+    "type": "查找算法",
+    "submits": 73,
+    "accepts": 48
+  },
+  "2449": {
+    "type": "查找算法",
+    "submits": 154,
+    "accepts": 98
+  },
+  "2514": {
+    "type": "查找算法",
+    "submits": 133,
+    "accepts": 92
+  },
+  "2445": {
+    "type": "查找算法",
+    "submits": 192,
+    "accepts": 96
+  },
+  "2741": {
+    "type": "查找算法",
+    "submits": 204,
+    "accepts": 154
+  },
+  "2542": {
+    "type": "排序算法",
+    "submits": 188,
+    "accepts": 162
+  },
+  "2454": {
+    "type": "查找算法",
+    "submits": 82,
+    "accepts": 48
+  },
+  "2465": {
+    "type": "查找算法",
+    "submits": 83,
+    "accepts": 50
+  },
+  "2453": {
+    "type": "查找算法",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2464": {
+    "type": "查找算法",
+    "submits": 131,
+    "accepts": 97
+  },
+  "2506": {
+    "type": "查找算法",
+    "submits": 184,
+    "accepts": 100
+  },
+  "2505": {
+    "type": "查找算法",
+    "submits": 80,
+    "accepts": 46
+  },
+  "2535": {
+    "type": "排序算法",
+    "submits": 202,
+    "accepts": 159
+  },
+  "2534": {
+    "type": "排序算法",
+    "submits": 152,
+    "accepts": 109
+  },
+  "2412": {
+    "type": "排序算法",
+    "submits": 107,
+    "accepts": 36
+  },
+  "2444": {
+    "type": "图结构",
+    "submits": 290,
+    "accepts": 130
+  },
+  "2387": {
+    "type": "排序算法",
+    "submits": 316,
+    "accepts": 131
+  },
+  "2441": {
+    "type": "线性表",
+    "submits": 111,
+    "accepts": 91
+  },
+  "2396": {
+    "type": "排序算法",
+    "submits": 110,
+    "accepts": 48
+  },
+  "2440": {
+    "type": "排序算法",
+    "submits": 188,
+    "accepts": 140
+  },
+  "2152": {
+    "type": "图结构",
+    "submits": 121,
+    "accepts": 75
+  },
+  "2490": {
+    "type": "排序算法",
+    "submits": 121,
+    "accepts": 90
+  },
+  "2070": {
+    "type": "数字操作",
+    "submits": 122,
+    "accepts": 47
+  },
+  "2111": {
+    "type": "数字操作",
+    "submits": 74,
+    "accepts": 54
+  },
+  "2099": {
+    "type": "数字操作",
+    "submits": 57,
+    "accepts": 49
+  },
+  "2110": {
+    "type": "数字操作",
+    "submits": 67,
+    "accepts": 47
+  },
+  "2153": {
+    "type": "数字操作",
+    "submits": 162,
+    "accepts": 93
+  },
+  "2098": {
+    "type": "数字操作",
+    "submits": 119,
+    "accepts": 50
+  },
+  "2097": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 46
+  },
+  "2096": {
+    "type": "数字操作",
+    "submits": 56,
+    "accepts": 50
+  },
+  "2095": {
+    "type": "数字操作",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2094": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 48
+  },
+  "2093": {
+    "type": "数字操作",
+    "submits": 58,
+    "accepts": 48
+  },
+  "2108": {
+    "type": "数字操作",
+    "submits": 60,
+    "accepts": 48
+  },
+  "2106": {
+    "type": "数字操作",
+    "submits": 69,
+    "accepts": 49
+  },
+  "2127": {
+    "type": "数字操作",
+    "submits": 73,
+    "accepts": 51
+  },
+  "2105": {
+    "type": "数字操作",
+    "submits": 60,
+    "accepts": 45
+  },
+  "2069": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 51
+  },
+  "2068": {
+    "type": "数字操作",
+    "submits": 85,
+    "accepts": 51
+  },
+  "2109": {
+    "type": "数字操作",
+    "submits": 59,
+    "accepts": 53
+  },
+  "2067": {
+    "type": "数字操作",
+    "submits": 65,
+    "accepts": 51
+  },
+  "2584": {
+    "type": "数字操作",
+    "submits": 133,
+    "accepts": 120
+  },
+  "2100": {
+    "type": "数字操作",
+    "submits": 54,
+    "accepts": 51
+  },
+  "2122": {
+    "type": "数字操作",
+    "submits": 48,
+    "accepts": 45
+  },
+  "2121": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 47
+  },
+  "2065": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 49
+  },
+  "2120": {
+    "type": "数字操作",
+    "submits": 64,
+    "accepts": 46
+  },
+  "2064": {
+    "type": "数字操作",
+    "submits": 86,
+    "accepts": 51
+  },
+  "2063": {
+    "type": "数字操作",
+    "submits": 73,
+    "accepts": 48
+  },
+  "2117": {
+    "type": "数字操作",
+    "submits": 50,
+    "accepts": 44
+  },
+  "2116": {
+    "type": "数字操作",
+    "submits": 56,
+    "accepts": 46
+  },
+  "2114": {
+    "type": "数字操作",
+    "submits": 54,
+    "accepts": 48
+  },
+  "2113": {
+    "type": "数字操作",
+    "submits": 87,
+    "accepts": 39
+  },
+  "2134": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 57
+  },
+  "2080": {
+    "type": "图结构",
+    "submits": 68,
+    "accepts": 42
+  },
+  "2088": {
+    "type": "图结构",
+    "submits": 104,
+    "accepts": 28
+  },
+  "2087": {
+    "type": "图结构",
+    "submits": 216,
+    "accepts": 35
+  },
+  "2086": {
+    "type": "图结构",
+    "submits": 89,
+    "accepts": 41
+  },
+  "2085": {
+    "type": "图结构",
+    "submits": 158,
+    "accepts": 46
+  },
+  "2084": {
+    "type": "图结构",
+    "submits": 201,
+    "accepts": 38
+  },
+  "2196": {
+    "type": "字符串",
+    "submits": 142,
+    "accepts": 31
+  },
+  "2178": {
+    "type": "字符串",
+    "submits": 188,
+    "accepts": 82
+  },
+  "2592": {
+    "type": "线性表",
+    "submits": 90,
+    "accepts": 42
+  },
+  "2193": {
+    "type": "数组",
+    "submits": 96,
+    "accepts": 43
+  },
+  "2397": {
+    "type": "树结构",
+    "submits": 664,
+    "accepts": 82
+  },
+  "2174": {
+    "type": "图结构",
+    "submits": 203,
+    "accepts": 55
+  },
+  "2115": {
+    "type": "图结构",
+    "submits": 234,
+    "accepts": 53
+  },
+  "2390": {
+    "type": "排序算法",
+    "submits": 203,
+    "accepts": 39
+  },
+  "2126": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 45
+  },
+  "2119": {
+    "type": "数字操作",
+    "submits": 59,
+    "accepts": 45
+  },
+  "2253": {
+    "type": "树结构",
+    "submits": 93,
+    "accepts": 31
+  },
+  "2296": {
+    "type": "树结构",
+    "submits": 142,
+    "accepts": 68
+  },
+  "2295": {
+    "type": "树结构",
+    "submits": 98,
+    "accepts": 37
+  },
+  "2273": {
+    "type": "树结构",
+    "submits": 167,
+    "accepts": 51
+  },
+  "2151": {
+    "type": "图结构",
+    "submits": 94,
+    "accepts": 66
+  },
+  "2291": {
+    "type": "树结构",
+    "submits": 56,
+    "accepts": 33
+  },
+  "2304": {
+    "type": "树结构",
+    "submits": 245,
+    "accepts": 81
+  },
+  "2149": {
+    "type": "图结构",
+    "submits": 106,
+    "accepts": 47
+  },
+  "2301": {
+    "type": "树结构",
+    "submits": 51,
+    "accepts": 27
+  },
+  "2289": {
+    "type": "树结构",
+    "submits": 62,
+    "accepts": 28
+  },
+  "2168": {
+    "type": "图结构",
+    "submits": 135,
+    "accepts": 51
+  },
+  "2300": {
+    "type": "树结构",
+    "submits": 117,
+    "accepts": 33
+  },
+  "2266": {
+    "type": "树结构",
+    "submits": 86,
+    "accepts": 26
+  },
+  "2288": {
+    "type": "树结构",
+    "submits": 67,
+    "accepts": 28
+  },
+  "2167": {
+    "type": "图结构",
+    "submits": 77,
+    "accepts": 65
+  },
+  "2308": {
+    "type": "树结构",
+    "submits": 173,
+    "accepts": 76
+  },
+  "2406": {
+    "type": "树结构",
+    "submits": 171,
+    "accepts": 59
+  },
+  "2286": {
+    "type": "树结构",
+    "submits": 55,
+    "accepts": 32
+  },
+  "2383": {
+    "type": "树结构",
+    "submits": 93,
+    "accepts": 28
+  },
+  "2415": {
+    "type": "树结构",
+    "submits": 110,
+    "accepts": 62
+  },
+  "2315": {
+    "type": "树结构",
+    "submits": 57,
+    "accepts": 39
+  },
+  "2237": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 39
+  },
+  "2236": {
+    "type": "树结构",
+    "submits": 89,
+    "accepts": 35
+  },
+  "2312": {
+    "type": "树结构",
+    "submits": 77,
+    "accepts": 38
+  },
+  "2378": {
+    "type": "树结构",
+    "submits": 191,
+    "accepts": 65
+  },
+  "2311": {
+    "type": "树结构",
+    "submits": 120,
+    "accepts": 30
+  },
+  "2299": {
+    "type": "树结构",
+    "submits": 62,
+    "accepts": 32
+  },
+  "2439": {
+    "type": "树结构",
+    "submits": 124,
+    "accepts": 71
+  },
+  "2091": {
+    "type": "图结构",
+    "submits": 100,
+    "accepts": 24
+  },
+  "2090": {
+    "type": "图结构",
+    "submits": 62,
+    "accepts": 24
+  },
+  "2089": {
+    "type": "图结构",
+    "submits": 58,
+    "accepts": 28
+  },
+  "2139": {
+    "type": "图结构",
+    "submits": 39,
+    "accepts": 31
+  },
+  "2104": {
+    "type": "图结构",
+    "submits": 106,
+    "accepts": 34
+  },
+  "2103": {
+    "type": "图结构",
+    "submits": 80,
+    "accepts": 23
+  },
+  "2124": {
+    "type": "图结构",
+    "submits": 73,
+    "accepts": 23
+  },
+  "2309": {
+    "type": "图结构",
+    "submits": 124,
+    "accepts": 53
+  },
+  "2791": {
+    "type": "数组",
+    "submits": 90,
+    "accepts": 52
+  },
+  "2790": {
+    "type": "数组",
+    "submits": 79,
+    "accepts": 50
+  },
+  "2789": {
+    "type": "数组",
+    "submits": 83,
+    "accepts": 50
+  },
+  "2800": {
+    "type": "数组",
+    "submits": 54,
+    "accepts": 50
+  },
+  "2822": {
+    "type": "数组",
+    "submits": 109,
+    "accepts": 49
+  },
+  "2821": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 58
+  },
+  "2820": {
+    "type": "数组",
+    "submits": 65,
+    "accepts": 57
+  },
+  "2809": {
+    "type": "数组",
+    "submits": 66,
+    "accepts": 50
+  },
+  "2808": {
+    "type": "数组",
+    "submits": 79,
+    "accepts": 50
+  },
+  "2829": {
+    "type": "数组",
+    "submits": 84,
+    "accepts": 52
+  },
+  "2807": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 50
+  },
+  "2806": {
+    "type": "数组",
+    "submits": 92,
+    "accepts": 52
+  },
+  "2828": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 49
+  },
+  "2827": {
+    "type": "数组",
+    "submits": 82,
+    "accepts": 57
+  },
+  "2805": {
+    "type": "数组",
+    "submits": 136,
+    "accepts": 51
+  },
+  "2826": {
+    "type": "数组",
+    "submits": 99,
+    "accepts": 54
+  },
+  "2825": {
+    "type": "数组",
+    "submits": 77,
+    "accepts": 56
+  },
+  "2847": {
+    "type": "数组",
+    "submits": 56,
+    "accepts": 52
+  },
+  "2803": {
+    "type": "数组",
+    "submits": 71,
+    "accepts": 51
+  },
+  "2846": {
+    "type": "数组",
+    "submits": 85,
+    "accepts": 53
+  },
+  "2802": {
+    "type": "数组",
+    "submits": 85,
+    "accepts": 52
+  },
+  "2812": {
+    "type": "数组",
+    "submits": 91,
+    "accepts": 58
+  },
+  "2811": {
+    "type": "数组",
+    "submits": 94,
+    "accepts": 58
+  },
+  "2833": {
+    "type": "数组",
+    "submits": 73,
+    "accepts": 55
+  },
+  "2799": {
+    "type": "数组",
+    "submits": 166,
+    "accepts": 49
+  },
+  "2810": {
+    "type": "数组",
+    "submits": 108,
+    "accepts": 48
+  },
+  "2798": {
+    "type": "数组",
+    "submits": 155,
+    "accepts": 47
+  },
+  "2795": {
+    "type": "数组",
+    "submits": 194,
+    "accepts": 50
+  },
+  "2794": {
+    "type": "数组",
+    "submits": 55,
+    "accepts": 47
+  },
+  "2818": {
+    "type": "数组",
+    "submits": 80,
+    "accepts": 54
+  },
+  "2839": {
+    "type": "数组",
+    "submits": 59,
+    "accepts": 52
+  },
+  "2817": {
+    "type": "数组",
+    "submits": 92,
+    "accepts": 50
+  },
+  "2816": {
+    "type": "数组",
+    "submits": 72,
+    "accepts": 49
+  },
+  "2814": {
+    "type": "数组",
+    "submits": 133,
+    "accepts": 52
+  },
+  "2813": {
+    "type": "数组",
+    "submits": 165,
+    "accepts": 57
+  },
+  "2793": {
+    "type": "数组",
+    "submits": 152,
+    "accepts": 47
+  },
+  "2792": {
+    "type": "数组",
+    "submits": 69,
+    "accepts": 45
+  },
+  "2801": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 41
+  },
+  "2788": {
+    "type": "数组",
+    "submits": 97,
+    "accepts": 45
+  },
+  "2787": {
+    "type": "数组",
+    "submits": 68,
+    "accepts": 41
+  },
+  "2786": {
+    "type": "数组",
+    "submits": 91,
+    "accepts": 42
+  },
+  "2797": {
+    "type": "数组",
+    "submits": 71,
+    "accepts": 44
+  },
+  "2785": {
+    "type": "数组",
+    "submits": 173,
+    "accepts": 44
+  },
+  "2796": {
+    "type": "数组",
+    "submits": 74,
+    "accepts": 43
+  },
+  "2784": {
+    "type": "数组",
+    "submits": 80,
+    "accepts": 41
+  },
+  "2783": {
+    "type": "数组",
+    "submits": 105,
+    "accepts": 46
+  },
+  "2819": {
+    "type": "数组",
+    "submits": 227,
+    "accepts": 91
+  },
+  "2815": {
+    "type": "数组",
+    "submits": 207,
+    "accepts": 95
+  },
+  "2870": {
+    "type": "数组",
+    "submits": 48,
+    "accepts": 42
+  },
+  "2867": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 41
+  },
+  "2845": {
+    "type": "数组",
+    "submits": 127,
+    "accepts": 38
+  },
+  "2823": {
+    "type": "数组",
+    "submits": 130,
+    "accepts": 38
+  },
+  "2844": {
+    "type": "数组",
+    "submits": 142,
+    "accepts": 40
+  },
+  "2866": {
+    "type": "数组",
+    "submits": 91,
+    "accepts": 41
+  },
+  "2865": {
+    "type": "数组",
+    "submits": 78,
+    "accepts": 42
+  },
+  "2843": {
+    "type": "数组",
+    "submits": 76,
+    "accepts": 40
+  },
+  "2864": {
+    "type": "数组",
+    "submits": 135,
+    "accepts": 33
+  },
+  "2842": {
+    "type": "数组",
+    "submits": 73,
+    "accepts": 39
+  },
+  "2863": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 42
+  },
+  "2840": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 41
+  },
+  "2861": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 40
+  },
+  "2849": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 41
+  },
+  "2848": {
+    "type": "数组",
+    "submits": 106,
+    "accepts": 39
+  },
+  "2868": {
+    "type": "数组",
+    "submits": 64,
+    "accepts": 41
+  },
+  "2824": {
+    "type": "数组",
+    "submits": 69,
+    "accepts": 42
+  },
+  "2834": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 39
+  },
+  "2877": {
+    "type": "数组",
+    "submits": 58,
+    "accepts": 40
+  },
+  "2855": {
+    "type": "数组",
+    "submits": 77,
+    "accepts": 41
+  },
+  "2854": {
+    "type": "数组",
+    "submits": 122,
+    "accepts": 42
+  },
+  "2832": {
+    "type": "数组",
+    "submits": 77,
+    "accepts": 40
+  },
+  "2875": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 41
+  },
+  "2831": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 41
+  },
+  "2853": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 42
+  },
+  "2830": {
+    "type": "数组",
+    "submits": 72,
+    "accepts": 42
+  },
+  "2852": {
+    "type": "数组",
+    "submits": 80,
+    "accepts": 40
+  },
+  "2873": {
+    "type": "数组",
+    "submits": 139,
+    "accepts": 44
+  },
+  "2851": {
+    "type": "数组",
+    "submits": 54,
+    "accepts": 42
+  },
+  "2872": {
+    "type": "数组",
+    "submits": 74,
+    "accepts": 41
+  },
+  "2850": {
+    "type": "数组",
+    "submits": 116,
+    "accepts": 41
+  },
+  "2838": {
+    "type": "数组",
+    "submits": 74,
+    "accepts": 41
+  },
+  "2859": {
+    "type": "数组",
+    "submits": 139,
+    "accepts": 40
+  },
+  "2837": {
+    "type": "数组",
+    "submits": 90,
+    "accepts": 41
+  },
+  "2836": {
+    "type": "数组",
+    "submits": 99,
+    "accepts": 37
+  },
+  "2858": {
+    "type": "数组",
+    "submits": 54,
+    "accepts": 41
+  },
+  "2835": {
+    "type": "数组",
+    "submits": 115,
+    "accepts": 39
+  },
+  "2857": {
+    "type": "数组",
+    "submits": 285,
+    "accepts": 38
+  },
+  "2891": {
+    "type": "数组",
+    "submits": 55,
+    "accepts": 54
+  },
+  "2890": {
+    "type": "数组",
+    "submits": 62,
+    "accepts": 41
+  },
+  "2889": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 56
+  },
+  "2922": {
+    "type": "数组",
+    "submits": 79,
+    "accepts": 45
+  },
+  "2888": {
+    "type": "数组",
+    "submits": 54,
+    "accepts": 43
+  },
+  "2921": {
+    "type": "数组",
+    "submits": 78,
+    "accepts": 40
+  },
+  "2887": {
+    "type": "数组",
+    "submits": 60,
+    "accepts": 48
+  },
+  "2920": {
+    "type": "数组",
+    "submits": 76,
+    "accepts": 48
+  },
+  "2886": {
+    "type": "数组",
+    "submits": 55,
+    "accepts": 53
+  },
+  "2885": {
+    "type": "数组",
+    "submits": 86,
+    "accepts": 49
+  },
+  "2841": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 47
+  },
+  "2884": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 57
+  },
+  "2862": {
+    "type": "数组",
+    "submits": 55,
+    "accepts": 51
+  },
+  "2883": {
+    "type": "数组",
+    "submits": 76,
+    "accepts": 55
+  },
+  "2882": {
+    "type": "数组",
+    "submits": 137,
+    "accepts": 47
+  },
+  "2860": {
+    "type": "数组",
+    "submits": 58,
+    "accepts": 44
+  },
+  "2929": {
+    "type": "数组",
+    "submits": 58,
+    "accepts": 49
+  },
+  "2928": {
+    "type": "数组",
+    "submits": 103,
+    "accepts": 49
+  },
+  "2927": {
+    "type": "数组",
+    "submits": 51,
+    "accepts": 46
+  },
+  "2926": {
+    "type": "数组",
+    "submits": 53,
+    "accepts": 48
+  },
+  "2925": {
+    "type": "数组",
+    "submits": 68,
+    "accepts": 46
+  },
+  "2869": {
+    "type": "数组",
+    "submits": 87,
+    "accepts": 54
+  },
+  "2924": {
+    "type": "数组",
+    "submits": 58,
+    "accepts": 47
+  },
+  "2923": {
+    "type": "数组",
+    "submits": 49,
+    "accepts": 43
+  },
+  "2881": {
+    "type": "数组",
+    "submits": 67,
+    "accepts": 61
+  },
+  "2880": {
+    "type": "数组",
+    "submits": 110,
+    "accepts": 51
+  },
+  "2878": {
+    "type": "数组",
+    "submits": 75,
+    "accepts": 58
+  },
+  "2856": {
+    "type": "数组",
+    "submits": 75,
+    "accepts": 55
+  },
+  "2911": {
+    "type": "数组",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2910": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 42
+  },
+  "2876": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 49
+  },
+  "2930": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 55
+  },
+  "2874": {
+    "type": "数组",
+    "submits": 78,
+    "accepts": 50
+  },
+  "2871": {
+    "type": "数组",
+    "submits": 68,
+    "accepts": 58
+  },
+  "2918": {
+    "type": "数组",
+    "submits": 103,
+    "accepts": 41
+  },
+  "2917": {
+    "type": "数组",
+    "submits": 66,
+    "accepts": 46
+  },
+  "2916": {
+    "type": "数组",
+    "submits": 74,
+    "accepts": 50
+  },
+  "2915": {
+    "type": "数组",
+    "submits": 78,
+    "accepts": 49
+  },
+  "2914": {
+    "type": "数组",
+    "submits": 116,
+    "accepts": 41
+  },
+  "2913": {
+    "type": "数组",
+    "submits": 72,
+    "accepts": 56
+  },
+  "2879": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 49
+  },
+  "2909": {
+    "type": "字符串",
+    "submits": 66,
+    "accepts": 46
+  },
+  "2900": {
+    "type": "字符串",
+    "submits": 65,
+    "accepts": 42
+  },
+  "2955": {
+    "type": "字符串",
+    "submits": 95,
+    "accepts": 35
+  },
+  "2898": {
+    "type": "字符串",
+    "submits": 67,
+    "accepts": 43
+  },
+  "2985": {
+    "type": "字符串",
+    "submits": 61,
+    "accepts": 43
+  },
+  "2952": {
+    "type": "字符串",
+    "submits": 64,
+    "accepts": 43
+  },
+  "2896": {
+    "type": "字符串",
+    "submits": 131,
+    "accepts": 38
+  },
+  "2740": {
+    "type": "查找算法",
+    "submits": 120,
+    "accepts": 101
+  },
+  "2906": {
+    "type": "字符串",
+    "submits": 58,
+    "accepts": 42
+  },
+  "2904": {
+    "type": "字符串",
+    "submits": 67,
+    "accepts": 42
+  },
+  "2947": {
+    "type": "字符串",
+    "submits": 56,
+    "accepts": 45
+  },
+  "2958": {
+    "type": "字符串",
+    "submits": 61,
+    "accepts": 34
+  },
+  "2934": {
+    "type": "字符串",
+    "submits": 92,
+    "accepts": 38
+  },
+  "2747": {
+    "type": "字符串",
+    "submits": 162,
+    "accepts": 88
+  },
+  "2671": {
+    "type": "线性表",
+    "submits": 48,
+    "accepts": 40
+  },
+  "2197": {
+    "type": "线性表",
+    "submits": 56,
+    "accepts": 43
+  },
+  "2195": {
+    "type": "线性表",
+    "submits": 61,
+    "accepts": 42
+  },
+  "2194": {
+    "type": "线性表",
+    "submits": 84,
+    "accepts": 43
+  },
+  "2192": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 43
+  },
+  "2207": {
+    "type": "线性表",
+    "submits": 58,
+    "accepts": 41
+  },
+  "2669": {
+    "type": "线性表",
+    "submits": 60,
+    "accepts": 44
+  },
+  "2206": {
+    "type": "线性表",
+    "submits": 60,
+    "accepts": 43
+  },
+  "2668": {
+    "type": "线性表",
+    "submits": 44,
+    "accepts": 41
+  },
+  "2205": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 38
+  },
+  "2667": {
+    "type": "线性表",
+    "submits": 69,
+    "accepts": 45
+  },
+  "2204": {
+    "type": "线性表",
+    "submits": 76,
+    "accepts": 43
+  },
+  "2665": {
+    "type": "线性表",
+    "submits": 43,
+    "accepts": 40
+  },
+  "2202": {
+    "type": "线性表",
+    "submits": 76,
+    "accepts": 40
+  },
+  "2543": {
+    "type": "线性表",
+    "submits": 54,
+    "accepts": 37
+  },
+  "2201": {
+    "type": "线性表",
+    "submits": 45,
+    "accepts": 43
+  },
+  "2662": {
+    "type": "线性表",
+    "submits": 42,
+    "accepts": 41
+  },
+  "2189": {
+    "type": "线性表",
+    "submits": 60,
+    "accepts": 41
+  },
+  "2562": {
+    "type": "线性表",
+    "submits": 115,
+    "accepts": 48
+  },
+  "2661": {
+    "type": "线性表",
+    "submits": 47,
+    "accepts": 41
+  },
+  "2187": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 44
+  },
+  "2658": {
+    "type": "线性表",
+    "submits": 56,
+    "accepts": 41
+  },
+  "2656": {
+    "type": "线性表",
+    "submits": 59,
+    "accepts": 45
+  },
+  "2655": {
+    "type": "线性表",
+    "submits": 51,
+    "accepts": 43
+  },
+  "2653": {
+    "type": "线性表",
+    "submits": 45,
+    "accepts": 39
+  },
+  "2651": {
+    "type": "线性表",
+    "submits": 44,
+    "accepts": 42
+  },
+  "2673": {
+    "type": "线性表",
+    "submits": 44,
+    "accepts": 41
+  },
+  "2659": {
+    "type": "线性表",
+    "submits": 43,
+    "accepts": 41
+  },
+  "2430": {
+    "type": "数组",
+    "submits": 59,
+    "accepts": 45
+  },
+  "2692": {
+    "type": "数组",
+    "submits": 148,
+    "accepts": 93
+  },
+  "2372": {
+    "type": "数组",
+    "submits": 89,
+    "accepts": 45
+  },
+  "2293": {
+    "type": "数组",
+    "submits": 48,
+    "accepts": 43
+  },
+  "2427": {
+    "type": "数组",
+    "submits": 52,
+    "accepts": 41
+  },
+  "2602": {
+    "type": "数组",
+    "submits": 56,
+    "accepts": 49
+  },
+  "2468": {
+    "type": "数组",
+    "submits": 86,
+    "accepts": 46
+  },
+  "2523": {
+    "type": "排序算法",
+    "submits": 121,
+    "accepts": 86
+  },
+  "2489": {
+    "type": "数组",
+    "submits": 130,
+    "accepts": 90
+  },
+  "2522": {
+    "type": "数组",
+    "submits": 155,
+    "accepts": 94
+  },
+  "2500": {
+    "type": "数组",
+    "submits": 167,
+    "accepts": 97
+  },
+  "2564": {
+    "type": "数组",
+    "submits": 73,
+    "accepts": 51
+  },
+  "2729": {
+    "type": "查找算法",
+    "submits": 142,
+    "accepts": 104
+  },
+  "2528": {
+    "type": "排序算法",
+    "submits": 207,
+    "accepts": 165
+  },
+  "2429": {
+    "type": "数组",
+    "submits": 48,
+    "accepts": 42
+  },
+  "2428": {
+    "type": "数组",
+    "submits": 66,
+    "accepts": 43
+  },
+  "2285": {
+    "type": "数组",
+    "submits": 47,
+    "accepts": 41
+  },
+  "2284": {
+    "type": "数组",
+    "submits": 81,
+    "accepts": 45
+  },
+  "2282": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 45
+  },
+  "2436": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 48
+  },
+  "2533": {
+    "type": "排序算法",
+    "submits": 197,
+    "accepts": 122
+  },
+  "2433": {
+    "type": "数组",
+    "submits": 172,
+    "accepts": 106
+  },
+  "2739": {
+    "type": "查找算法",
+    "submits": 141,
+    "accepts": 113
+  },
+  "2738": {
+    "type": "查找算法",
+    "submits": 133,
+    "accepts": 101
+  },
+  "2737": {
+    "type": "查找算法",
+    "submits": 202,
+    "accepts": 155
+  },
+  "2539": {
+    "type": "排序算法",
+    "submits": 138,
+    "accepts": 105
+  },
+  "2148": {
+    "type": "图结构",
+    "submits": 121,
+    "accepts": 30
+  },
+  "2125": {
+    "type": "图结构",
+    "submits": 43,
+    "accepts": 26
+  },
+  "2147": {
+    "type": "图结构",
+    "submits": 82,
+    "accepts": 31
+  },
+  "2146": {
+    "type": "图结构",
+    "submits": 57,
+    "accepts": 38
+  },
+  "2220": {
+    "type": "图结构",
+    "submits": 70,
+    "accepts": 25
+  },
+  "2150": {
+    "type": "图结构",
+    "submits": 114,
+    "accepts": 28
+  },
+  "2133": {
+    "type": "数字操作",
+    "submits": 49,
+    "accepts": 45
+  },
+  "2155": {
+    "type": "数字操作",
+    "submits": 52,
+    "accepts": 42
+  },
+  "2154": {
+    "type": "数字操作",
+    "submits": 49,
+    "accepts": 46
+  },
+  "2132": {
+    "type": "数字操作",
+    "submits": 55,
+    "accepts": 43
+  },
+  "2230": {
+    "type": "数字操作",
+    "submits": 47,
+    "accepts": 43
+  },
+  "2131": {
+    "type": "数字操作",
+    "submits": 50,
+    "accepts": 40
+  },
+  "2130": {
+    "type": "数字操作",
+    "submits": 71,
+    "accepts": 46
+  },
+  "2107": {
+    "type": "数字操作",
+    "submits": 49,
+    "accepts": 45
+  },
+  "2129": {
+    "type": "数字操作",
+    "submits": 57,
+    "accepts": 49
+  },
+  "2128": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 45
+  },
+  "2227": {
+    "type": "数字操作",
+    "submits": 96,
+    "accepts": 34
+  },
+  "2226": {
+    "type": "数字操作",
+    "submits": 52,
+    "accepts": 44
+  },
+  "2102": {
+    "type": "数字操作",
+    "submits": 47,
+    "accepts": 45
+  },
+  "2223": {
+    "type": "数字操作",
+    "submits": 85,
+    "accepts": 43
+  },
+  "2245": {
+    "type": "数字操作",
+    "submits": 50,
+    "accepts": 45
+  },
+  "2101": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 47
+  },
+  "2123": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 46
+  },
+  "2240": {
+    "type": "数字操作",
+    "submits": 99,
+    "accepts": 45
+  },
+  "2161": {
+    "type": "数字操作",
+    "submits": 48,
+    "accepts": 46
+  },
+  "2160": {
+    "type": "数字操作",
+    "submits": 55,
+    "accepts": 45
+  },
+  "2218": {
+    "type": "数字操作",
+    "submits": 64,
+    "accepts": 44
+  },
+  "2118": {
+    "type": "数字操作",
+    "submits": 54,
+    "accepts": 45
+  },
+  "2215": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 41
+  },
+  "2138": {
+    "type": "数字操作",
+    "submits": 52,
+    "accepts": 45
+  },
+  "2137": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 47
+  },
+  "2159": {
+    "type": "数字操作",
+    "submits": 48,
+    "accepts": 42
+  },
+  "2158": {
+    "type": "数字操作",
+    "submits": 65,
+    "accepts": 43
+  },
+  "2136": {
+    "type": "数字操作",
+    "submits": 50,
+    "accepts": 45
+  },
+  "2157": {
+    "type": "数字操作",
+    "submits": 59,
+    "accepts": 44
+  },
+  "2135": {
+    "type": "数字操作",
+    "submits": 53,
+    "accepts": 43
+  },
+  "2112": {
+    "type": "数字操作",
+    "submits": 51,
+    "accepts": 44
+  },
+  "2156": {
+    "type": "数字操作",
+    "submits": 46,
+    "accepts": 44
+  },
+  "2219": {
+    "type": "数字操作",
+    "submits": 62,
+    "accepts": 44
+  },
+  "2298": {
+    "type": "树结构",
+    "submits": 34,
+    "accepts": 33
+  },
+  "2375": {
+    "type": "树结构",
+    "submits": 168,
+    "accepts": 37
+  },
+  "2294": {
+    "type": "树结构",
+    "submits": 81,
+    "accepts": 37
+  },
+  "2492": {
+    "type": "树结构",
+    "submits": 70,
+    "accepts": 35
+  },
+  "2391": {
+    "type": "树结构",
+    "submits": 40,
+    "accepts": 38
+  },
+  "2292": {
+    "type": "树结构",
+    "submits": 47,
+    "accepts": 37
+  },
+  "2306": {
+    "type": "树结构",
+    "submits": 99,
+    "accepts": 35
+  },
+  "2405": {
+    "type": "树结构",
+    "submits": 86,
+    "accepts": 35
+  },
+  "2404": {
+    "type": "树结构",
+    "submits": 70,
+    "accepts": 34
+  },
+  "2446": {
+    "type": "树结构",
+    "submits": 57,
+    "accepts": 37
+  },
+  "2302": {
+    "type": "树结构",
+    "submits": 41,
+    "accepts": 35
+  },
+  "2460": {
+    "type": "树结构",
+    "submits": 48,
+    "accepts": 34
+  },
+  "2459": {
+    "type": "树结构",
+    "submits": 106,
+    "accepts": 36
+  },
+  "2458": {
+    "type": "树结构",
+    "submits": 56,
+    "accepts": 35
+  },
+  "2435": {
+    "type": "树结构",
+    "submits": 47,
+    "accepts": 43
+  },
+  "2457": {
+    "type": "树结构",
+    "submits": 99,
+    "accepts": 34
+  },
+  "2710": {
+    "type": "树结构",
+    "submits": 135,
+    "accepts": 85
+  },
+  "2434": {
+    "type": "树结构",
+    "submits": 72,
+    "accepts": 40
+  },
+  "2455": {
+    "type": "树结构",
+    "submits": 183,
+    "accepts": 72
+  },
+  "2432": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 43
+  },
+  "2431": {
+    "type": "树结构",
+    "submits": 92,
+    "accepts": 33
+  },
+  "2448": {
+    "type": "排序算法",
+    "submits": 73,
+    "accepts": 48
+  },
+  "2443": {
+    "type": "排序算法",
+    "submits": 64,
+    "accepts": 43
+  },
+  "2495": {
+    "type": "排序算法",
+    "submits": 70,
+    "accepts": 41
+  },
+  "2491": {
+    "type": "排序算法",
+    "submits": 52,
+    "accepts": 43
+  },
+  "2538": {
+    "type": "排序算法",
+    "submits": 183,
+    "accepts": 108
+  },
+  "2515": {
+    "type": "查找算法",
+    "submits": 62,
+    "accepts": 48
+  },
+  "2536": {
+    "type": "排序算法",
+    "submits": 243,
+    "accepts": 131
+  },
+  "2525": {
+    "type": "排序算法",
+    "submits": 123,
+    "accepts": 82
+  },
+  "2601": {
+    "type": "查找算法",
+    "submits": 59,
+    "accepts": 48
+  },
+  "2634": {
+    "type": "查找算法",
+    "submits": 151,
+    "accepts": 90
+  },
+  "2513": {
+    "type": "查找算法",
+    "submits": 131,
+    "accepts": 93
+  },
+  "2579": {
+    "type": "查找算法",
+    "submits": 77,
+    "accepts": 44
+  },
+  "2578": {
+    "type": "查找算法",
+    "submits": 81,
+    "accepts": 45
+  },
+  "2541": {
+    "type": "图结构",
+    "submits": 145,
+    "accepts": 103
+  },
+  "2517": {
+    "type": "查找算法",
+    "submits": 53,
+    "accepts": 43
+  },
+  "2604": {
+    "type": "查找算法",
+    "submits": 91,
+    "accepts": 47
+  },
+  "2516": {
+    "type": "查找算法",
+    "submits": 57,
+    "accepts": 44
+  },
+  "2603": {
+    "type": "数组",
+    "submits": 129,
+    "accepts": 47
+  },
+  "2368": {
+    "type": "数组",
+    "submits": 212,
+    "accepts": 39
+  },
+  "2365": {
+    "type": "数组",
+    "submits": 80,
+    "accepts": 50
+  },
+  "2385": {
+    "type": "数组",
+    "submits": 77,
+    "accepts": 45
+  },
+  "2290": {
+    "type": "线性表",
+    "submits": 95,
+    "accepts": 47
+  },
+  "2210": {
+    "type": "线性表",
+    "submits": 208,
+    "accepts": 39
+  },
+  "2231": {
+    "type": "线性表",
+    "submits": 120,
+    "accepts": 45
+  },
+  "2472": {
+    "type": "线性表",
+    "submits": 89,
+    "accepts": 45
+  },
+  "2593": {
+    "type": "线性表",
+    "submits": 192,
+    "accepts": 40
+  },
+  "2546": {
+    "type": "线性表",
+    "submits": 65,
+    "accepts": 45
+  },
+  "2689": {
+    "type": "线性表",
+    "submits": 56,
+    "accepts": 44
+  },
+  "2688": {
+    "type": "线性表",
+    "submits": 74,
+    "accepts": 42
+  },
+  "2687": {
+    "type": "线性表",
+    "submits": 76,
+    "accepts": 40
+  },
+  "2686": {
+    "type": "线性表",
+    "submits": 125,
+    "accepts": 45
+  },
+  "2685": {
+    "type": "线性表",
+    "submits": 65,
+    "accepts": 41
+  },
+  "2684": {
+    "type": "线性表",
+    "submits": 78,
+    "accepts": 40
+  },
+  "2208": {
+    "type": "线性表",
+    "submits": 148,
+    "accepts": 45
+  },
+  "2287": {
+    "type": "线性表",
+    "submits": 115,
+    "accepts": 43
+  },
+  "2683": {
+    "type": "线性表",
+    "submits": 116,
+    "accepts": 41
+  },
+  "2682": {
+    "type": "线性表",
+    "submits": 130,
+    "accepts": 46
+  },
+  "2681": {
+    "type": "线性表",
+    "submits": 57,
+    "accepts": 43
+  },
+  "2680": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 44
+  },
+  "2481": {
+    "type": "线性表",
+    "submits": 55,
+    "accepts": 46
+  },
+  "2480": {
+    "type": "线性表",
+    "submits": 75,
+    "accepts": 43
+  },
+  "2281": {
+    "type": "线性表",
+    "submits": 71,
+    "accepts": 43
+  },
+  "2679": {
+    "type": "线性表",
+    "submits": 71,
+    "accepts": 43
+  },
+  "2479": {
+    "type": "线性表",
+    "submits": 170,
+    "accepts": 50
+  },
+  "2677": {
+    "type": "线性表",
+    "submits": 52,
+    "accepts": 43
+  },
+  "2478": {
+    "type": "线性表",
+    "submits": 65,
+    "accepts": 45
+  },
+  "2676": {
+    "type": "线性表",
+    "submits": 88,
+    "accepts": 46
+  },
+  "2675": {
+    "type": "线性表",
+    "submits": 48,
+    "accepts": 43
+  },
+  "2477": {
+    "type": "线性表",
+    "submits": 105,
+    "accepts": 47
+  },
+  "2944": {
+    "type": "字符串",
+    "submits": 87,
+    "accepts": 46
+  },
+  "2964": {
+    "type": "字符串",
+    "submits": 196,
+    "accepts": 44
+  },
+  "2941": {
+    "type": "字符串",
+    "submits": 137,
+    "accepts": 47
+  },
+  "2951": {
+    "type": "字符串",
+    "submits": 129,
+    "accepts": 50
+  },
+  "2940": {
+    "type": "字符串",
+    "submits": 110,
+    "accepts": 43
+  },
+  "2962": {
+    "type": "字符串",
+    "submits": 164,
+    "accepts": 40
+  },
+  "2950": {
+    "type": "字符串",
+    "submits": 169,
+    "accepts": 43
+  },
+  "2960": {
+    "type": "字符串",
+    "submits": 143,
+    "accepts": 43
+  },
+  "2939": {
+    "type": "字符串",
+    "submits": 155,
+    "accepts": 50
+  },
+  "2938": {
+    "type": "字符串",
+    "submits": 80,
+    "accepts": 50
+  },
+  "2949": {
+    "type": "字符串",
+    "submits": 168,
+    "accepts": 47
+  },
+  "2937": {
+    "type": "字符串",
+    "submits": 55,
+    "accepts": 50
+  },
+  "2959": {
+    "type": "字符串",
+    "submits": 151,
+    "accepts": 46
+  },
+  "2935": {
+    "type": "字符串",
+    "submits": 82,
+    "accepts": 46
+  },
+  "2912": {
+    "type": "字符串",
+    "submits": 69,
+    "accepts": 48
+  },
+  "2251": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 56
+  },
+  "2328": {
+    "type": "数字操作",
+    "submits": 116,
+    "accepts": 50
+  },
+  "2229": {
+    "type": "数字操作",
+    "submits": 56,
+    "accepts": 43
+  },
+  "2327": {
+    "type": "数字操作",
+    "submits": 90,
+    "accepts": 44
+  },
+  "2228": {
+    "type": "数字操作",
+    "submits": 63,
+    "accepts": 44
+  },
+  "2249": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 45
+  },
+  "2325": {
+    "type": "数字操作",
+    "submits": 138,
+    "accepts": 47
+  },
+  "2248": {
+    "type": "数字操作",
+    "submits": 79,
+    "accepts": 44
+  },
+  "2247": {
+    "type": "数字操作",
+    "submits": 73,
+    "accepts": 41
+  },
+  "2225": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 43
+  },
+  "2323": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 45
+  },
+  "2224": {
+    "type": "数字操作",
+    "submits": 108,
+    "accepts": 46
+  },
+  "2246": {
+    "type": "数字操作",
+    "submits": 70,
+    "accepts": 45
+  },
+  "2244": {
+    "type": "数字操作",
+    "submits": 74,
+    "accepts": 44
+  },
+  "2222": {
+    "type": "数字操作",
+    "submits": 109,
+    "accepts": 47
+  },
+  "2243": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 46
+  },
+  "2320": {
+    "type": "数字操作",
+    "submits": 119,
+    "accepts": 42
+  },
+  "2166": {
+    "type": "数字操作",
+    "submits": 130,
+    "accepts": 36
+  },
+  "2242": {
+    "type": "数字操作",
+    "submits": 63,
+    "accepts": 48
+  },
+  "2241": {
+    "type": "数字操作",
+    "submits": 57,
+    "accepts": 43
+  },
+  "2163": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 44
+  },
+  "2162": {
+    "type": "数字操作",
+    "submits": 189,
+    "accepts": 87
+  },
+  "2317": {
+    "type": "数字操作",
+    "submits": 70,
+    "accepts": 45
+  },
+  "2217": {
+    "type": "数字操作",
+    "submits": 54,
+    "accepts": 42
+  },
+  "2216": {
+    "type": "数字操作",
+    "submits": 162,
+    "accepts": 82
+  },
+  "2238": {
+    "type": "数字操作",
+    "submits": 64,
+    "accepts": 45
+  },
+  "2335": {
+    "type": "数字操作",
+    "submits": 179,
+    "accepts": 103
+  },
+  "2214": {
+    "type": "数字操作",
+    "submits": 67,
+    "accepts": 43
+  },
+  "2334": {
+    "type": "数字操作",
+    "submits": 83,
+    "accepts": 44
+  },
+  "2333": {
+    "type": "数字操作",
+    "submits": 121,
+    "accepts": 45
+  },
+  "2376": {
+    "type": "数字操作",
+    "submits": 158,
+    "accepts": 44
+  },
+  "2277": {
+    "type": "数字操作",
+    "submits": 105,
+    "accepts": 45
+  },
+  "2319": {
+    "type": "数字操作",
+    "submits": 101,
+    "accepts": 48
+  },
+  "2221": {
+    "type": "图结构",
+    "submits": 81,
+    "accepts": 39
+  },
+  "2254": {
+    "type": "图结构",
+    "submits": 255,
+    "accepts": 77
+  },
+  "2265": {
+    "type": "图结构",
+    "submits": 97,
+    "accepts": 30
+  },
+  "2232": {
+    "type": "图结构",
+    "submits": 174,
+    "accepts": 30
+  },
+  "2165": {
+    "type": "图结构",
+    "submits": 69,
+    "accepts": 42
+  },
+  "2264": {
+    "type": "图结构",
+    "submits": 197,
+    "accepts": 35
+  },
+  "2175": {
+    "type": "图结构",
+    "submits": 87,
+    "accepts": 36
+  },
+  "2337": {
+    "type": "图结构",
+    "submits": 217,
+    "accepts": 43
+  },
+  "2303": {
+    "type": "图结构",
+    "submits": 113,
+    "accepts": 40
+  },
+  "2213": {
+    "type": "图结构",
+    "submits": 54,
+    "accepts": 32
+  },
+  "2234": {
+    "type": "图结构",
+    "submits": 211,
+    "accepts": 33
+  },
+  "2233": {
+    "type": "图结构",
+    "submits": 178,
+    "accepts": 41
+  },
+  "2702": {
+    "type": "查找算法",
+    "submits": 144,
+    "accepts": 45
+  },
+  "2635": {
+    "type": "查找算法",
+    "submits": 92,
+    "accepts": 48
+  },
+  "2645": {
+    "type": "查找算法",
+    "submits": 62,
+    "accepts": 45
+  },
+  "2644": {
+    "type": "查找算法",
+    "submits": 101,
+    "accepts": 43
+  },
+  "2643": {
+    "type": "查找算法",
+    "submits": 63,
+    "accepts": 43
+  },
+  "2566": {
+    "type": "查找算法",
+    "submits": 120,
+    "accepts": 42
+  },
+  "2576": {
+    "type": "查找算法",
+    "submits": 102,
+    "accepts": 45
+  },
+  "2642": {
+    "type": "查找算法",
+    "submits": 86,
+    "accepts": 41
+  },
+  "2565": {
+    "type": "查找算法",
+    "submits": 115,
+    "accepts": 45
+  },
+  "2641": {
+    "type": "查找算法",
+    "submits": 102,
+    "accepts": 48
+  },
+  "2630": {
+    "type": "查找算法",
+    "submits": 159,
+    "accepts": 44
+  },
+  "2575": {
+    "type": "查找算法",
+    "submits": 61,
+    "accepts": 45
+  },
+  "2773": {
+    "type": "排序算法",
+    "submits": 219,
+    "accepts": 102
+  },
+  "2563": {
+    "type": "查找算法",
+    "submits": 132,
+    "accepts": 45
+  },
+  "2606": {
+    "type": "查找算法",
+    "submits": 229,
+    "accepts": 146
+  },
+  "2639": {
+    "type": "查找算法",
+    "submits": 187,
+    "accepts": 99
+  },
+  "2637": {
+    "type": "查找算法",
+    "submits": 101,
+    "accepts": 50
+  },
+  "2526": {
+    "type": "树结构",
+    "submits": 314,
+    "accepts": 98
+  },
+  "2504": {
+    "type": "排序算法",
+    "submits": 116,
+    "accepts": 46
+  },
+  "2488": {
+    "type": "排序算法",
+    "submits": 98,
+    "accepts": 46
+  },
+  "2520": {
+    "type": "排序算法",
+    "submits": 87,
+    "accepts": 43
+  },
+  "2399": {
+    "type": "排序算法",
+    "submits": 130,
+    "accepts": 43
+  },
+  "2496": {
+    "type": "排序算法",
+    "submits": 95,
+    "accepts": 47
+  },
+  "2551": {
+    "type": "树结构",
+    "submits": 48,
+    "accepts": 42
+  },
+  "2297": {
+    "type": "树结构",
+    "submits": 87,
+    "accepts": 46
+  },
+  "2550": {
+    "type": "树结构",
+    "submits": 60,
+    "accepts": 44
+  },
+  "2572": {
+    "type": "树结构",
+    "submits": 157,
+    "accepts": 42
+  },
+  "2351": {
+    "type": "树结构",
+    "submits": 114,
+    "accepts": 28
+  },
+  "2493": {
+    "type": "树结构",
+    "submits": 52,
+    "accepts": 42
+  },
+  "2503": {
+    "type": "树结构",
+    "submits": 151,
+    "accepts": 42
+  },
+  "2349": {
+    "type": "图结构",
+    "submits": 97,
+    "accepts": 74
+  },
+  "2447": {
+    "type": "树结构",
+    "submits": 78,
+    "accepts": 43
+  },
+  "2502": {
+    "type": "树结构",
+    "submits": 123,
+    "accepts": 45
+  },
+  "2369": {
+    "type": "树结构",
+    "submits": 97,
+    "accepts": 49
+  },
+  "2501": {
+    "type": "树结构",
+    "submits": 57,
+    "accepts": 44
+  },
+  "2508": {
+    "type": "树结构",
+    "submits": 91,
+    "accepts": 39
+  },
+  "2437": {
+    "type": "树结构",
+    "submits": 112,
+    "accepts": 44
+  },
+  "2314": {
+    "type": "树结构",
+    "submits": 104,
+    "accepts": 39
+  },
+  "2512": {
+    "type": "树结构",
+    "submits": 56,
+    "accepts": 41
+  },
+  "2556": {
+    "type": "树结构",
+    "submits": 72,
+    "accepts": 40
+  },
+  "2313": {
+    "type": "树结构",
+    "submits": 228,
+    "accepts": 40
+  },
+  "2511": {
+    "type": "树结构",
+    "submits": 100,
+    "accepts": 37
+  },
+  "2555": {
+    "type": "树结构",
+    "submits": 67,
+    "accepts": 43
+  },
+  "2499": {
+    "type": "树结构",
+    "submits": 174,
+    "accepts": 44
+  },
+  "2554": {
+    "type": "树结构",
+    "submits": 88,
+    "accepts": 40
+  },
+  "2553": {
+    "type": "树结构",
+    "submits": 132,
+    "accepts": 40
+  },
+  "2597": {
+    "type": "树结构",
+    "submits": 107,
+    "accepts": 41
+  },
+  "2552": {
+    "type": "树结构",
+    "submits": 123,
+    "accepts": 43
+  },
+  "2310": {
+    "type": "树结构",
+    "submits": 261,
+    "accepts": 37
+  },
+  "2318": {
+    "type": "树结构",
+    "submits": 210,
+    "accepts": 40
+  },
+  "2666": {
+    "type": "线性表",
+    "submits": 80,
+    "accepts": 55
+  },
+  "2663": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 57
+  },
+  "2672": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 55
+  },
+  "2473": {
+    "type": "线性表",
+    "submits": 75,
+    "accepts": 39
+  },
+  "2691": {
+    "type": "线性表",
+    "submits": 74,
+    "accepts": 36
+  },
+  "2471": {
+    "type": "线性表",
+    "submits": 98,
+    "accepts": 40
+  },
+  "2690": {
+    "type": "线性表",
+    "submits": 141,
+    "accepts": 33
+  },
+  "2590": {
+    "type": "线性表",
+    "submits": 121,
+    "accepts": 40
+  },
+  "2724": {
+    "type": "线性表",
+    "submits": 46,
+    "accepts": 42
+  },
+  "2723": {
+    "type": "线性表",
+    "submits": 64,
+    "accepts": 42
+  },
+  "2646": {
+    "type": "线性表",
+    "submits": 57,
+    "accepts": 40
+  },
+  "2722": {
+    "type": "线性表",
+    "submits": 93,
+    "accepts": 40
+  },
+  "2721": {
+    "type": "线性表",
+    "submits": 76,
+    "accepts": 41
+  },
+  "2487": {
+    "type": "线性表",
+    "submits": 103,
+    "accepts": 45
+  },
+  "2761": {
+    "type": "线性表",
+    "submits": 58,
+    "accepts": 42
+  },
+  "2486": {
+    "type": "线性表",
+    "submits": 79,
+    "accepts": 38
+  },
+  "2728": {
+    "type": "线性表",
+    "submits": 78,
+    "accepts": 40
+  },
+  "2727": {
+    "type": "线性表",
+    "submits": 97,
+    "accepts": 35
+  },
+  "2649": {
+    "type": "线性表",
+    "submits": 85,
+    "accepts": 41
+  },
+  "2725": {
+    "type": "线性表",
+    "submits": 89,
+    "accepts": 37
+  },
+  "2760": {
+    "type": "线性表",
+    "submits": 61,
+    "accepts": 43
+  },
+  "2485": {
+    "type": "线性表",
+    "submits": 79,
+    "accepts": 40
+  },
+  "2484": {
+    "type": "线性表",
+    "submits": 116,
+    "accepts": 40
+  },
+  "2560": {
+    "type": "线性表",
+    "submits": 73,
+    "accepts": 41
+  },
+  "2483": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 44
+  },
+  "2559": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 44
+  },
+  "2557": {
+    "type": "线性表",
+    "submits": 95,
+    "accepts": 46
+  },
+  "2755": {
+    "type": "线性表",
+    "submits": 99,
+    "accepts": 39
+  },
+  "2732": {
+    "type": "线性表",
+    "submits": 74,
+    "accepts": 44
+  },
+  "2336": {
+    "type": "线性表",
+    "submits": 103,
+    "accepts": 38
+  },
+  "2731": {
+    "type": "线性表",
+    "submits": 58,
+    "accepts": 39
+  },
+  "2730": {
+    "type": "线性表",
+    "submits": 69,
+    "accepts": 41
+  },
+  "2759": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 41
+  },
+  "2954": {
+    "type": "字符串",
+    "submits": 124,
+    "accepts": 32
+  },
+  "2975": {
+    "type": "字符串",
+    "submits": 61,
+    "accepts": 45
+  },
+  "2942": {
+    "type": "字符串",
+    "submits": 161,
+    "accepts": 43
+  },
+  "2963": {
+    "type": "字符串",
+    "submits": 106,
+    "accepts": 34
+  },
+  "2974": {
+    "type": "字符串",
+    "submits": 75,
+    "accepts": 36
+  },
+  "2984": {
+    "type": "字符串",
+    "submits": 121,
+    "accepts": 43
+  },
+  "2961": {
+    "type": "字符串",
+    "submits": 74,
+    "accepts": 43
+  },
+  "2972": {
+    "type": "字符串",
+    "submits": 203,
+    "accepts": 36
+  },
+  "2970": {
+    "type": "字符串",
+    "submits": 89,
+    "accepts": 31
+  },
+  "2981": {
+    "type": "字符串",
+    "submits": 88,
+    "accepts": 35
+  },
+  "2969": {
+    "type": "字符串",
+    "submits": 109,
+    "accepts": 34
+  },
+  "2979": {
+    "type": "字符串",
+    "submits": 56,
+    "accepts": 44
+  },
+  "2946": {
+    "type": "字符串",
+    "submits": 80,
+    "accepts": 44
+  },
+  "2957": {
+    "type": "字符串",
+    "submits": 77,
+    "accepts": 36
+  },
+  "2968": {
+    "type": "字符串",
+    "submits": 77,
+    "accepts": 33
+  },
+  "2978": {
+    "type": "字符串",
+    "submits": 246,
+    "accepts": 44
+  },
+  "2945": {
+    "type": "字符串",
+    "submits": 91,
+    "accepts": 41
+  },
+  "2956": {
+    "type": "字符串",
+    "submits": 105,
+    "accepts": 39
+  },
+  "2305": {
+    "type": "图结构",
+    "submits": 107,
+    "accepts": 24
+  },
+  "2316": {
+    "type": "图结构",
+    "submits": 147,
+    "accepts": 30
+  },
+  "2348": {
+    "type": "图结构",
+    "submits": 98,
+    "accepts": 26
+  },
+  "2347": {
+    "type": "图结构",
+    "submits": 132,
+    "accepts": 25
+  },
+  "2235": {
+    "type": "图结构",
+    "submits": 86,
+    "accepts": 35
+  },
+  "2343": {
+    "type": "图结构",
+    "submits": 36,
+    "accepts": 33
+  },
+  "2354": {
+    "type": "图结构",
+    "submits": 186,
+    "accepts": 68
+  },
+  "2331": {
+    "type": "图结构",
+    "submits": 109,
+    "accepts": 33
+  },
+  "2352": {
+    "type": "图结构",
+    "submits": 77,
+    "accepts": 30
+  },
+  "2704": {
+    "type": "树结构",
+    "submits": 118,
+    "accepts": 86
+  },
+  "2374": {
+    "type": "数组",
+    "submits": 157,
+    "accepts": 85
+  },
+  "2470": {
+    "type": "数组",
+    "submits": 82,
+    "accepts": 36
+  },
+  "2393": {
+    "type": "数组",
+    "submits": 72,
+    "accepts": 39
+  },
+  "2469": {
+    "type": "数组",
+    "submits": 77,
+    "accepts": 38
+  },
+  "2384": {
+    "type": "数组",
+    "submits": 63,
+    "accepts": 37
+  },
+  "2521": {
+    "type": "排序算法",
+    "submits": 89,
+    "accepts": 42
+  },
+  "2532": {
+    "type": "排序算法",
+    "submits": 83,
+    "accepts": 43
+  },
+  "2497": {
+    "type": "排序算法",
+    "submits": 65,
+    "accepts": 46
+  },
+  "2519": {
+    "type": "排序算法",
+    "submits": 79,
+    "accepts": 45
+  },
+  "2529": {
+    "type": "排序算法",
+    "submits": 198,
+    "accepts": 103
+  },
+  "2650": {
+    "type": "树结构",
+    "submits": 63,
+    "accepts": 34
+  },
+  "2353": {
+    "type": "树结构",
+    "submits": 103,
+    "accepts": 35
+  },
+  "2524": {
+    "type": "树结构",
+    "submits": 143,
+    "accepts": 34
+  },
+  "2600": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 33
+  },
+  "2400": {
+    "type": "树结构",
+    "submits": 107,
+    "accepts": 24
+  },
+  "2509": {
+    "type": "树结构",
+    "submits": 61,
+    "accepts": 38
+  },
+  "2605": {
+    "type": "树结构",
+    "submits": 95,
+    "accepts": 37
+  },
+  "2549": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 39
+  },
+  "2648": {
+    "type": "树结构",
+    "submits": 113,
+    "accepts": 35
+  },
+  "2540": {
+    "type": "树结构",
+    "submits": 96,
+    "accepts": 28
+  },
+  "2660": {
+    "type": "树结构",
+    "submits": 137,
+    "accepts": 86
+  },
+  "2382": {
+    "type": "树结构",
+    "submits": 100,
+    "accepts": 39
+  },
+  "2416": {
+    "type": "树结构",
+    "submits": 77,
+    "accepts": 36
+  },
+  "2636": {
+    "type": "树结构",
+    "submits": 81,
+    "accepts": 37
+  },
+  "2657": {
+    "type": "树结构",
+    "submits": 76,
+    "accepts": 30
+  },
+  "2633": {
+    "type": "树结构",
+    "submits": 100,
+    "accepts": 37
+  },
+  "2699": {
+    "type": "树结构",
+    "submits": 149,
+    "accepts": 33
+  },
+  "2599": {
+    "type": "树结构",
+    "submits": 76,
+    "accepts": 33
+  },
+  "2632": {
+    "type": "树结构",
+    "submits": 88,
+    "accepts": 38
+  },
+  "2654": {
+    "type": "树结构",
+    "submits": 54,
+    "accepts": 36
+  },
+  "2598": {
+    "type": "树结构",
+    "submits": 63,
+    "accepts": 36
+  },
+  "2631": {
+    "type": "树结构",
+    "submits": 119,
+    "accepts": 36
+  },
+  "2697": {
+    "type": "树结构",
+    "submits": 61,
+    "accepts": 35
+  },
+  "2696": {
+    "type": "树结构",
+    "submits": 90,
+    "accepts": 38
+  },
+  "2355": {
+    "type": "树结构",
+    "submits": 125,
+    "accepts": 34
+  },
+  "2695": {
+    "type": "树结构",
+    "submits": 77,
+    "accepts": 33
+  },
+  "2398": {
+    "type": "树结构",
+    "submits": 129,
+    "accepts": 34
+  },
+  "2638": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 35
+  },
+  "2092": {
+    "type": "数字操作",
+    "submits": 254,
+    "accepts": 31
+  },
+  "2276": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 38
+  },
+  "2275": {
+    "type": "数字操作",
+    "submits": 82,
+    "accepts": 36
+  },
+  "2330": {
+    "type": "数字操作",
+    "submits": 154,
+    "accepts": 35
+  },
+  "2250": {
+    "type": "数字操作",
+    "submits": 83,
+    "accepts": 42
+  },
+  "2370": {
+    "type": "数字操作",
+    "submits": 67,
+    "accepts": 42
+  },
+  "2403": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 44
+  },
+  "2326": {
+    "type": "数字操作",
+    "submits": 75,
+    "accepts": 38
+  },
+  "2402": {
+    "type": "数字操作",
+    "submits": 44,
+    "accepts": 40
+  },
+  "2401": {
+    "type": "数字操作",
+    "submits": 58,
+    "accepts": 40
+  },
+  "2324": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 41
+  },
+  "2367": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 41
+  },
+  "2421": {
+    "type": "数字操作",
+    "submits": 93,
+    "accepts": 49
+  },
+  "2322": {
+    "type": "数字操作",
+    "submits": 79,
+    "accepts": 38
+  },
+  "2420": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 45
+  },
+  "2321": {
+    "type": "数字操作",
+    "submits": 119,
+    "accepts": 38
+  },
+  "2409": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 49
+  },
+  "2408": {
+    "type": "数字操作",
+    "submits": 95,
+    "accepts": 46
+  },
+  "2407": {
+    "type": "数字操作",
+    "submits": 73,
+    "accepts": 45
+  },
+  "2329": {
+    "type": "数字操作",
+    "submits": 71,
+    "accepts": 36
+  },
+  "2364": {
+    "type": "数字操作",
+    "submits": 59,
+    "accepts": 41
+  },
+  "2363": {
+    "type": "数字操作",
+    "submits": 59,
+    "accepts": 44
+  },
+  "2362": {
+    "type": "数字操作",
+    "submits": 73,
+    "accepts": 42
+  },
+  "2360": {
+    "type": "数字操作",
+    "submits": 62,
+    "accepts": 39
+  },
+  "2381": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 41
+  },
+  "2239": {
+    "type": "数字操作",
+    "submits": 93,
+    "accepts": 42
+  },
+  "2379": {
+    "type": "数字操作",
+    "submits": 70,
+    "accepts": 41
+  },
+  "2411": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 44
+  },
+  "2377": {
+    "type": "数字操作",
+    "submits": 94,
+    "accepts": 44
+  },
+  "2332": {
+    "type": "数字操作",
+    "submits": 63,
+    "accepts": 38
+  },
+  "2419": {
+    "type": "数字操作",
+    "submits": 54,
+    "accepts": 43
+  },
+  "2518": {
+    "type": "数字操作",
+    "submits": 82,
+    "accepts": 45
+  },
+  "2694": {
+    "type": "查找算法",
+    "submits": 57,
+    "accepts": 37
+  },
+  "2570": {
+    "type": "查找算法",
+    "submits": 71,
+    "accepts": 36
+  },
+  "2745": {
+    "type": "查找算法",
+    "submits": 127,
+    "accepts": 83
+  },
+  "2711": {
+    "type": "查找算法",
+    "submits": 105,
+    "accepts": 94
+  },
+  "2567": {
+    "type": "查找算法",
+    "submits": 72,
+    "accepts": 40
+  },
+  "2720": {
+    "type": "查找算法",
+    "submits": 60,
+    "accepts": 40
+  },
+  "2707": {
+    "type": "图结构",
+    "submits": 138,
+    "accepts": 104
+  },
+  "2706": {
+    "type": "查找算法",
+    "submits": 76,
+    "accepts": 43
+  },
+  "2717": {
+    "type": "查找算法",
+    "submits": 152,
+    "accepts": 88
+  },
+  "2716": {
+    "type": "图结构",
+    "submits": 296,
+    "accepts": 66
+  },
+  "2705": {
+    "type": "图结构",
+    "submits": 148,
+    "accepts": 92
+  },
+  "2726": {
+    "type": "树结构",
+    "submits": 109,
+    "accepts": 88
+  },
+  "2715": {
+    "type": "查找算法",
+    "submits": 95,
+    "accepts": 42
+  },
+  "2703": {
+    "type": "查找算法",
+    "submits": 120,
+    "accepts": 52
+  },
+  "2573": {
+    "type": "线性表",
+    "submits": 104,
+    "accepts": 57
+  },
+  "2771": {
+    "type": "线性表",
+    "submits": 59,
+    "accepts": 51
+  },
+  "2594": {
+    "type": "线性表",
+    "submits": 58,
+    "accepts": 51
+  },
+  "2770": {
+    "type": "线性表",
+    "submits": 78,
+    "accepts": 45
+  },
+  "2670": {
+    "type": "线性表",
+    "submits": 72,
+    "accepts": 57
+  },
+  "2591": {
+    "type": "线性表",
+    "submits": 79,
+    "accepts": 50
+  },
+  "2768": {
+    "type": "线性表",
+    "submits": 67,
+    "accepts": 46
+  },
+  "2767": {
+    "type": "线性表",
+    "submits": 80,
+    "accepts": 46
+  },
+  "2766": {
+    "type": "线性表",
+    "submits": 64,
+    "accepts": 47
+  },
+  "2545": {
+    "type": "线性表",
+    "submits": 72,
+    "accepts": 49
+  },
+  "2765": {
+    "type": "线性表",
+    "submits": 56,
+    "accepts": 46
+  },
+  "2544": {
+    "type": "线性表",
+    "submits": 98,
+    "accepts": 52
+  },
+  "2764": {
+    "type": "线性表",
+    "submits": 58,
+    "accepts": 42
+  },
+  "2763": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 50
+  },
+  "2762": {
+    "type": "线性表",
+    "submits": 51,
+    "accepts": 44
+  },
+  "2609": {
+    "type": "线性表",
+    "submits": 70,
+    "accepts": 51
+  },
+  "2905": {
+    "type": "线性表",
+    "submits": 59,
+    "accepts": 53
+  },
+  "2780": {
+    "type": "线性表",
+    "submits": 57,
+    "accepts": 46
+  },
+  "2779": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 47
+  },
+  "2778": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 46
+  },
+  "2678": {
+    "type": "线性表",
+    "submits": 61,
+    "accepts": 51
+  },
+  "2777": {
+    "type": "线性表",
+    "submits": 74,
+    "accepts": 50
+  },
+  "2775": {
+    "type": "线性表",
+    "submits": 72,
+    "accepts": 53
+  },
+  "2774": {
+    "type": "线性表",
+    "submits": 62,
+    "accepts": 49
+  },
+  "2476": {
+    "type": "线性表",
+    "submits": 64,
+    "accepts": 46
+  },
+  "2674": {
+    "type": "线性表",
+    "submits": 63,
+    "accepts": 48
+  },
+  "2574": {
+    "type": "线性表",
+    "submits": 78,
+    "accepts": 57
+  },
+  "2772": {
+    "type": "线性表",
+    "submits": 59,
+    "accepts": 51
+  },
+  "2475": {
+    "type": "线性表",
+    "submits": 55,
+    "accepts": 47
+  },
+  "2991": {
+    "type": "字符串",
+    "submits": 114,
+    "accepts": 60
+  },
+  "2980": {
+    "type": "字符串",
+    "submits": 90,
+    "accepts": 54
+  },
+  "2990": {
+    "type": "字符串",
+    "submits": 63,
+    "accepts": 62
+  },
+  "2988": {
+    "type": "字符串",
+    "submits": 70,
+    "accepts": 62
+  },
+  "2977": {
+    "type": "字符串",
+    "submits": 79,
+    "accepts": 56
+  },
+  "2966": {
+    "type": "字符串",
+    "submits": 53,
+    "accepts": 40
+  },
+  "2987": {
+    "type": "字符串",
+    "submits": 75,
+    "accepts": 69
+  },
+  "2976": {
+    "type": "字符串",
+    "submits": 102,
+    "accepts": 49
+  },
+  "2965": {
+    "type": "字符串",
+    "submits": 69,
+    "accepts": 51
+  },
+  "2986": {
+    "type": "字符串",
+    "submits": 70,
+    "accepts": 49
+  },
+  "2973": {
+    "type": "字符串",
+    "submits": 62,
+    "accepts": 50
+  },
+  "2983": {
+    "type": "字符串",
+    "submits": 88,
+    "accepts": 52
+  },
+  "2971": {
+    "type": "字符串",
+    "submits": 97,
+    "accepts": 46
+  },
+  "2948": {
+    "type": "字符串",
+    "submits": 96,
+    "accepts": 53
+  },
+  "2989": {
+    "type": "字符串",
+    "submits": 68,
+    "accepts": 62
+  },
+  "2967": {
+    "type": "字符串",
+    "submits": 66,
+    "accepts": 52
+  },
+  "2693": {
+    "type": "树结构",
+    "submits": 68,
+    "accepts": 47
+  },
+  "2744": {
+    "type": "树结构",
+    "submits": 53,
+    "accepts": 44
+  },
+  "2743": {
+    "type": "树结构",
+    "submits": 61,
+    "accepts": 43
+  },
+  "2742": {
+    "type": "树结构",
+    "submits": 72,
+    "accepts": 43
+  },
+  "2708": {
+    "type": "树结构",
+    "submits": 106,
+    "accepts": 46
+  },
+  "2749": {
+    "type": "树结构",
+    "submits": 85,
+    "accepts": 38
+  },
+  "2902": {
+    "type": "树结构",
+    "submits": 57,
+    "accepts": 52
+  },
+  "2782": {
+    "type": "树结构",
+    "submits": 84,
+    "accepts": 43
+  },
+  "2781": {
+    "type": "树结构",
+    "submits": 84,
+    "accepts": 40
+  },
+  "2713": {
+    "type": "树结构",
+    "submits": 85,
+    "accepts": 41
+  },
+  "2735": {
+    "type": "树结构",
+    "submits": 65,
+    "accepts": 45
+  },
+  "2757": {
+    "type": "树结构",
+    "submits": 77,
+    "accepts": 50
+  },
+  "2712": {
+    "type": "树结构",
+    "submits": 59,
+    "accepts": 41
+  },
+  "2734": {
+    "type": "树结构",
+    "submits": 54,
+    "accepts": 38
+  },
+  "2733": {
+    "type": "树结构",
+    "submits": 75,
+    "accepts": 34
+  },
+  "2776": {
+    "type": "树结构",
+    "submits": 77,
+    "accepts": 46
+  },
+  "2698": {
+    "type": "树结构",
+    "submits": 80,
+    "accepts": 51
+  },
+  "2510": {
+    "type": "树结构",
+    "submits": 72,
+    "accepts": 38
+  },
+  "2652": {
+    "type": "树结构",
+    "submits": 112,
+    "accepts": 45
+  },
+  "2719": {
+    "type": "树结构",
+    "submits": 57,
+    "accepts": 43
+  },
+  "2758": {
+    "type": "树结构",
+    "submits": 72,
+    "accepts": 50
+  },
+  "2714": {
+    "type": "树结构",
+    "submits": 109,
+    "accepts": 41
+  },
+  "2736": {
+    "type": "树结构",
+    "submits": 62,
+    "accepts": 47
+  },
+  "2595": {
+    "type": "数字操作",
+    "submits": 69,
+    "accepts": 62
+  },
+  "2452": {
+    "type": "数字操作",
+    "submits": 75,
+    "accepts": 56
+  },
+  "2625": {
+    "type": "数字操作",
+    "submits": 114,
+    "accepts": 52
+  },
+  "2624": {
+    "type": "数字操作",
+    "submits": 79,
+    "accepts": 56
+  },
+  "2623": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 59
+  },
+  "2622": {
+    "type": "数字操作",
+    "submits": 141,
+    "accepts": 64
+  },
+  "2621": {
+    "type": "数字操作",
+    "submits": 84,
+    "accepts": 59
+  },
+  "2620": {
+    "type": "数字操作",
+    "submits": 70,
+    "accepts": 59
+  },
+  "2587": {
+    "type": "数字操作",
+    "submits": 74,
+    "accepts": 57
+  },
+  "2586": {
+    "type": "数字操作",
+    "submits": 78,
+    "accepts": 59
+  },
+  "2585": {
+    "type": "数字操作",
+    "submits": 80,
+    "accepts": 55
+  },
+  "2608": {
+    "type": "数字操作",
+    "submits": 105,
+    "accepts": 50
+  },
+  "2628": {
+    "type": "数字操作",
+    "submits": 61,
+    "accepts": 48
+  },
+  "2627": {
+    "type": "数字操作",
+    "submits": 107,
+    "accepts": 52
+  },
+  "2901": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 60
+  },
+  "2626": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 58
+  },
+  "2583": {
+    "type": "数字操作",
+    "submits": 81,
+    "accepts": 50
+  },
+  "2582": {
+    "type": "数字操作",
+    "submits": 63,
+    "accepts": 58
+  },
+  "2361": {
+    "type": "数字操作",
+    "submits": 72,
+    "accepts": 54
+  },
+  "2581": {
+    "type": "数字操作",
+    "submits": 66,
+    "accepts": 54
+  },
+  "2580": {
+    "type": "数字操作",
+    "submits": 88,
+    "accepts": 52
+  },
+  "2899": {
+    "type": "数字操作",
+    "submits": 70,
+    "accepts": 60
+  },
+  "2613": {
+    "type": "数字操作",
+    "submits": 87,
+    "accepts": 54
+  },
+  "2414": {
+    "type": "数字操作",
+    "submits": 76,
+    "accepts": 57
+  },
+  "2612": {
+    "type": "数字操作",
+    "submits": 83,
+    "accepts": 51
+  },
+  "2413": {
+    "type": "数字操作",
+    "submits": 87,
+    "accepts": 60
+  },
+  "2895": {
+    "type": "数字操作",
+    "submits": 65,
+    "accepts": 59
+  },
+  "2410": {
+    "type": "数字操作",
+    "submits": 111,
+    "accepts": 63
+  },
+  "2619": {
+    "type": "数字操作",
+    "submits": 67,
+    "accepts": 52
+  },
+  "2418": {
+    "type": "数字操作",
+    "submits": 77,
+    "accepts": 54
+  },
+  "2616": {
+    "type": "数字操作",
+    "submits": 64,
+    "accepts": 51
+  },
+  "2417": {
+    "type": "数字操作",
+    "submits": 68,
+    "accepts": 59
+  },
+  "2756": {
+    "type": "图结构",
+    "submits": 58,
+    "accepts": 48
+  },
+  "2754": {
+    "type": "图结构",
+    "submits": 68,
+    "accepts": 51
+  },
+  "2750": {
+    "type": "图结构",
+    "submits": 64,
+    "accepts": 51
+  },
+  "2571": {
+    "type": "查找算法",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2746": {
+    "type": "查找算法",
+    "submits": 70,
+    "accepts": 52
+  },
+  "2897": {
+    "type": "查找算法",
+    "submits": 65,
+    "accepts": 54
+  },
+  "2577": {
+    "type": "查找算法",
+    "submits": 81,
+    "accepts": 49
+  },
+  "2753": {
+    "type": "查找算法",
+    "submits": 67,
+    "accepts": 54
+  },
+  "2752": {
+    "type": "查找算法",
+    "submits": 61,
+    "accepts": 49
+  },
+  "2751": {
+    "type": "查找算法",
+    "submits": 91,
+    "accepts": 52
+  },
+  "2640": {
+    "type": "查找算法",
+    "submits": 66,
+    "accepts": 56
+  },
+  "2709": {
+    "type": "查找算法",
+    "submits": 56,
+    "accepts": 47
+  },
+  "2748": {
+    "type": "查找算法",
+    "submits": 133,
+    "accepts": 47
+  },
+  "2769": {
+    "type": "查找算法",
+    "submits": 60,
+    "accepts": 47
+  },
+  "2422": {
+    "type": "排序算法",
+    "submits": 71,
+    "accepts": 49
+  },
+  "2903": {
+    "type": "数组",
+    "submits": 70,
+    "accepts": 47
+  },
+  "2893": {
+    "type": "数组",
+    "submits": 66,
+    "accepts": 52
+  },
+  "2953": {
+    "type": "字符串",
+    "submits": 161,
+    "accepts": 46
+  },
+  "2588": {
+    "type": "数字操作",
+    "submits": 105,
+    "accepts": 49
+  },
+  "2350": {
+    "type": "图结构",
+    "submits": 77,
+    "accepts": 36
+  }
+}

@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 labels = ['string', 'list', 'array', 'search-algorithm', 'tree', 'graph', 'numeric-operation', 'sort-algorithm']
 ax1 = plt.subplot(projection='polar')
 
