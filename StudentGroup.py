@@ -20,8 +20,7 @@ def devideGroup(filter=False):
     :param filter: 是否进行过滤，若为true会放弃对100道题以下同学的分组
     :return:
     """
-    case_map = {}  # 题目集合
-    f = open('../test_data.json', encoding='utf-8')
+    f = open('test_data.json', encoding='utf-8')
     res = f.read()
     data = json.loads(res)
     for student in data:
