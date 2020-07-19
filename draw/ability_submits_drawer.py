@@ -29,7 +29,7 @@ def draw(group):
 def get_submits(case_map):
     res = 0
     for key in case_map.keys():
-        if case_map[key] != None:
+        if case_map[key] is not None:
             res += 1
     return res
 

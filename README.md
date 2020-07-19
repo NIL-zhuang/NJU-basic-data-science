@@ -12,10 +12,10 @@
 - 2020.07.02 程荣鑫：修改了evaluator.py和defender.py，添加了driver.py
 - 2020.07.02 陈彦泽：修改了evaluator.py中删除文件的方法，见使用说明
 - 2020.07.03~2020.07.06 程荣鑫&陈彦泽，用subprocess代替较老的模块os
-- 2020.07.09 程荣鑫：添加了abilities包，其中的abilities.py用于评估每个学生面对不同种类题目的表现
+- 2020.07.09 程荣鑫：添加了abilities包，abilities.py(为方便调用函数放进calculate包中)用于评估每个学生面对不同种类题目的表现
 - 2020.07.11 陈彦泽：添加了calculate包，Calculator.py用于处理编程能力评估
 - 2020.07.11 陈彦泽：为CaseData类添加了成员变量type，标识题目类型
-- 2020.07.19 陈彦泽：给StudentGroup类加上了筛选开关，可以做了不到80题的学生
+- 2020.07.19 陈彦泽：给StudentGroup类加上了筛选开关，可以剔除做了不到80题的学生
 
 ### 功能阐述
 
