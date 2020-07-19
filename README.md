@@ -15,6 +15,7 @@
 - 2020.07.09 程荣鑫：添加了abilities包，其中的abilities.py用于评估每个学生面对不同种类题目的表现
 - 2020.07.11 陈彦泽：添加了calculate包，Calculator.py用于处理编程能力评估
 - 2020.07.11 陈彦泽：为CaseData类添加了成员变量type，标识题目类型
+- 2020.07.19 陈彦泽：给StudentGroup类加上了筛选开关，可以做了不到80题的学生
 
 ### 功能阐述
 
@@ -36,7 +37,7 @@
     - 面向用例，返回单题作弊次数/单题测试用例数
     
 - driver类用来自动爬取数据运行评估
-    
+  
     - 主要用于测试defender类和evaluator类
     
 - DataUtils.py为一些数据处理的工具，比如均值、方差等
@@ -63,8 +64,8 @@
         ```
 
         用于获取某个组迭代计算后的数据，**外部文件可直接调用这类接口**
-
-
+    
+- StudentGroup类将`getStudentGroup`和`getQuestionGroup`的中的`isFilte`改为True可以打开筛选
 
 ### 使用方法
 

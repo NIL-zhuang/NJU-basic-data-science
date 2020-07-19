@@ -175,8 +175,8 @@ def calculate(times=20):
                     count += 1
             # 这里有两种处理方法，一种是没做的题目也算在n里（即看为0分），一种是不算在n里，不知道取用哪一种
             temp_ability /= len(case_difficulty.keys())
-            ability_loss += (temp_ability - student_ability[s]) ** 2 if student_ability[s] is not None else 0
             # temp_ability /= count
+            ability_loss += (temp_ability - student_ability[s]) ** 2 if student_ability[s] is not None else 0
             student_ability[s] = temp_ability
         # 计算Qi
         b = 1  # 反正是个常数，当1处理，有需要再修改这里
@@ -197,7 +197,7 @@ def calculate(times=20):
                 temp += b / divisor * ((100 - Mij) if Mij < 100 else 0) / 10
             # 这里同样有两种处理方法，不知道取用哪一种
             temp /= len(student_ability.keys())
-            # calculate /= count
+            # temp /= count
             diff_loss += (temp - case_difficulty[q]) ** 2 if case_difficulty[q] is not None else 0
             case_difficulty[q] = temp
         # print('迭代', i)

@@ -14,7 +14,12 @@ def contain(list1, list2):
 
 
 # 进行分组
-def devideGroup():
+def devideGroup(filter=False):
+    """
+    进行分组
+    :param filter: 是否进行过滤，若为true会放弃对100道题以下同学的分组
+    :return:
+    """
     case_map = {}  # 题目集合
     f = open('../test_data.json', encoding='utf-8')
     res = f.read()
@@ -47,6 +52,10 @@ def devideGroup():
         found = False
         cases = data[student]['cases']
         tmp = []
+        if filter:  # 过滤100题以下的同学
+            if len(cases) < 100:
+                failure_user[student] = tmp.copy()
+                continue
         for case in cases:
             tmp.append(case['case_id'])
         # 分组逻辑
@@ -73,13 +82,15 @@ def devideGroup():
 
 # 获取分组名单
 def getStudentGroup(index):
+    isFilte = False
     if len(group_list.keys()) == 0:
-        devideGroup()
+        devideGroup(isFilte)
     return group_list[index]
 
 
 # 获取对应组的题目列表
 def getQuestionGroup(index):
+    isFilte = False
     if len(group_list.keys()) == 0:
-        devideGroup()
+        devideGroup(isFilte)
     return question_list[index]

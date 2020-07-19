@@ -19,9 +19,11 @@ def draw(group):
     print(array_submits)
     index = [i for i in range(len(array_submits))]
     subplot.plot(index, array_submits)
-    subplot.plot(index, array_ability)
+    subplot1 = subplot.twinx()
+    subplot1.plot(index, array_ability,color='r')
     subplot.set_title('group{}'.format(group))
-    subplot.legend(['num of submit', 'ability'])
+    subplot.legend(['num of submit'])
+    subplot1.legend(['ability'])
 
 
 def get_submits(case_map):
