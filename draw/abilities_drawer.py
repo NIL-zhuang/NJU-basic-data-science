@@ -28,13 +28,13 @@ def draw(ax, data):
 if __name__ == '__main__':
     print('输入目标学生的id: ')
     id = input()
-    f = open('../abilities/raw_abilities.json')
+    f = open('../abilities/raw_abilities.json',encoding='utf-8')
     src = json.loads(f.read())
     f.close()
     d = np.array(list(src[id].values()))
     draw(ax1, d)
 
-    f = open('../abilities/final_abilities.json')
+    f = open('../abilities/final_abilities.json',encoding='utf-8')
     src = json.loads(f.read())
     f.close()
     d = np.array(list(src[id].values()))
