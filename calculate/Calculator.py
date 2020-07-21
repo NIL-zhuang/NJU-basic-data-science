@@ -243,7 +243,7 @@ def run(group, time=5):
     init_map(group)
     read_data(group)
     pre_deal_data()
-    calculate()
+    calculate(time)
     print("run group {} finish".format(group))
 
 

@@ -132,6 +132,16 @@ $$
 
 https://github.com/NIL-zhuang/NJU-basic-data-science
 
+### 学生分组
+
+代码在StudentGroup.py中
+
+结合python作业布置时的信息，通过对每位学生做的题目进行分析，分析出五种题目分配对应五个组别，进而通过学生做题的包含关系将学生分为五个小组（每组学生做的题目都是一样的，这是我们分组的依据）
+
+通过`getStudentGroup(index)`获取分组学生名单
+
+通过`getQuestionGroup(index):`获取分组题目列表
+
 ### 反面向用例
 
 代码在defender.py文件中，它包含两个方面：
@@ -144,10 +154,11 @@ https://github.com/NIL-zhuang/NJU-basic-data-science
 
     举个例子，下面这样的代码，测试用例为input: 10, output: 213123123123
     
-        if input == 10:
-        
-            print(213123123123)
-
+    ```python
+    if input == 10:
+        print(213123123123)
+```
+    
     会被我们的程序捕捉到。我们扫描同学们提交的代码，并与测试用例的输入输出作匹配，得出同学们在某道题上的“水分”，也就是以面向用例手段通过的用例占比（如果这题全是这么过的，那么就会被降到0分）。
 
 ### 提交代码评估
@@ -172,34 +183,115 @@ https://github.com/NIL-zhuang/NJU-basic-data-science
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-26-53.png)
 
-2. Calculator.py
+2. calculate/Calculator.py
 
-    它负责将test_data.json中的学生和题目分组（每组学生做的题目都是一样的，这是我们分组的依据），然后以组为单位评估学生代码，通过调用evaluator.py来完成。我们认为，对某个学生做的特定题目而言，选最后一次提交来分析是比较合理的。
+    该文件下的`score_evaluator_get_score_save`方法进行代码评估以及数据持久化操作，调用StudentGroup.py和evaluator.py提高的接口。
 
-    他的输出信息主要在控制台，以及json文件中。calculate包中的5个group.json文件就是运行的结果。
+    实现逻辑是将test_data.json中的学生和题目分组，然后以组为单位评估学生代码，通过调用evaluator.py来完成。我们认为，对某个学生做的特定题目而言，选最后一次提交来分析是比较合理的。
 
-    至此，Calculator.py的第一个任务完成了。
+    由于一次运行需要耗费数小时时间，我们对其运行结果进行持久化操作，保存在`calculate/group[n].json`文中（数据解释见附录）
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-28-23.png)
 
-    持久化数据：
+    持久化数据片段：
 
-    ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-31-35.png)
+    ```json
+    {
+      "48117": {
+        "2081": [
+          true,
+          1,
+          31.72421875,
+          13
+        ],
+        "2180": [
+          false,
+          1,
+          0,
+          89
+        ],
+    ```
 
 ### 能力计算
 
-这涉及Calculator.py和abilities.py两份代码。
+该部分主要涉及calculate和abilities两包内的代码。
 
-1. Calculator.py
+1. calculate/CaseData.py
 
-    根据每组先前运算得出的数据成果作进一步处理，算出每组题目的对应题目难度和学生能力值（综合能力）
+    为方便操作，定义了能力计算的对象，存储以case为最小单位的数据，包括作答学生、题目类型、url、得分、时间、行数等
 
-2. abilities.py
+    ```python
+    class CaseData:
+        def __init__(self, case_id, user_id, url, score, time, line, type):
+            self.user_id = user_id
+            self.case_id = case_id
+            self.url = url
+            self.score = score
+            self.time = time
+            self.line = line
+            self.type = type
+    ```
+
+2. calculate/Calculator.py
+
+    核心为定义的一组字典，
+
+    ```python
+    raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
+    case_student_map = {}  # 题目-学生二维字典
+    student_case_map = {}  # 学生-题目二维字典
+    # 以上三个的内容均为CaseData
+    student_ability = {}  # 学生能力值
+    case_difficulty = {}  # 题目难度
+    ```
+
+    根据先前得到的中间数据`group[n].json`作进一步处理，算出每组题目的对应题目难度和学生能力值（综合能力），实现逻辑参考研究方法中的“数据计算”。
+
+    提供外部调用的四个getter，核心为run方法
+
+    ```python
+    def run(group, time=5): # time为迭代次数
+        raw_case_map.clear()
+        case_student_map.clear()
+        student_case_map.clear()  
+        case_difficulty.clear()
+        student_ability.clear()
+    	# 清空是为了组组之间互不影响
+        init_map(group)
+        read_data(group)
+        pre_deal_data()
+        calculate(time)
+        print("run group {} finish".format(group))
+        
+    def get_student_ability(group):
+        run(group)
+        return student_ability
+    
+    
+    def get_case_difficulty(group):
+        run(group)
+        return case_difficulty
+    
+    
+    def get_case_student_map(group):
+        run(group)
+        return case_student_map
+    
+    
+    def get_student_case_map(group):
+        run(group)
+        return student_case_map
+    ```
+
+3. abilities/abilities.py
 
     主要算每个学生在不同类别题目中体现出的能力水平，方便后续的数据分析。产物有四个阶段，从最开始的毛坯raw_abilities.json到最后的final_abilities.json都在abilities包中存放。
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/66BE2505-050B-4CC4-AEB5-6E50B14257C2.png)
 
+### 数据可视化
+
+draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操作，此处不进行赘述。
 
 ### 代码解释总结
 
