@@ -209,3 +209,88 @@ https://github.com/NIL-zhuang/NJU-basic-data-science
 
 ### 数据解释
 
+* `test_data.json`为原始数据集
+
+	* ```
+		user_id: 用户唯一标识ID 
+		final_score: 该题最终得分 
+		case_id: 题目ID 
+		case_type: 题目类型 
+		case_zip: 题目包 
+		upload_id: 提交记录ID 
+		upload_time: 上传时间 
+		code_url: 对应
+		upload_id所提交的代码 
+		score: 对应upload_id提交得分
+		```
+
+* `calculate/group[n].json`保存第[n]组数据预处理的中间数据。因数据预处理需本地运行学生提交的代码，需要耗费大量时间，故将其在服务器运行后使用json数据格式进行持久化处理。
+
+	* 数据结构为
+
+		```json
+		{
+		    userId:{
+		    	caseId:{
+		     		[
+		    		是否有效,
+		    		剔除面向用例后的有效得分比例,
+		    		运行时间,
+		    		代码行数
+		     		]
+		     	},
+		     	...
+		    },
+			...
+		}
+		```
+
+* `calculate/question_info.json`保存题目信息
+
+	* 数据结构为
+
+		```json
+		{
+		    caseId:{
+		        "type": "字符串", // 类型
+		        "submits": 487, // 总提交数
+		        "accepts": 99 // 有效提交数
+			},
+			...
+		}
+		```
+
+* `abilities/abilities_with_defend.json`
+
+	* 数据结构为
+
+		```json
+		{
+		  "60769": { // caseId
+		    "字符串": 28.654512888337955, // 每类题目及其综合评分
+		    "线性表": 67.5091843647911,
+		    "数组": 74.8942948824353,
+		    "查找算法": 56.07401615079685,
+		    "树结构": 17.194807860973608,
+		    "图结构": 20.48379091988403,
+		    "数字操作": 85.10575186005649,
+		    "排序算法": 41.3609940179318
+		  },
+		    ...
+		}
+		```
+
+		
+
+* `abilities/abilities_with_modify.json`
+
+	* 数据结构同上
+
+* `abilities/final_abilities.json`保存根据原始最终得分（即原始数据集的score）与每道题的难度值加权平均后得到的每类题目平均得分
+
+	* 数据结构同上
+
+* `abilities/raw_abilities.json`保存修正后得分与每道题的难度值加权平均后得到的每类题目平均得分
+
+	* 数据结构同上
+
