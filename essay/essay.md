@@ -2,13 +2,17 @@
 
 [toc]
 
-## 小组成员
+## 基本信息
 
-共三人
+### 小组成员
 
-* 181250021 程荣鑫 181250021@smail.nju.edu.cn
-* 陈彦泽 @Cpaulyz
-* 庄子元 @NIL-zhuang
+| 姓名   | 学号      | 邮箱                       | Python练习 | 分工 | GitHub账户 |
+| ------ | --------- | -------------------------- | ---------- | ---- | ---------- |
+| 陈彦泽 | 181250015 | 181250015@smail.nju.edu.cn |            |      | Cpaulyz    |
+| 程荣鑫 |           |                            |            |      | Sparrow612 |
+| 庄子元 |           |                            |            |      | NIL-zhuang |
+
+*TODO: 起个好听点的名字，比如啥马尔可夫链，啥多维视角下xxxxx*
 
 ## 摘要
 
@@ -16,36 +20,146 @@
 
 **关键字**：马尔科夫链，编程能力评估
 
-## 介绍
+## 前言
+
+### 研究背景
 
 编程OJ（Online Judge）是评估学生对编程语言的掌握能力、逻辑思维能力等的重要方式，目前被普遍用于各类测试、练习和竞赛中。对学生编程能力进行合理高效的计算对衡量学生编程能力，分配训练题目等都有着重要的应用价值。
 
-南京大学2018级软件学院约250名同学在2020春季学期的数据科学基础课上，基于MoocTest平台，分为5组完成了总计近1000道python编程题。通过对数据进行分析、采访部份同学等方式，我们发现在编程OJ中，存在如下一系列影响评估的行为：
+南京大学2018级软件学院约250名同学在2020春季学期的数据科学基础课上，基于MoocTest平台，分为5组完成了总计近1000道python编程题。
 
-1. 碍于编程题目的原创性低，部分同学利用搜索引擎在leetcode, codeforce, geekforgeeks，poj等各大OJ平台上找到类似的原题，并抄袭题解以期提高得分
+从收集到的提交数据中，可以获得每名学生每个题目的最终得分、提交记录、题目类型、上传时间、提交代码包，从提交代码包中还可以获得该题目测试用例，计算出运行时间、代码行数等数据。
+
+### 研究现状
+
+通过对数据进行采样分析、采访部份同学等方式，我们发现在编程OJ中，存在如下一系列影响评估的行为：
+
+1. 碍于编程题目的原创性低，部分同学利用搜索引擎在leetcode, codeforce, geekforgeeks，poj等各大OJ平台上找到类似的原题，并抄袭题解以期提高得分，以使用C++/C语言提交
 2. 由于MoocTest平台以编程训练为旨，会给学生错误答案的实时反馈。部分学生利用此特性编制面向测试用例的代码，来绕过代码逻辑，获得评测分数。
 3. 题目的选择和分配没有难度区分，不同组别、不同学生之间题目相差较大。难以用初始得分评估学生的编程水平
 
+现有评价体系以学生题目作答数作为评分标准，难以察觉上述影响评估的行为，难以保证公平性与有效性。
+
+### 研究问题
+
+通过对提交数据的解析，可以获取以下有效数据：原始最终得分、提交代码、测试用例，通过本地运行后可获得运行时间、代码行数。
+
+为了修正现有评价方法存在的不足，我们以多维角度对学生能力进行评价，并同时对题目难度进行评估。
+
+针对学生，我们期望评价其能力值。学生每做一道题会对其能力值带来提高，其提高程度与原始得分、面向用例通过比例、运行时间、代码行数有关（提交次数也应是重要的影响因素，但因平台仅收集学生”提交“次数而非”运行“次数，考虑到学生做题习惯的差异，部分学生习惯多次”运行“至满分后才”提交“，部分学生习惯每次“提交”，因此误差较大，故不考虑）。
+
+针对题目，我们无法从数据集中提取题目难度，期望评价其难度。题目难度与该题的作答率、最终成绩、作答学生的能力值有关。
+
+该研究问题大致可应用于以下场景：
+
+1. 可对学生能力进行更精准的评价
+2. 可对题组中的题目难度进行定量分析
+3. 可获取学生针对某一类型题目的能力
+4. 可对比学生对各个类型题目解答能力差异
+
+## 研究方法
+
+*TODO: PPT要求里提到研究方法的重点，这里尽量写详细一点*
+
+### 数据预处理
+
+*TODO:crx完善一下1和2*
+
+*TODO:zzy的alpha beta优化过程写在这里的3*
+
+1. **面向用例排查**
+
+2. **非python提交数据清洗**
+
+3. **运行时间、代码行数多维分析**
+
+	代码的好坏由程序运行时间、代码行数和用例测试得分决定。其中这三个因素对编程能力影响的排名是**得分 > 时间 > 行数**，因此我们可以通过以下式子来对得分进行修正：
+
+	$$
+	score' = score \times\Omega(\frac{time-\mu}{\sigma_1})^{\alpha}\times\Omega(\frac{line-\eta}{\sigma_2})^{\beta}
+	$$
+
+	$$
+	\Omega(x) = \begin{cases}
+	1.129 & x>1.29 \\
+	1+\frac{x}{10} &|x|\le1.29 \\
+	0.871 & x<-1.29
+	\end{cases}
+	$$
+
+	其中$\alpha, \beta$分别是程序运行时间、代码行数的权重，我们把它们设为$1.15$和$1.05$，$\sigma_1, \sigma_2$分别是时间、行数的标准差，$\mu,\eta$分别是时间、行数的平均值。我们在修正范围中考虑中间80%的同学，超过范围的对其进行误差截断。
+
+### 数据计算
+
+*TODO:把文档的搬过来，zzy来完善这个吧*
+
+记学生的数量为$m$，题目的数量为$n$，令$M_{ij}$为第$i$个学生第$j$题的成绩。则定义学生的成绩矩阵为$M = [a_{ij}]_{m\times n}$
+
+题目的难度定为一个$n$维向量$Q$，其中$Q_i$是第$i$题的难度。最初，将所有题目的难度定为$1$。
+
+学生的python能力向量记为$B$，其中第$i$个学生的python能力是$B_i$
+
+**rule** : 越难的题目得分越高，则编程能力越强
+$$
+B_i = \frac{\Sigma_{t}Q_j \times M_{ij}}{n}
+$$
+
+**rule** : 编程能力越极端(很强/很蒻)，题目难度对他的影响越小
+$$
+Q_j = \frac{1}{n}\Sigma_{t}\frac{b}{1+\frac{|B_i - \bar{B}|}{\sigma}}\times(100-M_{ij})
+$$
+
+其中$t$是做了的题目，$b = \int_{-\infin}^{+\infin}\frac{1}{1+\Phi(|x|)}dx$，以保证数据的中心性。
+
+### 数据分析
+
+*TODO:把分析有用上的都写在这里吧*
+
+* PCA
+* kmeans
+* 相关性计算
+* ...
+
+### 模型评价
+
+
+
 ## 代码解释
 
-开源地址：https://github.com/NIL-zhuang/NJU-basic-data-science
+*TODO:这里简单解释代码做什么，不解释模型*
+
+### 代码开源地址
+
+https://github.com/NIL-zhuang/NJU-basic-data-science
+
+### 学生分组
+
+代码在StudentGroup.py中
+
+结合python作业布置时的信息，通过对每位学生做的题目进行分析，分析出五种题目分配对应五个组别，进而通过学生做题的包含关系将学生分为五个小组（每组学生做的题目都是一样的，这是我们分组的依据）
+
+通过`getStudentGroup(index)`获取分组学生名单
+
+通过`getQuestionGroup(index):`获取分组题目列表
 
 ### 反面向用例
 
-这部分代码在defender.py文件中，它包含两个方面：
+代码在defender.py文件中，它包含两个方面：
 
 1. 极个别的C++语言提交
-    
+   
     这不在我们分析范畴内，所以遇到这类代码直接标记为‘不可用’
 
 2. 面向用例代码
 
     举个例子，下面这样的代码，测试用例为input: 10, output: 213123123123
     
-        if input == 10:
+    ```python
+    if input == 10:
+        print(213123123123)
+    ```
+```
     
-            print(213123123123)
-
     会被我们的程序捕捉到。我们扫描同学们提交的代码，并与测试用例的输入输出作匹配，得出同学们在某道题上的“水分”，也就是以面向用例手段通过的用例占比（如果这题全是这么过的，那么就会被降到0分）。
 
 ### 提交代码评估
@@ -70,41 +184,206 @@
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-26-53.png)
 
-2. Calculator.py
+2. calculate/Calculator.py
 
-    它负责将test_data.json中的学生和题目分组（每组学生做的题目都是一样的，这是我们分组的依据），然后以组为单位评估学生代码，通过调用evaluator.py来完成。我们认为，对某个学生做的特定题目而言，选最后一次提交来分析是比较合理的。
+    该文件下的`score_evaluator_get_score_save`方法进行代码评估以及数据持久化操作，调用StudentGroup.py和evaluator.py提高的接口。
 
-    他的输出信息主要在控制台，以及json文件中。calculate包中的5个group.json文件就是运行的结果。
+    实现逻辑是将test_data.json中的学生和题目分组，然后以组为单位评估学生代码，通过调用evaluator.py来完成。我们认为，对某个学生做的特定题目而言，选最后一次提交来分析是比较合理的。
 
-    至此，Calculator.py的第一个任务完成了。
+    由于一次运行需要耗费数小时时间，我们对其运行结果进行持久化操作，保存在`calculate/group[n].json`文中（数据解释见附录）
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-28-23.png)
 
-    持久化数据：
+    持久化数据片段：
 
-    ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/Xnip2020-07-21_13-31-35.png)
+    ```json
+    {
+      "48117": {
+        "2081": [
+          true,
+          1,
+          31.72421875,
+          13
+        ],
+        "2180": [
+          false,
+          1,
+          0,
+          89
+        ],
+```
 
 ### 能力计算
 
-这涉及Calculator.py和abilities.py两份代码。
+该部分主要涉及calculate和abilities两包内的代码。
 
-1. Calculator.py
+1. calculate/CaseData.py
 
-    根据每组先前运算得出的数据成果作进一步处理，算出每组题目的对应题目难度和学生能力值（综合能力）
+    为方便操作，定义了能力计算的对象，存储以case为最小单位的数据，包括作答学生、题目类型、url、得分、时间、行数等
 
-2. abilities.py
+    ```python
+    class CaseData:
+        def __init__(self, case_id, user_id, url, score, time, line, type):
+            self.user_id = user_id
+            self.case_id = case_id
+            self.url = url
+            self.score = score
+            self.time = time
+            self.line = line
+            self.type = type
+    ```
+
+2. calculate/Calculator.py
+
+    核心为定义的一组字典，
+
+    ```python
+    raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
+    case_student_map = {}  # 题目-学生二维字典
+    student_case_map = {}  # 学生-题目二维字典
+    # 以上三个的内容均为CaseData
+    student_ability = {}  # 学生能力值
+    case_difficulty = {}  # 题目难度
+    ```
+
+    根据先前得到的中间数据`group[n].json`作进一步处理，算出每组题目的对应题目难度和学生能力值（综合能力），实现逻辑参考研究方法中的“数据计算”。
+
+    提供外部调用的四个getter，核心为run方法
+
+    ```python
+    def run(group, time=5): # time为迭代次数
+        raw_case_map.clear()
+        case_student_map.clear()
+        student_case_map.clear()  
+        case_difficulty.clear()
+        student_ability.clear()
+    	# 清空是为了组组之间互不影响
+        init_map(group)
+        read_data(group)
+        pre_deal_data()
+        calculate(time)
+        print("run group {} finish".format(group))
+        
+    def get_student_ability(group):
+        run(group)
+        return student_ability
+    
+    
+    def get_case_difficulty(group):
+        run(group)
+        return case_difficulty
+    
+    
+    def get_case_student_map(group):
+        run(group)
+        return case_student_map
+    
+    
+    def get_student_case_map(group):
+        run(group)
+        return student_case_map
+    ```
+
+3. abilities/abilities.py
 
     主要算每个学生在不同类别题目中体现出的能力水平，方便后续的数据分析。产物有四个阶段，从最开始的毛坯raw_abilities.json到最后的final_abilities.json都在abilities包中存放。
 
     ![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/66BE2505-050B-4CC4-AEB5-6E50B14257C2.png)
 
+### 数据可视化
+
+draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操作，此处不进行赘述。
 
 ### 代码解释总结
 
-主要的代码已经解释完毕，剩下一些代码是我们写的一些画图工具（比如draw包），或者帮助数据分析的一些代码，像pca.py负责主成分分析，kmeans.py实现k均值聚类算法，correction.py用于相关性计算等等。
+主要的代码已经解释完毕，剩下一些代码是我们写的一些画图工具，或者帮助数据分析的一些代码，像pca.py负责主成分分析，kmeans.py实现k均值聚类算法，correction.py用于相关性计算等等。
 
-## 模型 & 方法
+## 附录
 
-## 数据分析
+### 数据解释
 
-## 结语
+* `test_data.json`为原始数据集
+
+	* ```
+		user_id: 用户唯一标识ID 
+		final_score: 该题最终得分 
+		case_id: 题目ID 
+		case_type: 题目类型 
+		case_zip: 题目包 
+		upload_id: 提交记录ID 
+		upload_time: 上传时间 
+		code_url: 对应
+		upload_id所提交的代码 
+		score: 对应upload_id提交得分
+		```
+
+* `calculate/group[n].json`保存第[n]组数据预处理的中间数据。因数据预处理需本地运行学生提交的代码，需要耗费大量时间，故将其在服务器运行后使用json数据格式进行持久化处理。
+
+	* 数据结构为
+
+		```json
+		{
+		    userId:{
+		    	caseId:{
+		     		[
+		    		是否有效,
+		    		剔除面向用例后的有效得分比例,
+		    		运行时间,
+		    		代码行数
+		     		]
+		     	},
+		     	...
+		    },
+			...
+		}
+		```
+
+* `calculate/question_info.json`保存题目信息
+
+	* 数据结构为
+
+		```json
+		{
+		    caseId:{
+		        "type": "字符串", // 类型
+		        "submits": 487, // 总提交数
+		        "accepts": 99 // 有效提交数
+			},
+			...
+		}
+		```
+
+* `abilities/abilities_with_defend.json`原始得分剔除面向用例后，直接平均后得到的结果。此数据为中间结果。
+
+	* 数据结构为
+
+		```json
+		{
+		  "60769": { // caseId
+		    "字符串": 28.654512888337955, // 每类题目及其综合评分
+		    "线性表": 67.5091843647911,
+		    "数组": 74.8942948824353,
+		    "查找算法": 56.07401615079685,
+		    "树结构": 17.194807860973608,
+		    "图结构": 20.48379091988403,
+		    "数字操作": 85.10575186005649,
+		    "排序算法": 41.3609940179318
+		  },
+		    ...
+		}
+		```
+
+		
+
+* `abilities/abilities_with_modify.json`原始得分剔除面向用例后，根据题目难度值加权平均后得到的每类题目平均得分，由于浮点数运算误差，个别值超过了100。此数据为中间结果。
+
+	* 数据结构同上
+
+* `abilities/final_abilities.json`在`abilities/abilities_with_modify.json`基础上修正了浮点数运算误差得到的最终结果。
+
+	* 数据结构同上
+
+* `abilities/raw_abilities.json`保存修正后得分与每道题的难度值加权平均后得到的每类题目平均得分
+
+	* 数据结构同上
+
