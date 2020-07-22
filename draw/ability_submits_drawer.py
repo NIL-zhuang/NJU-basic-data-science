@@ -1,6 +1,5 @@
 # 绘制一下学生能力值和有效提交数的图，探索一下有没有什么关系
 import matplotlib.pyplot as plt
-
 import calculate.Calculator as Calculator
 
 

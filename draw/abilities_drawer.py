@@ -19,7 +19,7 @@ def draw(ax, data):
     data = np.append(data, data[0])
     ax.plot(theta, data, 'b')
     ax.fill(theta, data, 'b', alpha=0.5)
-    ax.set_xticks(theta)  # 分成8等分
+
     ax.set_xticklabels(labels, y=0.01)
 
     ax.set_yticks([20, 40, 60, 80, 100])
