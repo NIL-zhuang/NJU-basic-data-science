@@ -6,7 +6,7 @@ types = ['字符串', '线性表', '数组', '查找算法', '树结构', '图�
 
 
 def get_matrix():
-    f = open('abilities/final_abilities.json', encoding='utf-8')
+    f = open('../abilities/final_abilities.json', encoding='utf-8')
     data = json.loads(f.read())
     res = []
     for student in data:
@@ -26,6 +26,8 @@ def pca(matrix, k):
     data_adjust = matrix - average
     cov = np.cov(data_adjust.T)
     feature, vector = np.linalg.eig(cov)
+    for i, t in enumerate(types):
+        print(t, feature[i])
     index = np.argsort(-feature)
 
     for i in index[:k]:
