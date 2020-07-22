@@ -4,7 +4,9 @@
 
 ## 小组成员
 
-* 程荣鑫 @Sparrow612
+共三人
+
+* 181250021 程荣鑫 181250021@smail.nju.edu.cn
 * 陈彦泽 @Cpaulyz
 * 庄子元 @NIL-zhuang
 
@@ -26,9 +28,11 @@
 
 ## 代码解释
 
+开源地址：https://github.com/NIL-zhuang/NJU-basic-data-science
+
 ### 反面向用例
 
-代码在defender.py文件中，它包含两个方面：
+这部分代码在defender.py文件中，它包含两个方面：
 
 1. 极个别的C++语言提交
     
@@ -97,7 +101,7 @@
 
 ### 代码解释总结
 
-主要的代码已经解释完毕，剩下一些代码是我们写的一些画图工具，或者帮助数据分析的一些代码，像pca.py负责主成分分析，kmeans.py实现k均值聚类算法，correction.py用于相关性计算等等。
+主要的代码已经解释完毕，剩下一些代码是我们写的一些画图工具（比如draw包），或者帮助数据分析的一些代码，像pca.py负责主成分分析，kmeans.py实现k均值聚类算法，correction.py用于相关性计算等等。
 
 ## 模型 & 方法
 

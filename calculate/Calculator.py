@@ -205,32 +205,32 @@ def calculate(times=20):
         print('学生能力值', student_ability)
         diff_loss_arr.append(diff_loss)
         ability_loss_arr.append(ability_loss)
-    plt.xlabel('iter time')
-    plt.ylabel('loss')
-    plt.title('difficulty loss')
-    plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
-    plt.show()
-    plt.xlabel('iter time')
-    plt.ylabel('loss')
-    plt.title('ability loss')
-    plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
-    plt.show()
-    students = list(student_case_map.keys())
-    stu_ability = [student_ability[stu_id] for stu_id in students]
+    # plt.xlabel('iter time')
+    # plt.ylabel('loss')
+    # plt.title('difficulty loss')
+    # plt.plot(diff_loss_arr[1::], color='r', linewidth=5, linestyle='-', label='难度损失')
+    # plt.show()
+    # plt.xlabel('iter time')
+    # plt.ylabel('loss')
+    # plt.title('ability loss')
+    # plt.plot(ability_loss_arr[1::], color='g', linewidth=5, linestyle='-', label='能力损失')
+    # plt.show()
+    # students = list(student_case_map.keys())
+    # stu_ability = [student_ability[stu_id] for stu_id in students]
     student_score = []
     # for stu in students:
     #     scores = [student_case_map[stu][q].score * case_difficulty[q] / 2.5 for q in case_difficulty.keys() if
     #               student_case_map[stu][q] is not None]
     #     student_score.append(np.average(scores))
     # return linregress(stu_ability, student_score)
-    for stu_index in range(len(students)):
-        color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
-        x, y = stu_ability[stu_index], student_score[stu_index]
-        plt.scatter(x, y, c=color, alpha=0.6, edgecolors='white')
-    plt.xlabel('student ability')
-    plt.ylabel('average score')
-    plt.grid(True)
-    plt.show()
+    # for stu_index in range(len(students)):
+    #     color = ['red', 'blue', 'green'][np.random.randint(0, 3)]
+    #     x, y = stu_ability[stu_index], student_score[stu_index]
+    #     plt.scatter(x, y, c=color, alpha=0.6, edgecolors='white')
+    # plt.xlabel('student ability')
+    # plt.ylabel('average score')
+    # plt.grid(True)
+    # plt.show()
 
 
 def run(group, time=5):
