@@ -265,10 +265,10 @@ $$
 
     举个例子，下面这样的代码，测试用例为input: 10, output: 213123123123
 
-    ```python
-    if input == 10:
-        print(213123123123)
-    ```
+```python
+if input == 10:
+    print(213123123123)
+```
 
     会被我们的程序捕捉到。我们扫描同学们提交的代码，并与测试用例的输入输出作匹配，得出同学们在某道题上的“水分”，也就是以面向用例手段通过的用例占比（如果这题全是这么过的，那么就会被降到0分）。
 
@@ -362,36 +362,36 @@ $$
 
   提供外部调用的四个getter，核心为run方法
 
-```python
+    ```
     def run(group, time=5): # time为迭代次数
         raw_case_map.clear()
         case_student_map.clear()
         student_case_map.clear()
         case_difficulty.clear()
         student_ability.clear()
-    # 清空是为了组组之间互不影响
+        # 清空是为了组组之间互不影响
         init_map(group)
         read_data(group)
         pre_deal_data()
         calculate(time)
         print("run group {} finish".format(group))
-
+    
     def get_student_ability(group):
         run(group)
         return student_ability
-​
-​    def get_case_difficulty(group):
-​        run(group)
-​        return case_difficulty
-
-​    def get_case_student_map(group):
-​        run(group)
-​        return case_student_map
-
-​    def get_student_case_map(group):
-​        run(group)
-​        return student_case_map
-```
+    ​
+    ​def get_case_difficulty(group):
+        run(group)
+        return case_difficulty
+    
+    ​def get_case_student_map(group):
+        run(group)
+        return case_student_map
+    
+    ​def get_student_case_map(group):
+        run(group)
+        return student_case_map
+    ```
 
 3. abilities/abilities.py
 
@@ -414,30 +414,31 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 * `test_data.json`为原始数据集
 
 ```json
-    user_id: 用户唯一标识ID
-    final_score: 该题最终得分
-    case_id: 题目ID
-    case_type: 题目类型
-    case_zip: 题目包
-    upload_id: 提交记录ID
-    upload_time: 上传时间
-    code_url: 对应
-    upload_id所提交的代码
-    score: 对应upload_id提交得分
+{
+    "user_id": "用户唯一标识ID",
+    "final_score": "该题最终得分",
+    "case_id": "题目ID",
+    "case_type": "题目类型",
+    "case_zip": "题目包",
+    "upload_id": "提交记录ID",
+    "upload_time": "上传时间",
+    "code_url": "对应upload_id所提交的代码链接",
+    "score": "对应upload_id提交得分"
+}
 ```
 
 * `calculate/group[n].json`保存第[n]组数据预处理的中间数据。因数据预处理需本地运行学生提交的代码，需要耗费大量时间，故将其在服务器运行后使用json数据格式进行持久化处理。
   * 数据结构为
 
-    ```json
+    ```
     {
-        userId:{
-            caseId:{
+        "userId":{
+            "caseId":{
                 [
-                是否有效,
-                剔除面向用例后的有效得分比例,
-                运行时间,
-                代码行数
+                "是否有效",
+                "剔除面向用例后的有效得分比例",
+                "运行时间",
+                "代码行数"
                 ]
             },
             ...
@@ -449,9 +450,9 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 * `calculate/question_info.json`保存题目信息
   * 数据结构为
 
-    ```json
+    ```
     {
-        caseId:{
+        "caseId":{
             "type": "字符串", // 类型
             "submits": 487, // 总提交数
             "accepts": 99 // 有效提交数
@@ -465,8 +466,8 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 
     ```json
     {
-        "60769": { // caseId
-        "字符串": 28.654512888337955, // 每类题目及其综合评分
+        "60769": { 
+        "字符串": 28.654512888337955, 
         "线性表": 67.5091843647911,
         "数组": 74.8942948824353,
         "查找算法": 56.07401615079685,
@@ -474,8 +475,7 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
         "图结构": 20.48379091988403,
         "数字操作": 85.10575186005649,
         "排序算法": 41.3609940179318
-        },
-        ...
+        }
     }
     ```
 
