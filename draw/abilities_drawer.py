@@ -11,8 +11,6 @@ theta = np.append(theta, theta[0])
 
 ax1 = plt.subplot(121, projection='polar')
 ax2 = plt.subplot(122, projection='polar')
-ax1.set_title('Raw-Abilities', color='b', size=10)
-ax2.set_title('Final-Abilities', color='b', size=10)
 
 
 def draw(ax, data):
