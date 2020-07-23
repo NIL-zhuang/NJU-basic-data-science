@@ -152,82 +152,134 @@ $$
 
 * PCA
 
-  分析源数据在abilities/final_abilities.json中，这里面存放的，是我们算出的每个学生经过"反面向用例+题目难度分析"修正过的各题型能力值。
-
-  数据展示：
-
-  ```json
-  {
-    "48117": {
-      "字符串": 52.14023329414596,
-      "线性表": 66.84609313886622,
-      "数组": 69.55055138951201,
-      "查找算法": 53.04604262368937,
-      "树结构": 0.0,
-      "图结构": 16.554267750781246,
-      "数字操作": 72.13449329753452,
-      "排序算法": 64.92690221519682
-    },
-    "49405": {
-      "字符串": 58.913564991303595,
-      "线性表": 87.93203629792232,
-      "数组": 91.85347974900004,
-      "查找算法": 74.84177176101025,
-      "树结构": 58.0253290118282,
-      "图结构": 49.71731690370514,
-      "数字操作": 93.54855695121705,
-      "排序算法": 53.748032775917885
-    }
-  }
-  ```
-
-  题目共有八个种类，那么哪一个才是最重要的呢？
-
-  为了找到这个答案，我们用abilities包下的final_abilities.json作为数据源，对学生能力分布进行主成分分析。
-
-  分析的代码在pca.py中。
-
-  我们来看看分析后的可视化结果
-
-![asset](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/abilities_pca.png)
-
-  学生能力是八维数据，每个题类各占一维，我们将八维数据降到二维。
-
-  红色代表的是学生能力值降维处理后的结果矩阵。
-
-  蓝色则表示根据降维的结果重构的样本在超平面上的投影。
-
-  我们本来还想用pca的可视化结果看看能否针对学生能力聚类，但是看到降维的结果（红色），并无明显的类别区分，很难进行聚类，遂放弃该想法，转而对题目进行聚类。
-
-  当然，我们的第一目的——找到影响能力值的主要题型——还是顺利完成了。将计算好的特征值排除，我们发现特征值最大的是题目类型是“字符串”（一骑绝尘），其次是线性表，再次是跟线性表比较相似的数组。
-
-![pca](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/7F0683BE-AE18-4FD6-B30E-F4DB57D16109.png)
-
-  得出结论：字符串是最能影响能力评估，或者说，最能反映学生编程水平的题型。
+      分析源数据在abilities/final_abilities.json中，这里面存放的，是我们算出的每个学生经过"反面向用例+题目难度分析"修正过的各题型能力值。
+    
+      数据展示：
+    
+      ```json
+      {
+        "48117": {
+          "字符串": 52.14023329414596,
+          "线性表": 66.84609313886622,
+          "数组": 69.55055138951201,
+          "查找算法": 53.04604262368937,
+          "树结构": 0.0,
+          "图结构": 16.554267750781246,
+          "数字操作": 72.13449329753452,
+          "排序算法": 64.92690221519682
+        },
+        "49405": {
+          "字符串": 58.913564991303595,
+          "线性表": 87.93203629792232,
+          "数组": 91.85347974900004,
+          "查找算法": 74.84177176101025,
+          "树结构": 58.0253290118282,
+          "图结构": 49.71731690370514,
+          "数字操作": 93.54855695121705,
+          "排序算法": 53.748032775917885
+        }
+      }
+      ```
+    
+      题目共有八个种类，那么哪一个才是最重要的呢？
+    
+      为了找到这个答案，我们用abilities包下的final_abilities.json作为数据源，对学生能力分布进行主成分分析。
+    
+      分析的代码在pca.py中。
+    
+      我们来看看分析后的可视化结果
+    
+    ![asset](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/abilities_pca.png)
+    
+      学生能力是八维数据，每个题类各占一维，我们将八维数据降到二维。
+    
+      红色代表的是学生能力值降维处理后的结果矩阵。
+    
+      蓝色则表示根据降维的结果重构的样本在超平面上的投影。
+    
+      我们本来还想用pca的可视化结果看看能否针对学生能力聚类，但是看到降维的结果（红色），并无明显的类别区分，很难进行聚类，遂放弃该想法，转而对题目进行聚类。
+    
+      当然，我们的第一目的——找到影响能力值的主要题型——还是顺利完成了。将计算好的特征值排除，我们发现特征值最大的是题目类型是“字符串”（一骑绝尘），其次是线性表，再次是跟线性表比较相似的数组。
+    
+    ![pca](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/7F0683BE-AE18-4FD6-B30E-F4DB57D16109.png)
+    
+      得出结论：字符串是最能影响能力评估，或者说，最能反映学生编程水平的题型。
 
 * K-means
 
 * 相关性计算
 
-  我们发现：编程综合能力越强的学生，提交数往往都是比较高的。
+    1. 学生能力-提交总数相关性分析
 
-  于是我们提出这样的猜想：提交数量与综合能力之间应该存在某种关系，最有可能是正相关。所以我们对学生的综合能力和提交总数进行了相关性分析。
-
-  得出的结果如下。
-
-![commit_num](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/4B379513-2CC4-46BC-9383-9E7E3A3741B1.png)
-
-  从图线来看确实正相关，我们再来看看运行的数据结果。
-
-![res](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/BED2389C-D894-4ECD-A315-1A739512AA02.png)
-
-  0～4对应着5组的组号，每个元组的第一个值是相关系数，第二个值是假设检验的p值，p值越小代表相关性越显著。
-
-  我们可以发现除了3、4号组，其余组的相关性都超过了0.9，并且p值都很小。
-
-  得出结论：学生编程综合能力和提交总数具有显著的、较强的相关性。
-
-* ..
+        我们发现：编程综合能力越强的学生，提交数往往都是比较高的。
+    
+        于是我们提出这样的猜想：提交数量与综合能力之间应该存在某种关系，最有可能是正相关。所以我们对学生的综合能力和提交总数进行了相关性分析。
+    
+        得出的结果如下。
+    
+        ![commit_num](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/4B379513-2CC4-46BC-9383-9E7E3A3741B1.png)
+    
+        从图线来看确实正相关，我们再来看看运行的数据结果。
+    
+        ![res](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/BED2389C-D894-4ECD-A315-1A739512AA02.png)
+    
+        0～4对应着5组的组号，每个元组的第一个值是相关系数，第二个值是假设检验的p值，p值越小代表相关性越显著。
+    
+        我们可以发现除了3、4号组，其余组的相关性都超过了0.9，并且p值都很小。
+      
+        再把所有的小组放到一起，代码和分析的结果如下。
+      
+        ```
+        def get_ability_submits_corr():
+            array_ability = []
+            array_submits = []
+            for group in range(5):
+                ability = Calculator.get_student_ability(group)
+                student_case_map = Calculator.get_student_case_map(group)
+                ability_sort = sorted(ability.items(), key=lambda x: x[1])
+                for item in ability_sort:
+                    array_ability.append(item[1])
+                    array_submits.append(get_submits(student_case_map[item[0]]))
+            correlation, p_value = stats.pearsonr(array_ability, array_submits)
+            print(correlation, p_value)
+            return correlation, p_value
+        ```
+    
+            correlation, p_value = 0.8706538538912352, 5.174913473912861e-83
+            
+        可以发现相关性还是很强的。
+    
+        得出结论：学生编程综合能力和提交总数具有显著的、较强的相关性。
+        
+    2. 问题难度-通过率相关性分析
+        
+        猜想：越难的问题通过率越低，这二者应该是负相关的关系
+        
+        我们同样用皮尔逊相关性分析看看结果。
+        
+        ```
+        def get_difficulty_acp_corr():
+            difficulty, ac_portion = [], []
+            f = open('../calculate/question_info.json')
+            question_info = json.loads(f.read())
+            f.close()
+            f = open('../calculate/case_difficulty.json')
+            temp = json.loads(f.read())
+            f.close()
+            difficulty_items = sorted(temp.items(), key=lambda x: x[1])
+            for item in difficulty_items:
+                difficulty.append(item[1])
+                info = question_info[item[0]]
+                ac_portion.append(info['accepts']/info['submits'])
+            correlation, p_value = stats.pearsonr(difficulty, ac_portion)
+            print(correlation, p_value)
+            return correlation, p_value
+        ```
+        
+            correlation, p_value = -0.36288939496061307, 7.652602871686174e-29
+            
+        出乎意料，虽然是负相关，但是从结果来看相关性并不大。我们认为主要原因在于：大多数在都会在mooctest平台"运行"满分了之后才"提交"（提供的源数据也只有提交次数，而没有运行次数），导致提交通过率较高，且随题目难度变化不明显。
+* ...
 
 ### 模型评价
 
@@ -343,14 +395,14 @@ if input == 10:
 
     核心为定义的一组字典，
 
-    ```python
-    raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
-    case_student_map = {}  # 题目-学生二维字典
-    student_case_map = {}  # 学生-题目二维字典
-    # 以上三个的内容均为CaseData
-    student_ability = {}  # 学生能力值
-    case_difficulty = {}  # 题目难度
-    ```
+```python
+raw_case_map = {}  # 未处理的数据，map，键为case_id，内容为CaseData
+case_student_map = {}  # 题目-学生二维字典
+student_case_map = {}  # 学生-题目二维字典
+# 以上三个的内容均为CaseData
+student_ability = {}  # 学生能力值
+case_difficulty = {}  # 题目难度
+```
 
   根据先前得到的中间数据`group[n].json`作进一步处理，算出每组题目的对应题目难度和学生能力值（综合能力），实现逻辑参考研究方法中的“数据计算”。
 
