@@ -498,8 +498,7 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 
 	* 数据结构同上
 
-* `abilities/final_abilities.json`在`abilities/abilities_with_modify.json`基础上修正了浮点数运算误差得到的最终结果。
-
+* `abilities/final_abilities.json`在`abilities/abilities_with_modify.json`基础上
 	* 数据结构同上
 
 * `abilities/raw_abilities.json`保存修正后得分与每道题的难度值加权平均后得到的每类题目平均得分
