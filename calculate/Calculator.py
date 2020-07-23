@@ -117,8 +117,8 @@ def pre_deal_data(alpha=1, beta=1):
 
 # 数据读取
 def read_data(group):
-    f2 = open(root_path()+'/calculate/group{}.json'.format(group), encoding='utf-8')
-    f = open(root_path()+'/test_data.json', encoding='utf-8')
+    f2 = open(root_path() + '/calculate/group{}.json'.format(group), encoding='utf-8')
+    f = open(root_path() + '/test_data.json', encoding='utf-8')
 
     res = f.read()
     data = json.loads(res)
@@ -316,15 +316,15 @@ def init_group(group):
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
     # run_param()
-    s = {}
-    c = {}
-    for i in range(5):
-        run(i)
-        s.update(student_ability)
-        c.update(case_difficulty)
-    f1 = open('student_ability.json', 'w')
-    f1.write(json.dumps(s))
-    f1.close()
-    f2 = open('case_difficulty.json', 'w')
-    f2.write(json.dumps(c))
-    f2.close()
+    f = open('student_ability.json', encoding='utf-8')
+    res = f.read()
+    f.close()
+    data = json.loads(res)
+    # data = get_student_ability(0)
+    print('请输入userid:', end=" ")
+    userid = input()
+    print('ability is ', data[userid])
+    data_sort = sorted(data.items(), key=lambda x: x[1])
+    for index in range(len(data_sort)):
+        if data_sort[index][0] == userid:
+            print('超过了', index / len(data_sort) * 100, '%的学生')
