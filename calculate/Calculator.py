@@ -316,4 +316,15 @@ def init_group(group):
 if __name__ == '__main__':
     # score_evaluator_get_score_save(4)
     # run_param()
-    run(0)
+    s = {}
+    c = {}
+    for i in range(5):
+        run(i)
+        s.update(student_ability)
+        c.update(case_difficulty)
+    f1 = open('student_ability.json', 'w')
+    f1.write(json.dumps(s))
+    f1.close()
+    f2 = open('case_difficulty.json', 'w')
+    f2.write(json.dumps(c))
+    f2.close()
