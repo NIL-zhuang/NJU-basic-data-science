@@ -1,6 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import json
+
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 
 def euclidean(point1, point2):
@@ -42,28 +46,20 @@ def k_means(dataset, k, iteration):
     return clusters, labels
 
 
-data = """
-1,0.697,0.46,2,0.774,0.376,3,0.634,0.264,4,0.608,0.318,5,0.556,0.215,
-6,0.403,0.237,7,0.481,0.149,8,0.437,0.211,9,0.666,0.091,10,0.243,0.267,
-11,0.245,0.057,12,0.343,0.099,13,0.639,0.161,14,0.657,0.198,15,0.36,0.37,
-16,0.593,0.042,17,0.719,0.103,18,0.359,0.188,19,0.339,0.241,20,0.282,0.257,
-21,0.748,0.232,22,0.714,0.346,23,0.483,0.312,24,0.478,0.437,25,0.525,0.369,
-26,0.751,0.489,27,0.532,0.472,28,0.473,0.376,29,0.725,0.445,30,0.446,0.459"""
-
-# 数据处理 dataset是30个样本（密度，含糖量）的列表
-a = data.split(',')
-dataset = [[float(a[i]), float(a[i + 1])] for i in range(1, len(a) - 1, 3)]
-C, labels = k_means(dataset, 4, 20)
-
-colValue = ['r', 'y', 'g', 'b', 'c', 'k', 'm']
-for i in range(len(C)):
-    coo_X = []  # x坐标列表
-    coo_Y = []  # y坐标列表
-    for j in range(len(C[i])):
-        coo_X.append(C[i][j][0])
-        coo_Y.append(C[i][j][1])
-    plt.scatter(coo_X, coo_Y,  color=colValue[i], label=i)
-
-# plt.legend(loc='upper right')
+f = open('../calculate/question_info.json', encoding='utf-8')
+data = json.loads(f.read())
+dataset = [(data[question]['submits'], data[question]['accepts']) for question in data]
+types = [data[question]['type'] for question in data]
+C, labels = k_means(dataset, 5, 200)
+colValue = ['r', 'y', 'g', 'b', 'c', 'k', 'm', 'grey']
+mark = {"字符串": 'd', "数组": 'o', "排序算法": 'v', "线性表": 'x', "查找算法": 's', "数字操作": '*', "图结构": '+', "树结构": '^'}
+keys = [key for key in data]
+f, ax = plt.subplots(figsize=(15, 10))
+for i in range(len(types)):
+    if data[keys[i]]['submits'] > 300: continue
+    plt.scatter(data[keys[i]]['submits'], data[keys[i]]['accepts'], marker=mark[types[i]],
+             color=colValue[labels[i]], label=types[i])
+plt.xlabel('submits')
+plt.ylabel('accepts')
+# ax.legend(loc='upper left')
 plt.show()
-print(labels)
