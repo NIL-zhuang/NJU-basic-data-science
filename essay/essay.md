@@ -285,7 +285,7 @@ $$
 
 再把所有的小组放到一起，代码和分析的结果如下。
 
-```python
+```
 def get_ability_submits_corr():
     array_ability = []
     array_submits = []
@@ -313,7 +313,7 @@ correlation, p_value = 0.8706538538912352, 5.174913473912861e-83
 
 我们同样用皮尔逊相关性分析看看结果。
 
-```python
+```
 def get_difficulty_acp_corr():
     difficulty, ac_portion = [], []
     f = open('../calculate/question_info.json')
@@ -469,7 +469,7 @@ case_difficulty = {}  # 题目难度
 
 提供外部调用的四个getter，核心为run方法
 
-```python
+```
 def run(group, time=5): # time为迭代次数
     raw_case_map.clear()
     case_student_map.clear()
@@ -537,7 +537,7 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 * `calculate/group[n].json`保存第[n]组数据预处理的中间数据。因数据预处理需本地运行学生提交的代码，需要耗费大量时间，故将其在服务器运行后使用json数据格式进行持久化处理。
   * 数据结构为
 
-    ```json
+    ```
     {
         "userId":{
             "caseId":{
@@ -557,7 +557,7 @@ draw包下的代码主要使用matplotlib和numpy工具进行数据可视化操�
 * `calculate/question_info.json`保存题目信息
   * 数据结构为
 
-    ```json
+    ```
     {
         "caseId":{
             "type": "字符串", // 类型

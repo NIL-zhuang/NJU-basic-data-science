@@ -37,6 +37,7 @@ for g in range(5):
     ax.set_title('group{} difficulty'.format(g), size=10)
     plt.savefig('group{}_difficulty'.format(g))
     plt.show()
+
 difficulties = np.array(difficulties)
 plt.bar(np.arange(0, 5), difficulties, label='The sum of difficulties')
 plt.legend(loc='upper left')
