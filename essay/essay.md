@@ -315,7 +315,7 @@ $A_i = \frac{\Sigma Q_j \times M_{ij}}{\Sigma Q_j}$
 
 我们来看看分析后的可视化结果
 
-![asset](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/abilities_pca.png)
+![](https://lemonzzy.oss-cn-hangzhou.aliyuncs.com/img/abilities_pca.png)
 
 学生能力是八维数据，每个题类各占一维，我们将八维数据降到二维。
 

@@ -3,25 +3,24 @@
 import json
 from evaluator import ScoreEvaluator
 from calculate import Calculator
+from calculate.StudentGroup import getQuestionGroup
 
 f = open('../test_data.json', encoding='UTF-8')
 d = f.read()
 data = json.loads(d)
+f.close()
+f = open('question_info.json')
+info = json.loads(f.read())
 f.close()
 
 types = ['字符串', '线性表', '数组', '查找算法', '树结构', '图结构', '数字操作', '排序算法']  # 题目种类
 
 
 # 提取指定用户指定类型的题目
-def extract_the_case(src, t, case_student_map):
+def extract_the_case(src, t):
     res = {}
     for s in src:
-        type = ''
-        uploads = case_student_map[s]
-        for u in uploads:
-            if uploads[u]:
-                type = uploads[u].type
-                break
+        type = info[s]['type']
         if type == t: res[s] = src[s]
     return res
 
@@ -68,7 +67,7 @@ def get_abilities(with_defender=False):
     return user_ability
 
 
-def get_ability_with_weight(src, case_difficulty):
+def get_ability_with_weight(src, curr_type, case_difficulty):
     sum_total_score = 0
     sum_total_num = 0
     for s in src:
@@ -80,13 +79,13 @@ def get_ability_with_weight(src, case_difficulty):
 def get_abilities_with_weight():
     user_ability = {}
     for group in range(5):
-        student_case_map, case_difficulty, case_student_map = Calculator.init_group(group)
+        student_case_map, case_difficulty = Calculator.init_group(group)
         for student in student_case_map:
             cases = student_case_map[student]
             user_ability[student] = {}
             for t in types:
-                user_ability[student][t] = get_ability_with_weight(extract_the_case(cases, t, case_student_map),
-                                                                   case_difficulty)
+                user_ability[student][t] = get_ability_with_weight(extract_the_case(cases, t),
+                                                                   t, case_difficulty)
     return user_ability
 
 
@@ -117,7 +116,10 @@ def modify_with_variation():
 
 
 if __name__ == '__main__':
+
     res = modify_with_variation()
+    print(res)
+
     f = open('../abilities/final_abilities.json', 'w')
     f.write(json.dumps(res, ensure_ascii=False))
     f.close()

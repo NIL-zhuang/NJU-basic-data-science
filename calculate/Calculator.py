@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import DataUtils
-from StudentGroup import getQuestionGroup, getStudentGroup
+from calculate.StudentGroup import getQuestionGroup, getStudentGroup
 from calculate.CaseData import CaseData
 from evaluator import ScoreEvaluator
 
@@ -106,7 +106,7 @@ def pre_deal_data(alpha=1, beta=1):
         lineVAR = np.var(lineList)
         for raw_case in raw_case_map[case_id]:
             temp = raw_case.copy()
-            # TODO:缺省值处理加在这里，temp是新的对象
+
             time = DataUtils.omega(raw_case.time, timeAVG, timeVAR)
             line = DataUtils.omega(raw_case.line, lineAVG, lineVAR)
             temp.score = temp.score * time ** alpha * line ** beta
@@ -310,12 +310,10 @@ def get_student_case_map(group):
 
 def init_group(group):
     run(group)
-    return student_case_map, case_difficulty, case_student_map
+    return student_case_map, case_difficulty
 
 
 if __name__ == '__main__':
-    # score_evaluator_get_score_save(4)
-    # run_param()
     f = open('student_ability.json', encoding='utf-8')
     res = f.read()
     f.close()
