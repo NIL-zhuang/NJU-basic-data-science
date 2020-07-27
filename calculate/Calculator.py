@@ -318,7 +318,7 @@ if __name__ == '__main__':
     res = f.read()
     f.close()
     data = json.loads(res)
-    # data = get_student_ability(0)
+    # data = get_student_ability(4)
     print('请输入userid:', end=" ")
     userid = input()
     print('ability is ', data[userid])
